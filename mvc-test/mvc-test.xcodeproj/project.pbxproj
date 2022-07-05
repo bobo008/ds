@@ -16,10 +16,11 @@
 		154F1BA528740DAF00D425FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BA428740DAF00D425FB /* main.m */; };
 		154F1BD02874286A00D425FB /* THBMvcTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BCE2874286A00D425FB /* THBMvcTestVC.m */; };
 		154F1BD12874286A00D425FB /* THBMvcTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1BCF2874286A00D425FB /* THBMvcTestVC.xib */; };
-		154F1BDA2874294500D425FB /* PXCCanvasCropView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1BD42874294400D425FB /* PXCCanvasCropView.xib */; };
-		154F1BDB2874294500D425FB /* PXCCanvasCropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BD52874294400D425FB /* PXCCanvasCropView.m */; };
-		154F1BDC2874294500D425FB /* PXCCropCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BD82874294400D425FB /* PXCCropCell.m */; };
-		154F1BDD2874294500D425FB /* PXCCropCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1BD92874294500D425FB /* PXCCropCell.xib */; };
+		154F1BDA2874294500D425FB /* THBFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1BD42874294400D425FB /* THBFilterView.xib */; };
+		154F1BDB2874294500D425FB /* THBFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BD52874294400D425FB /* THBFilterView.m */; };
+		154F1BDC2874294500D425FB /* THBFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BD82874294400D425FB /* THBFilterCell.m */; };
+		154F1BDD2874294500D425FB /* THBFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1BD92874294500D425FB /* THBFilterCell.xib */; };
+		154F1BE228743E3B00D425FB /* THBFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BE128743E3B00D425FB /* THBFilterModel.m */; };
 		C6204904F823876452FCD4EF /* libPods-mvc-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 323E78CB8E31521DED16AA38 /* libPods-mvc-test.a */; };
 /* End PBXBuildFile section */
 
@@ -59,12 +60,14 @@
 		154F1BCD2874286A00D425FB /* THBMvcTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBMvcTestVC.h; sourceTree = "<group>"; };
 		154F1BCE2874286A00D425FB /* THBMvcTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBMvcTestVC.m; sourceTree = "<group>"; };
 		154F1BCF2874286A00D425FB /* THBMvcTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THBMvcTestVC.xib; sourceTree = "<group>"; };
-		154F1BD42874294400D425FB /* PXCCanvasCropView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXCCanvasCropView.xib; sourceTree = "<group>"; };
-		154F1BD52874294400D425FB /* PXCCanvasCropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXCCanvasCropView.m; sourceTree = "<group>"; };
-		154F1BD62874294400D425FB /* PXCCanvasCropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXCCanvasCropView.h; sourceTree = "<group>"; };
-		154F1BD72874294400D425FB /* PXCCropCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXCCropCell.h; sourceTree = "<group>"; };
-		154F1BD82874294400D425FB /* PXCCropCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXCCropCell.m; sourceTree = "<group>"; };
-		154F1BD92874294500D425FB /* PXCCropCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXCCropCell.xib; sourceTree = "<group>"; };
+		154F1BD42874294400D425FB /* THBFilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBFilterView.xib; sourceTree = "<group>"; };
+		154F1BD52874294400D425FB /* THBFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterView.m; sourceTree = "<group>"; };
+		154F1BD62874294400D425FB /* THBFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterView.h; sourceTree = "<group>"; };
+		154F1BD72874294400D425FB /* THBFilterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterCell.h; sourceTree = "<group>"; };
+		154F1BD82874294400D425FB /* THBFilterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterCell.m; sourceTree = "<group>"; };
+		154F1BD92874294500D425FB /* THBFilterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBFilterCell.xib; sourceTree = "<group>"; };
+		154F1BE028743E3B00D425FB /* THBFilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBFilterModel.h; sourceTree = "<group>"; };
+		154F1BE128743E3B00D425FB /* THBFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBFilterModel.m; sourceTree = "<group>"; };
 		323E78CB8E31521DED16AA38 /* libPods-mvc-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mvc-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A2ADBA1A22C7C6393978E /* Pods-mvc-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvc-test.release.xcconfig"; path = "Target Support Files/Pods-mvc-test/Pods-mvc-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +140,7 @@
 		154F1BC92874282800D425FB /* mvc */ = {
 			isa = PBXGroup;
 			children = (
+				154F1BDF28743E2600D425FB /* model */,
 				154F1BD2287428DD00D425FB /* view */,
 				154F1BCD2874286A00D425FB /* THBMvcTestVC.h */,
 				154F1BCE2874286A00D425FB /* THBMvcTestVC.m */,
@@ -148,14 +152,23 @@
 		154F1BD2287428DD00D425FB /* view */ = {
 			isa = PBXGroup;
 			children = (
-				154F1BD62874294400D425FB /* PXCCanvasCropView.h */,
-				154F1BD52874294400D425FB /* PXCCanvasCropView.m */,
-				154F1BD42874294400D425FB /* PXCCanvasCropView.xib */,
-				154F1BD72874294400D425FB /* PXCCropCell.h */,
-				154F1BD82874294400D425FB /* PXCCropCell.m */,
-				154F1BD92874294500D425FB /* PXCCropCell.xib */,
+				154F1BD62874294400D425FB /* THBFilterView.h */,
+				154F1BD52874294400D425FB /* THBFilterView.m */,
+				154F1BD42874294400D425FB /* THBFilterView.xib */,
+				154F1BD72874294400D425FB /* THBFilterCell.h */,
+				154F1BD82874294400D425FB /* THBFilterCell.m */,
+				154F1BD92874294500D425FB /* THBFilterCell.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		154F1BDF28743E2600D425FB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				154F1BE028743E3B00D425FB /* THBFilterModel.h */,
+				154F1BE128743E3B00D425FB /* THBFilterModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		81BCA79AEDF63A3C45A86601 /* Pods */ = {
@@ -280,9 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				154F1BA228740DAF00D425FB /* LaunchScreen.storyboard in Resources */,
-				154F1BDA2874294500D425FB /* PXCCanvasCropView.xib in Resources */,
+				154F1BDA2874294500D425FB /* THBFilterView.xib in Resources */,
 				154F1B9F28740DAF00D425FB /* Assets.xcassets in Resources */,
-				154F1BDD2874294500D425FB /* PXCCropCell.xib in Resources */,
+				154F1BDD2874294500D425FB /* THBFilterCell.xib in Resources */,
 				154F1BD12874286A00D425FB /* THBMvcTestVC.xib in Resources */,
 				154F1B9D28740DAE00D425FB /* Main.storyboard in Resources */,
 			);
@@ -334,10 +347,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154F1BE228743E3B00D425FB /* THBFilterModel.m in Sources */,
 				154F1B9A28740DAE00D425FB /* ViewController.m in Sources */,
 				154F1B9428740DAE00D425FB /* AppDelegate.m in Sources */,
-				154F1BDC2874294500D425FB /* PXCCropCell.m in Sources */,
-				154F1BDB2874294500D425FB /* PXCCanvasCropView.m in Sources */,
+				154F1BDC2874294500D425FB /* THBFilterCell.m in Sources */,
+				154F1BDB2874294500D425FB /* THBFilterView.m in Sources */,
 				154F1BD02874286A00D425FB /* THBMvcTestVC.m in Sources */,
 				154F1BA528740DAF00D425FB /* main.m in Sources */,
 				154F1B9728740DAE00D425FB /* SceneDelegate.m in Sources */,

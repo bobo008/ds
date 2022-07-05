@@ -8,7 +8,7 @@
 #import "THBMvcTestVC.h"
 
 
-#import "PXCCanvasCropView.h"
+#import "THBFilterView.h"
 
 
 
@@ -32,7 +32,7 @@
 
 
 - (void)setupFilterView {
-    PXCCanvasCropView *view = [[PXCCanvasCropView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100)];
+    THBFilterView *view = [[THBFilterView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100)];
     [self.view addSubview:view];
 }
 

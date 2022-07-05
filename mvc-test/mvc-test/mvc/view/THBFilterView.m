@@ -1,19 +1,14 @@
-//
-//  PXCCanvasCropView.m
-//  PXCEditor
-//
-//  Created by guangzhuiyuandev on 2021/7/27.
-//
 
-#import "PXCCanvasCropView.h"
 
-#import "PXCCropCell.h"
+#import "THBFilterView.h"
+
+#import "THBFilterCell.h"
 
 #import <ReactiveObjC.h>
 
 
 
-@interface PXCCanvasCropView()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface THBFilterView()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic) UIView *view;
 
@@ -24,7 +19,7 @@
 
 @end
 
-@implementation PXCCanvasCropView
+@implementation THBFilterView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
@@ -76,7 +71,7 @@
     
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PXCCropCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([PXCCropCell class])];
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([THBFilterCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([THBFilterCell class])];
 }
 
 #pragma mark collectionView datasource
@@ -85,7 +80,7 @@
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    PXCCropCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([PXCCropCell class]) forIndexPath:indexPath];
+    THBFilterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([THBFilterCell class]) forIndexPath:indexPath];
     NSString *label = self.itemArray[indexPath.item];
 
 
