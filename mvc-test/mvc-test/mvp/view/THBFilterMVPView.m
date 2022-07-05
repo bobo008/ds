@@ -21,6 +21,8 @@
 
 @property (nonatomic) id<THBFilterMVPPersenterProtocol> persenter;
 
+
+@property (nonatomic) int index;
 @end
 
 @implementation THBFilterMVPView
@@ -54,6 +56,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserverForName:THBFilterMVPUpdateNotificaiton object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
         // 修改选中框
+        self.index = [note.userInfo[@"selectItem"] intValue];
+        [self.collectionView reloadData];
     }];
 
 }
@@ -89,13 +93,18 @@
     THBFilterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([THBFilterCell class]) forIndexPath:indexPath];
     NSDictionary *dict = self.itemArray[indexPath.item];
     cell.label.text = dict[@"label"];
+    if (self.index == indexPath.item) {
+        cell.backgroundColor = UIColor.redColor;
+    } else {
+        cell.backgroundColor = UIColor.yellowColor;
+    }
     return cell;
 }
 
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.persenter selectItem:self.itemArray[indexPath.item] index:indexPath.item];
+    [self.persenter selectItem:self.itemArray[indexPath.item]];
 }
 
 @end

@@ -21,6 +21,9 @@
 
 @property (nonatomic) id<THBFilterMVVMViewModelProtocol> viewModel;
 
+
+@property (nonatomic) int index;
+
 @end
 
 @implementation THBFilterMVVMView
@@ -51,7 +54,8 @@
     
 
     [RACObserve(self.viewModel, seletIndex) subscribeNext:^(id  _Nullable x) {
-
+        self.index = self.viewModel.seletIndex;
+        [self.collectionView reloadData];
     }];
 }
 
@@ -86,13 +90,18 @@
     THBFilterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([THBFilterCell class]) forIndexPath:indexPath];
     NSDictionary *dict = self.itemArray[indexPath.item];
     cell.label.text = dict[@"label"];
+    if (self.index == indexPath.item) {
+        cell.backgroundColor = UIColor.redColor;
+    } else {
+        cell.backgroundColor = UIColor.yellowColor;
+    }
     return cell;
 }
 
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self.viewModel selectItem:self.itemArray[indexPath.item] index:indexPath.item];
+    [self.viewModel selectItem:self.itemArray[indexPath.item]];
 }
 
 @end

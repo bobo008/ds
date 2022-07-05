@@ -6,7 +6,7 @@ static NSNotificationName THBFilterMVPUpdateNotificaiton = @"thb.update.mvp.filt
 
 @protocol THBFilterMVPPersenterProtocol <NSObject>
 
-- (void)selectItem:(NSDictionary *)dict index:(int)index;
+- (void)selectItem:(NSDictionary *)dict;
 
 - (NSArray *)obtainArray;
 

@@ -9,6 +9,7 @@
 
 
 
+@property (nonatomic) THBEditor *editor;
 
 @end
 
@@ -18,10 +19,11 @@
 
 @synthesize seletIndex = _seletIndex;
 
-- (instancetype)init {
+- (instancetype)initWithEditor:(THBEditor *)editor {
     self = [super init];
     if (self) {
-
+        self.editor = editor;
+        self.seletIndex = -1;
     }
     return self;
 }
@@ -38,12 +40,31 @@
     return ret.copy;
 }
 
-- (void)selectItem:(NSDictionary *)dict index:(int)index {
+- (void)selectItem:(NSDictionary *)dict {
     //TODO: 修改底层数据 通知view去改选中框
+    self.editor.data.filterID = dict[@"label"];
     
-    self.seletIndex = 1;
+    NSArray *array = [THBFilterManager manager].modelArrays;
+    for (int i = 0; i < array.count; i++) {
+        THBFilterModel *model = array[i];
+        if ([model.filterID isEqualToString:self.editor.data.filterID]) {
+            self.seletIndex = i;
+            break;
+        }
+    }
+    
 }
 
+
+- (void)enterFilterEdit {
+    self.editor.editModel.currentEditItem = @"Filter";
+    [self.editor.editModel.array addObject:@"Filter"];
+}
+
+- (void)quitFilterEdit {
+    [self.editor.editModel.array removeLastObject];
+    self.editor.editModel.currentEditItem = self.editor.editModel.array.lastObject;
+}
 
 
 @end

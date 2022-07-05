@@ -31,6 +31,9 @@
 		154F1C0C2874511B00D425FB /* THBFilterMVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1C062874511B00D425FB /* THBFilterMVVMController.m */; };
 		154F1C0D2874511B00D425FB /* THBFilterMVVMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1C092874511B00D425FB /* THBFilterMVVMView.m */; };
 		154F1C0E2874511B00D425FB /* THBFilterMVVMView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1C0A2874511B00D425FB /* THBFilterMVVMView.xib */; };
+		154F1C132874529000D425FB /* THBData.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1C122874529000D425FB /* THBData.m */; };
+		154F1C16287452D800D425FB /* THBEditModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1C14287452D800D425FB /* THBEditModel.m */; };
+		154F1C1A2874530D00D425FB /* THBEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1C192874530D00D425FB /* THBEditor.m */; };
 		C6204904F823876452FCD4EF /* libPods-mvc-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 323E78CB8E31521DED16AA38 /* libPods-mvc-test.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +99,12 @@
 		154F1C082874511B00D425FB /* THBFilterMVVMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterMVVMView.h; sourceTree = "<group>"; };
 		154F1C092874511B00D425FB /* THBFilterMVVMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterMVVMView.m; sourceTree = "<group>"; };
 		154F1C0A2874511B00D425FB /* THBFilterMVVMView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBFilterMVVMView.xib; sourceTree = "<group>"; };
+		154F1C112874529000D425FB /* THBData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBData.h; sourceTree = "<group>"; };
+		154F1C122874529000D425FB /* THBData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBData.m; sourceTree = "<group>"; };
+		154F1C14287452D800D425FB /* THBEditModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBEditModel.m; sourceTree = "<group>"; };
+		154F1C15287452D800D425FB /* THBEditModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBEditModel.h; sourceTree = "<group>"; };
+		154F1C182874530D00D425FB /* THBEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBEditor.h; sourceTree = "<group>"; };
+		154F1C192874530D00D425FB /* THBEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBEditor.m; sourceTree = "<group>"; };
 		323E78CB8E31521DED16AA38 /* libPods-mvc-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mvc-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A2ADBA1A22C7C6393978E /* Pods-mvc-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvc-test.release.xcconfig"; path = "Target Support Files/Pods-mvc-test/Pods-mvc-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -194,10 +203,9 @@
 		154F1BDF28743E2600D425FB /* model */ = {
 			isa = PBXGroup;
 			children = (
-				154F1BE028743E3B00D425FB /* THBFilterModel.h */,
-				154F1BE128743E3B00D425FB /* THBFilterModel.m */,
-				154F1BE328743F0D00D425FB /* THBFilterManager.h */,
-				154F1BE428743F0D00D425FB /* THBFilterManager.m */,
+				154F1C17287452F600D425FB /* editor */,
+				154F1C102874527E00D425FB /* data */,
+				154F1C0F2874527800D425FB /* filter */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -295,6 +303,45 @@
 				154F1C0A2874511B00D425FB /* THBFilterMVVMView.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		154F1C0F2874527800D425FB /* filter */ = {
+			isa = PBXGroup;
+			children = (
+				154F1BE028743E3B00D425FB /* THBFilterModel.h */,
+				154F1BE128743E3B00D425FB /* THBFilterModel.m */,
+				154F1BE328743F0D00D425FB /* THBFilterManager.h */,
+				154F1BE428743F0D00D425FB /* THBFilterManager.m */,
+			);
+			path = filter;
+			sourceTree = "<group>";
+		};
+		154F1C102874527E00D425FB /* data */ = {
+			isa = PBXGroup;
+			children = (
+				154F1C15287452D800D425FB /* THBEditModel.h */,
+				154F1C14287452D800D425FB /* THBEditModel.m */,
+				154F1C112874529000D425FB /* THBData.h */,
+				154F1C122874529000D425FB /* THBData.m */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		154F1C17287452F600D425FB /* editor */ = {
+			isa = PBXGroup;
+			children = (
+				154F1C1B2874538800D425FB /* protocol */,
+				154F1C182874530D00D425FB /* THBEditor.h */,
+				154F1C192874530D00D425FB /* THBEditor.m */,
+			);
+			path = editor;
+			sourceTree = "<group>";
+		};
+		154F1C1B2874538800D425FB /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocol;
 			sourceTree = "<group>";
 		};
 		81BCA79AEDF63A3C45A86601 /* Pods */ = {
@@ -481,14 +528,17 @@
 				154F1BF628744D1F00D425FB /* THBFilterMVPController.m in Sources */,
 				154F1B9A28740DAE00D425FB /* ViewController.m in Sources */,
 				154F1C0B2874511B00D425FB /* THBFilterMVVMViewModel.m in Sources */,
+				154F1C1A2874530D00D425FB /* THBEditor.m in Sources */,
 				154F1B9428740DAE00D425FB /* AppDelegate.m in Sources */,
 				154F1BDC2874294500D425FB /* THBFilterCell.m in Sources */,
+				154F1C16287452D800D425FB /* THBEditModel.m in Sources */,
 				154F1BDB2874294500D425FB /* THBFilterView.m in Sources */,
 				154F1C0C2874511B00D425FB /* THBFilterMVVMController.m in Sources */,
 				154F1BD02874286A00D425FB /* THBMvcTestVC.m in Sources */,
 				154F1BA528740DAF00D425FB /* main.m in Sources */,
 				154F1B9728740DAE00D425FB /* SceneDelegate.m in Sources */,
 				154F1BFE28744ECF00D425FB /* THBFilterMVPPersenter.m in Sources */,
+				154F1C132874529000D425FB /* THBData.m in Sources */,
 				154F1BE528743F0D00D425FB /* THBFilterManager.m in Sources */,
 				154F1C0D2874511B00D425FB /* THBFilterMVVMView.m in Sources */,
 			);

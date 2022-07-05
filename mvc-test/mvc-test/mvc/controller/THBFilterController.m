@@ -18,6 +18,7 @@
     THBFilterView *view = [[THBFilterView alloc] initWithFrame:self.frame];
     view.selectItem = ^(THBFilterModel *model) {
         //TODO:选择了一个滤镜，修改底层数据
+        self.editor.data.filterID = model.filterID;
     };
     [self.superView addSubview:view];
 }

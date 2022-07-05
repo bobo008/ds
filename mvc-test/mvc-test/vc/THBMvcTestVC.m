@@ -7,6 +7,7 @@
 
 #import "THBMvcTestVC.h"
 
+#import "THBEditor.h"
 
 #import "THBFilterView.h"
 
@@ -25,23 +26,37 @@
 
 
 @interface THBMvcTestVC ()
-
+@property (nonatomic) THBEditor *editor;
 @end
 
 @implementation THBMvcTestVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    [self setupEditor];
     [self setupFilterView4];
 }
 
+- (void)dealloc {
+    [self.editor uninstall];
+}
+
+- (void)setupEditor {
+    THBEditModel *editModel = [[THBEditModel alloc] init];
+    THBData *data = [[THBData alloc] init];
+    self.editor = [[THBEditor alloc] init];
+    [self.editor install:data editModel:editModel];
+    
+}
 
 /// mvc - mode 1
 - (void)setupFilterView1 {
     THBFilterView *view = [[THBFilterView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100)];
     view.selectItem = ^(THBFilterModel *model) {
         //TODO:选择了一个滤镜，修改底层数据
+        self.editor.data.filterID = model.filterID;
+
     };
     [self.view addSubview:view];
 }
@@ -55,7 +70,7 @@
     THBFilterController *controller = [[THBFilterController alloc] init];
     controller.frame = CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100);
     controller.superView = self.view;
-    
+    controller.editor = self.editor;
     [controller setup];    
 }
 
@@ -66,7 +81,7 @@
     THBFilterMVPController *controller = [[THBFilterMVPController alloc] init];
     controller.frame = CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100);
     controller.superView = self.view;
-    
+    controller.editor = self.editor;
     [controller setup];
 }
 
@@ -76,8 +91,8 @@
     THBFilterMVVMController *controller = [[THBFilterMVVMController alloc] init];
     controller.frame = CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100);
     controller.superView = self.view;
-    
-    [controller setup];
+    controller.editor = self.editor;
+    [controller install];
 }
 
 

@@ -8,7 +8,7 @@
 
 @property int seletIndex;
 
-- (void)selectItem:(NSDictionary *)dict index:(int)index;
+- (void)selectItem:(NSDictionary *)dict;
 
 - (NSArray *)obtainArray;
 

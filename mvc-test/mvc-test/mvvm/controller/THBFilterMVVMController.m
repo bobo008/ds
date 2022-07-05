@@ -16,17 +16,19 @@
 
 
 
-- (void)setup {
-    THBFilterMVVMViewModel *viewModel = [[THBFilterMVVMViewModel alloc] init];
-    
+- (void)install {
+    THBFilterMVVMViewModel *viewModel = [[THBFilterMVVMViewModel alloc] initWithEditor:self.editor];
     THBFilterMVVMView *view = [[THBFilterMVVMView alloc] initWithFrame:self.frame persenter:viewModel];
-
     [self.superView addSubview:view];
-    
     self.viewModel = viewModel;
     self.view = view;
+    
+    [self.viewModel enterFilterEdit];
 }
 
 
+- (void)uninstall {
+    [self.viewModel quitFilterEdit];
+}
 
 @end
