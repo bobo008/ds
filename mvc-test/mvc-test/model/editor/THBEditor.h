@@ -5,26 +5,23 @@
 #import "THBEditModel.h"
 #import "THBData.h"
 
+
+#import "THBDataProtocol.h"
+#import "THBRenderProtocol.h"
+#import "THBEditModelProtocol.h"
+#import "THBUndoManagerProtocol.h"
+
+/// 使用协议将各个职责分开
 NS_ASSUME_NONNULL_BEGIN
 
-@interface THBEditor : NSObject
+@interface THBEditor : NSObject <THBUndoManagerProtocol, THBRenderProtocol, THBDataProtocol, THBEditModelProtocol>
 
-@property (nonatomic) THBData *data;
-@property (nonatomic) THBEditModel *editModel;
+
 
 - (void)install:(THBData *)data editModel:(THBEditModel *)editModel;
 
 - (void)uninstall;
 
-
-/// 数据
-
-
-
-/// undo redo 模块
-
-
-/// 渲染模块
 
 @end
 

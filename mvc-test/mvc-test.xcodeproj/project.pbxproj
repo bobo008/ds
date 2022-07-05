@@ -105,6 +105,10 @@
 		154F1C15287452D800D425FB /* THBEditModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBEditModel.h; sourceTree = "<group>"; };
 		154F1C182874530D00D425FB /* THBEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBEditor.h; sourceTree = "<group>"; };
 		154F1C192874530D00D425FB /* THBEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBEditor.m; sourceTree = "<group>"; };
+		154F1C1C287458C800D425FB /* THBRenderProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBRenderProtocol.h; sourceTree = "<group>"; };
+		154F1C1D287458D500D425FB /* THBDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBDataProtocol.h; sourceTree = "<group>"; };
+		154F1C1E287458EB00D425FB /* THBUndoManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBUndoManagerProtocol.h; sourceTree = "<group>"; };
+		154F1C1F287459E100D425FB /* THBEditModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBEditModelProtocol.h; sourceTree = "<group>"; };
 		323E78CB8E31521DED16AA38 /* libPods-mvc-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mvc-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A2ADBA1A22C7C6393978E /* Pods-mvc-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvc-test.release.xcconfig"; path = "Target Support Files/Pods-mvc-test/Pods-mvc-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,8 +165,8 @@
 				154F1BE62874410500D425FB /* vc */,
 				154F1BEB28744D0B00D425FB /* mvp */,
 				154F1C002874511B00D425FB /* mvvm */,
-				154F1BDF28743E2600D425FB /* model */,
 				154F1BC92874282800D425FB /* mvc */,
+				154F1BDF28743E2600D425FB /* model */,
 				154F1B9228740DAE00D425FB /* AppDelegate.h */,
 				154F1B9328740DAE00D425FB /* AppDelegate.m */,
 				154F1B9528740DAE00D425FB /* SceneDelegate.h */,
@@ -340,6 +344,10 @@
 		154F1C1B2874538800D425FB /* protocol */ = {
 			isa = PBXGroup;
 			children = (
+				154F1C1F287459E100D425FB /* THBEditModelProtocol.h */,
+				154F1C1E287458EB00D425FB /* THBUndoManagerProtocol.h */,
+				154F1C1D287458D500D425FB /* THBDataProtocol.h */,
+				154F1C1C287458C800D425FB /* THBRenderProtocol.h */,
 			);
 			path = protocol;
 			sourceTree = "<group>";

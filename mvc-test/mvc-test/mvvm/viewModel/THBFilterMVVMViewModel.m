@@ -9,7 +9,7 @@
 
 
 
-@property (nonatomic) THBEditor *editor;
+@property (nonatomic) id<THBDataProtocol, THBEditModelProtocol> editor;
 
 @end
 
@@ -19,7 +19,7 @@
 
 @synthesize seletIndex = _seletIndex;
 
-- (instancetype)initWithEditor:(THBEditor *)editor {
+- (instancetype)initWithEditor:(id<THBDataProtocol, THBEditModelProtocol>)editor  {
     self = [super init];
     if (self) {
         self.editor = editor;
