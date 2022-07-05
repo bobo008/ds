@@ -1,34 +1,37 @@
 
 
-#import "THBFilterView.h"
+#import "THBFilterMVPView.h"
 
 #import "THBFilterCell.h"
-
 
 
 #import <ReactiveObjC.h>
 
 
 
-@interface THBFilterView()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface THBFilterMVPView()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic) UIView *view;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
-@property (nonatomic) NSArray<THBFilterModel *> *itemArray;
+@property (nonatomic) NSArray<NSDictionary *> *itemArray;
+
+
+@property (nonatomic) id<THBFilterMVPPersenterProtocol> persenter;
 
 @end
 
-@implementation THBFilterView
+@implementation THBFilterMVPView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame persenter:(id<THBFilterMVPPersenterProtocol>)persenter  {
     if (self = [super initWithFrame:frame]) {
         self.view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].firstObject;
         [self addSubview:self.view];
         self.view.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 
+        self.persenter = persenter;
         [self setup];
 
         
@@ -48,6 +51,10 @@
 
     [self setupDataSource];
     [self setupCollectionView];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:THBFilterMVPUpdateNotificaiton object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        // 修改选中框
+    }];
 
 }
 
@@ -55,7 +62,9 @@
 
 
 - (void)setupDataSource {
-    self.itemArray = [THBFilterManager manager].modelArrays;
+    self.itemArray = [self.persenter obtainArray];
+    
+    
 }
 
 
@@ -78,17 +87,15 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     THBFilterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([THBFilterCell class]) forIndexPath:indexPath];
-    THBFilterModel *model = self.itemArray[indexPath.item];
-    cell.label.text = model.filterID;
+    NSDictionary *dict = self.itemArray[indexPath.item];
+    cell.label.text = dict[@"label"];
     return cell;
 }
 
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.selectItem) {
-        self.selectItem(self.itemArray[indexPath.item]);
-    }
+    [self.persenter selectItem:self.itemArray[indexPath.item] index:indexPath.item];
 }
 
 @end

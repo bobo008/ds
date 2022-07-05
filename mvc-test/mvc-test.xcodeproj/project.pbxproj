@@ -22,6 +22,15 @@
 		154F1BDD2874294500D425FB /* THBFilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1BD92874294500D425FB /* THBFilterCell.xib */; };
 		154F1BE228743E3B00D425FB /* THBFilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BE128743E3B00D425FB /* THBFilterModel.m */; };
 		154F1BE528743F0D00D425FB /* THBFilterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BE428743F0D00D425FB /* THBFilterManager.m */; };
+		154F1BEA287449AA00D425FB /* THBFilterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BE9287449AA00D425FB /* THBFilterController.m */; };
+		154F1BF628744D1F00D425FB /* THBFilterMVPController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BEE28744D1F00D425FB /* THBFilterMVPController.m */; };
+		154F1BF828744D1F00D425FB /* THBFilterMVPView.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BF128744D1F00D425FB /* THBFilterMVPView.m */; };
+		154F1BF928744D1F00D425FB /* THBFilterMVPView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1BF228744D1F00D425FB /* THBFilterMVPView.xib */; };
+		154F1BFE28744ECF00D425FB /* THBFilterMVPPersenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1BFC28744ECF00D425FB /* THBFilterMVPPersenter.m */; };
+		154F1C0B2874511B00D425FB /* THBFilterMVVMViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1C022874511B00D425FB /* THBFilterMVVMViewModel.m */; };
+		154F1C0C2874511B00D425FB /* THBFilterMVVMController.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1C062874511B00D425FB /* THBFilterMVVMController.m */; };
+		154F1C0D2874511B00D425FB /* THBFilterMVVMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 154F1C092874511B00D425FB /* THBFilterMVVMView.m */; };
+		154F1C0E2874511B00D425FB /* THBFilterMVVMView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154F1C0A2874511B00D425FB /* THBFilterMVVMView.xib */; };
 		C6204904F823876452FCD4EF /* libPods-mvc-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 323E78CB8E31521DED16AA38 /* libPods-mvc-test.a */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +80,22 @@
 		154F1BE128743E3B00D425FB /* THBFilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBFilterModel.m; sourceTree = "<group>"; };
 		154F1BE328743F0D00D425FB /* THBFilterManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBFilterManager.h; sourceTree = "<group>"; };
 		154F1BE428743F0D00D425FB /* THBFilterManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBFilterManager.m; sourceTree = "<group>"; };
+		154F1BE8287449AA00D425FB /* THBFilterController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBFilterController.h; sourceTree = "<group>"; };
+		154F1BE9287449AA00D425FB /* THBFilterController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBFilterController.m; sourceTree = "<group>"; };
+		154F1BED28744D1F00D425FB /* THBFilterMVPController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterMVPController.h; sourceTree = "<group>"; };
+		154F1BEE28744D1F00D425FB /* THBFilterMVPController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterMVPController.m; sourceTree = "<group>"; };
+		154F1BF128744D1F00D425FB /* THBFilterMVPView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterMVPView.m; sourceTree = "<group>"; };
+		154F1BF228744D1F00D425FB /* THBFilterMVPView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBFilterMVPView.xib; sourceTree = "<group>"; };
+		154F1BF528744D1F00D425FB /* THBFilterMVPView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterMVPView.h; sourceTree = "<group>"; };
+		154F1BFC28744ECF00D425FB /* THBFilterMVPPersenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterMVPPersenter.m; sourceTree = "<group>"; };
+		154F1BFD28744ECF00D425FB /* THBFilterMVPPersenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterMVPPersenter.h; sourceTree = "<group>"; };
+		154F1C022874511B00D425FB /* THBFilterMVVMViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterMVVMViewModel.m; sourceTree = "<group>"; };
+		154F1C032874511B00D425FB /* THBFilterMVVMViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterMVVMViewModel.h; sourceTree = "<group>"; };
+		154F1C052874511B00D425FB /* THBFilterMVVMController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterMVVMController.h; sourceTree = "<group>"; };
+		154F1C062874511B00D425FB /* THBFilterMVVMController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterMVVMController.m; sourceTree = "<group>"; };
+		154F1C082874511B00D425FB /* THBFilterMVVMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBFilterMVVMView.h; sourceTree = "<group>"; };
+		154F1C092874511B00D425FB /* THBFilterMVVMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBFilterMVVMView.m; sourceTree = "<group>"; };
+		154F1C0A2874511B00D425FB /* THBFilterMVVMView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBFilterMVVMView.xib; sourceTree = "<group>"; };
 		323E78CB8E31521DED16AA38 /* libPods-mvc-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mvc-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19A2ADBA1A22C7C6393978E /* Pods-mvc-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvc-test.release.xcconfig"; path = "Target Support Files/Pods-mvc-test/Pods-mvc-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +149,9 @@
 		154F1B9128740DAE00D425FB /* mvc-test */ = {
 			isa = PBXGroup;
 			children = (
+				154F1BE62874410500D425FB /* vc */,
+				154F1BEB28744D0B00D425FB /* mvp */,
+				154F1C002874511B00D425FB /* mvvm */,
 				154F1BDF28743E2600D425FB /* model */,
 				154F1BC92874282800D425FB /* mvc */,
 				154F1B9228740DAE00D425FB /* AppDelegate.h */,
@@ -144,10 +172,8 @@
 		154F1BC92874282800D425FB /* mvc */ = {
 			isa = PBXGroup;
 			children = (
+				154F1BE72874410D00D425FB /* controller */,
 				154F1BD2287428DD00D425FB /* view */,
-				154F1BCD2874286A00D425FB /* THBMvcTestVC.h */,
-				154F1BCE2874286A00D425FB /* THBMvcTestVC.m */,
-				154F1BCF2874286A00D425FB /* THBMvcTestVC.xib */,
 			);
 			path = mvc;
 			sourceTree = "<group>";
@@ -174,6 +200,101 @@
 				154F1BE428743F0D00D425FB /* THBFilterManager.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		154F1BE62874410500D425FB /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				154F1BCD2874286A00D425FB /* THBMvcTestVC.h */,
+				154F1BCE2874286A00D425FB /* THBMvcTestVC.m */,
+				154F1BCF2874286A00D425FB /* THBMvcTestVC.xib */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		154F1BE72874410D00D425FB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				154F1BE8287449AA00D425FB /* THBFilterController.h */,
+				154F1BE9287449AA00D425FB /* THBFilterController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		154F1BEB28744D0B00D425FB /* mvp */ = {
+			isa = PBXGroup;
+			children = (
+				154F1BFB28744D2D00D425FB /* persenter */,
+				154F1BEC28744D1F00D425FB /* controller */,
+				154F1BEF28744D1F00D425FB /* view */,
+			);
+			path = mvp;
+			sourceTree = "<group>";
+		};
+		154F1BEC28744D1F00D425FB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				154F1BED28744D1F00D425FB /* THBFilterMVPController.h */,
+				154F1BEE28744D1F00D425FB /* THBFilterMVPController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		154F1BEF28744D1F00D425FB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				154F1BF528744D1F00D425FB /* THBFilterMVPView.h */,
+				154F1BF128744D1F00D425FB /* THBFilterMVPView.m */,
+				154F1BF228744D1F00D425FB /* THBFilterMVPView.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		154F1BFB28744D2D00D425FB /* persenter */ = {
+			isa = PBXGroup;
+			children = (
+				154F1BFD28744ECF00D425FB /* THBFilterMVPPersenter.h */,
+				154F1BFC28744ECF00D425FB /* THBFilterMVPPersenter.m */,
+			);
+			path = persenter;
+			sourceTree = "<group>";
+		};
+		154F1C002874511B00D425FB /* mvvm */ = {
+			isa = PBXGroup;
+			children = (
+				154F1C012874511B00D425FB /* viewModel */,
+				154F1C042874511B00D425FB /* controller */,
+				154F1C072874511B00D425FB /* view */,
+			);
+			path = mvvm;
+			sourceTree = "<group>";
+		};
+		154F1C012874511B00D425FB /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				154F1C032874511B00D425FB /* THBFilterMVVMViewModel.h */,
+				154F1C022874511B00D425FB /* THBFilterMVVMViewModel.m */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		154F1C042874511B00D425FB /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				154F1C052874511B00D425FB /* THBFilterMVVMController.h */,
+				154F1C062874511B00D425FB /* THBFilterMVVMController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		154F1C072874511B00D425FB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				154F1C082874511B00D425FB /* THBFilterMVVMView.h */,
+				154F1C092874511B00D425FB /* THBFilterMVVMView.m */,
+				154F1C0A2874511B00D425FB /* THBFilterMVVMView.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		81BCA79AEDF63A3C45A86601 /* Pods */ = {
@@ -297,12 +418,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154F1BF928744D1F00D425FB /* THBFilterMVPView.xib in Resources */,
 				154F1BA228740DAF00D425FB /* LaunchScreen.storyboard in Resources */,
 				154F1BDA2874294500D425FB /* THBFilterView.xib in Resources */,
 				154F1B9F28740DAF00D425FB /* Assets.xcassets in Resources */,
 				154F1BDD2874294500D425FB /* THBFilterCell.xib in Resources */,
 				154F1BD12874286A00D425FB /* THBMvcTestVC.xib in Resources */,
 				154F1B9D28740DAE00D425FB /* Main.storyboard in Resources */,
+				154F1C0E2874511B00D425FB /* THBFilterMVVMView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,15 +475,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154F1BEA287449AA00D425FB /* THBFilterController.m in Sources */,
+				154F1BF828744D1F00D425FB /* THBFilterMVPView.m in Sources */,
 				154F1BE228743E3B00D425FB /* THBFilterModel.m in Sources */,
+				154F1BF628744D1F00D425FB /* THBFilterMVPController.m in Sources */,
 				154F1B9A28740DAE00D425FB /* ViewController.m in Sources */,
+				154F1C0B2874511B00D425FB /* THBFilterMVVMViewModel.m in Sources */,
 				154F1B9428740DAE00D425FB /* AppDelegate.m in Sources */,
 				154F1BDC2874294500D425FB /* THBFilterCell.m in Sources */,
 				154F1BDB2874294500D425FB /* THBFilterView.m in Sources */,
+				154F1C0C2874511B00D425FB /* THBFilterMVVMController.m in Sources */,
 				154F1BD02874286A00D425FB /* THBMvcTestVC.m in Sources */,
 				154F1BA528740DAF00D425FB /* main.m in Sources */,
 				154F1B9728740DAE00D425FB /* SceneDelegate.m in Sources */,
+				154F1BFE28744ECF00D425FB /* THBFilterMVPPersenter.m in Sources */,
 				154F1BE528743F0D00D425FB /* THBFilterManager.m in Sources */,
+				154F1C0D2874511B00D425FB /* THBFilterMVVMView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

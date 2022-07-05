@@ -1,38 +1,38 @@
 
 
-#import "THBFilterView.h"
+#import "THBFilterMVVMView.h"
 
 #import "THBFilterCell.h"
-
 
 
 #import <ReactiveObjC.h>
 
 
 
-@interface THBFilterView()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface THBFilterMVVMView()<UICollectionViewDelegate,UICollectionViewDataSource>
 
 @property (nonatomic) UIView *view;
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
-@property (nonatomic) NSArray<THBFilterModel *> *itemArray;
+@property (nonatomic) NSArray<NSDictionary *> *itemArray;
+
+
+@property (nonatomic) id<THBFilterMVVMViewModelProtocol> viewModel;
 
 @end
 
-@implementation THBFilterView
+@implementation THBFilterMVVMView
 
-- (instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame persenter:(id<THBFilterMVVMViewModelProtocol>)persenter  {
     if (self = [super initWithFrame:frame]) {
         self.view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].firstObject;
         [self addSubview:self.view];
         self.view.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 
+        self.viewModel = persenter;
         [self setup];
-
-        
-
     }
     return self;
 }
@@ -48,14 +48,20 @@
 
     [self setupDataSource];
     [self setupCollectionView];
+    
 
+    [RACObserve(self.viewModel, seletIndex) subscribeNext:^(id  _Nullable x) {
+
+    }];
 }
 
 
 
 
 - (void)setupDataSource {
-    self.itemArray = [THBFilterManager manager].modelArrays;
+    self.itemArray = [self.viewModel obtainArray];
+    
+    
 }
 
 
@@ -78,17 +84,15 @@
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     THBFilterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([THBFilterCell class]) forIndexPath:indexPath];
-    THBFilterModel *model = self.itemArray[indexPath.item];
-    cell.label.text = model.filterID;
+    NSDictionary *dict = self.itemArray[indexPath.item];
+    cell.label.text = dict[@"label"];
     return cell;
 }
 
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.selectItem) {
-        self.selectItem(self.itemArray[indexPath.item]);
-    }
+    [self.viewModel selectItem:self.itemArray[indexPath.item] index:indexPath.item];
 }
 
 @end
