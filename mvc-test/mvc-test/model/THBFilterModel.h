@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface THBFilterModel : NSObject
-
+@property (nonatomic) NSString *filterID;
 @end
 
 NS_ASSUME_NONNULL_END
