@@ -6,5 +6,5 @@ target 'mvc-test' do
   pod 'ReactiveObjC'
 
 
-  // 你好sddasdasds
+  // 你好sddasdasds  git add . Git commit -m git push origin mainc  
 end 
