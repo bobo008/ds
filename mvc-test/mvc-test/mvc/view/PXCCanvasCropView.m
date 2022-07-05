@@ -1,0 +1,102 @@
+//
+//  PXCCanvasCropView.m
+//  PXCEditor
+//
+//  Created by guangzhuiyuandev on 2021/7/27.
+//
+
+#import "PXCCanvasCropView.h"
+
+#import "PXCCropCell.h"
+
+#import <ReactiveObjC.h>
+
+
+
+@interface PXCCanvasCropView()<UICollectionViewDelegate,UICollectionViewDataSource>
+
+@property (nonatomic) UIView *view;
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+
+@property (nonatomic) NSArray *itemArray;
+
+@end
+
+@implementation PXCCanvasCropView
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        self.view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].firstObject;
+        [self addSubview:self.view];
+        self.view.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
+
+        [self setup];
+
+        
+
+    }
+    return self;
+}
+
+
+- (void)dealloc {
+#ifdef DEBUG
+    NSLog(@"%@ dealloc", self);
+#endif
+}
+
+- (void)setup {
+
+    [self setupDataSource];
+    [self setupCollectionView];
+
+}
+
+
+
+
+
+
+
+
+
+- (void)setupDataSource {
+    self.itemArray = @[@"filter1",@"filter2"];
+}
+
+
+- (void)setupCollectionView {
+    UICollectionViewFlowLayout *layout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+    layout.minimumLineSpacing = 30;
+    layout.minimumInteritemSpacing = 30;
+    layout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
+    layout.itemSize = CGSizeMake(100, 100);
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([PXCCropCell class]) bundle:nil] forCellWithReuseIdentifier:NSStringFromClass([PXCCropCell class])];
+}
+
+#pragma mark collectionView datasource
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return  self.itemArray.count;
+}
+
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    PXCCropCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([PXCCropCell class]) forIndexPath:indexPath];
+    NSString *label = self.itemArray[indexPath.item];
+
+
+    cell.label = label;
+    return cell;
+}
+
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+@end
