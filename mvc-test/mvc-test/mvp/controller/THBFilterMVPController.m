@@ -21,11 +21,14 @@
     
     THBFilterMVPView *view = [[THBFilterMVPView alloc] initWithFrame:self.frame persenter:persenter];
 
+
     [self.superView addSubview:view];
     
     self.persenter = persenter;
     self.view = view;
 }
+
+
 
 
 

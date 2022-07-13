@@ -27,6 +27,9 @@
 
 @interface THBMvcTestVC ()
 @property (nonatomic) THBEditor *editor;
+
+
+//cancvasContaoller
 @end
 
 @implementation THBMvcTestVC
@@ -50,6 +53,8 @@
     
 }
 
+//A - B - C   A - C
+
 /// mvc - mode 1
 - (void)setupFilterView1 {
     THBFilterView *view = [[THBFilterView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100)];
@@ -69,6 +74,8 @@
 - (void)setupFilterView2 {
     THBFilterController *controller = [[THBFilterController alloc] init];
     controller.frame = CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100);
+    
+
     controller.superView = self.view;
     controller.editor = self.editor;
     [controller setup];    
@@ -80,6 +87,8 @@
 - (void)setupFilterView3 {
     THBFilterMVPController *controller = [[THBFilterMVPController alloc] init];
     controller.frame = CGRectMake(0, SCREEN_HEIGHT - BOTTOM_MARGIN - 100, SCREEN_WIDTH, 100);
+
+    
     controller.superView = self.view;
     controller.editor = self.editor;
     [controller setup];

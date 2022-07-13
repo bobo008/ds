@@ -29,7 +29,7 @@
 
 - (NSArray *)obtainArray {
     NSArray *array = [THBFilterManager manager].modelArrays;
-    
+
     NSMutableArray *ret = [NSMutableArray array];
     for (THBFilterModel *model in array) {
         NSDictionary *dic = @{@"label":model.filterID};
@@ -40,6 +40,7 @@
 
 - (void)selectItem:(NSDictionary *)dict {
     //TODO: 修改底层数据 通知view去改选中框
+//    if down
     self.editor.data.filterID = dict[@"label"];
     
     int index;

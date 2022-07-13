@@ -49,6 +49,7 @@
     [self setupDataSource];
     [self setupCollectionView];
 
+//    [self setupNoti]
 }
 
 
@@ -86,6 +87,9 @@
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    THBFilterModel *model = self.itemArray[indexPath.item];
+//    model.isne
+//    [[THBFilterManager manager] down]
     if (self.selectItem) {
         self.selectItem(self.itemArray[indexPath.item]);
     }
