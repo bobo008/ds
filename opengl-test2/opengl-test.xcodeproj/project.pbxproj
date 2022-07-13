@@ -1,0 +1,993 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1517ADE0287D561E00CF0087 /* THBLightTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1517ADDE287D561E00CF0087 /* THBLightTestVC.xib */; };
+		1517ADE1287D561E00CF0087 /* THBLightTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517ADDF287D561E00CF0087 /* THBLightTestVC.m */; };
+		1517ADE9287D57A000CF0087 /* THBTestRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517ADE4287D57A000CF0087 /* THBTestRenderNode.m */; };
+		1517ADEE287D595000CF0087 /* THBTestRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517ADEC287D595000CF0087 /* THBTestRenderer.m */; };
+		1517ADF8287D694400CF0087 /* UIImage+EAVExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517ADF6287D694400CF0087 /* UIImage+EAVExtend.m */; };
+		1517ADFE287D788700CF0087 /* comics_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 1517ADFD287D788700CF0087 /* comics_22.png */; };
+		1517AE00287D78C500CF0087 /* Cutout_002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1517ADFF287D78C500CF0087 /* Cutout_002.jpg */; };
+		15444EE5287EA00600F5E6DC /* light_fs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15444EE3287EA00600F5E6DC /* light_fs.fsh */; };
+		15444EE6287EA00600F5E6DC /* light_vs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15444EE4287EA00600F5E6DC /* light_vs.fsh */; };
+		15444EF1287EAD5400F5E6DC /* resultImage_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 15444EF0287EAD5400F5E6DC /* resultImage_1.png */; };
+		15444F1C287EE83700F5E6DC /* THBTBNLightTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15444F0E287EE83700F5E6DC /* THBTBNLightTestVC.m */; };
+		15444F20287EE83700F5E6DC /* light_tbn_fs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15444F14287EE83700F5E6DC /* light_tbn_fs.fsh */; };
+		15444F21287EE83700F5E6DC /* light_tbn_vs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15444F17287EE83700F5E6DC /* light_tbn_vs.fsh */; };
+		15444F22287EE83700F5E6DC /* THBTBNTestRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15444F18287EE83700F5E6DC /* THBTBNTestRenderer.m */; };
+		15444F23287EE83700F5E6DC /* THBTBNTestRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15444F19287EE83700F5E6DC /* THBTBNTestRenderNode.m */; };
+		15444F24287EE83700F5E6DC /* THBTBNLightTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15444F1B287EE83700F5E6DC /* THBTBNLightTestVC.xib */; };
+		1561F2A328751B6400CEBCE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A228751B6400CEBCE6 /* AppDelegate.m */; };
+		1561F2A628751B6400CEBCE6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A528751B6400CEBCE6 /* SceneDelegate.m */; };
+		1561F2A928751B6400CEBCE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A828751B6400CEBCE6 /* ViewController.m */; };
+		1561F2AC28751B6400CEBCE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1561F2AA28751B6400CEBCE6 /* Main.storyboard */; };
+		1561F2AE28751B6500CEBCE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1561F2AD28751B6500CEBCE6 /* Assets.xcassets */; };
+		1561F2B128751B6500CEBCE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1561F2AF28751B6500CEBCE6 /* LaunchScreen.storyboard */; };
+		1561F2B428751B6500CEBCE6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2B328751B6500CEBCE6 /* main.m */; };
+		1561F2BE28751B6500CEBCE6 /* opengl_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2BD28751B6500CEBCE6 /* opengl_testTests.m */; };
+		1561F2C828751B6500CEBCE6 /* opengl_testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2C728751B6500CEBCE6 /* opengl_testUITests.m */; };
+		1561F2CA28751B6500CEBCE6 /* opengl_testUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2C928751B6500CEBCE6 /* opengl_testUITestsLaunchTests.m */; };
+		1561F2E028751BF300CEBCE6 /* THBGestTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2DE28751BF300CEBCE6 /* THBGestTestVC.m */; };
+		1561F2E128751BF300CEBCE6 /* THBGestTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561F2DF28751BF300CEBCE6 /* THBGestTestVC.xib */; };
+		1561F2F82875AC6B00CEBCE6 /* THBTestAView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2F72875AC6B00CEBCE6 /* THBTestAView.m */; };
+		1561F2FD2875AC7C00CEBCE6 /* THBTestCView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2FA2875AC7C00CEBCE6 /* THBTestCView.m */; };
+		1561F2FE2875AC7C00CEBCE6 /* THBTestBView..m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2FC2875AC7C00CEBCE6 /* THBTestBView..m */; };
+		1561F3022875AFFA00CEBCE6 /* UITestTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3012875AFFA00CEBCE6 /* UITestTap.m */; };
+		1561F3052875B07500CEBCE6 /* UITestATap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3032875B07500CEBCE6 /* UITestATap.m */; };
+		1561F3082875B46E00CEBCE6 /* THBTestBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3072875B46E00CEBCE6 /* THBTestBtn.m */; };
+		1561F3112875BF5400CEBCE6 /* PXCShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F30B2875BF5400CEBCE6 /* PXCShadowTestVC.m */; };
+		1561F3132875BF5400CEBCE6 /* ipad_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1561F30D2875BF5400CEBCE6 /* ipad_1.png */; };
+		1561F3142875BF5400CEBCE6 /* PXCShadowTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561F30F2875BF5400CEBCE6 /* PXCShadowTestVC.xib */; };
+		1561F31A2875BFD400CEBCE6 /* THBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3192875BFD400CEBCE6 /* THBContext.m */; };
+		1561F31D2875BFDC00CEBCE6 /* THBGLESTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F31C2875BFDC00CEBCE6 /* THBGLESTexture.m */; };
+		1561F3212875BFE800CEBCE6 /* THBPixelBufferUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F31F2875BFE800CEBCE6 /* THBPixelBufferUtil.m */; };
+		1561F3272875BFFF00CEBCE6 /* THBPixelBufferPoolAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3252875BFFE00CEBCE6 /* THBPixelBufferPoolAdaptor.m */; };
+		1561F32A2875C00600CEBCE6 /* CXXFillColorRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3292875C00600CEBCE6 /* CXXFillColorRenderNode.m */; };
+		1561F32D2875C04E00CEBCE6 /* GPUImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F32C2875C04E00CEBCE6 /* GPUImageContext.m */; };
+		1561F3302875C06300CEBCE6 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F32F2875C06300CEBCE6 /* GLProgram.m */; };
+		1561F3362875C17500CEBCE6 /* THBPixelBufferPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3342875C17500CEBCE6 /* THBPixelBufferPool.m */; };
+		158A740C2878229E0038F666 /* MNTPMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158A73F82878229E0038F666 /* MNTPMesh.mm */; };
+		158A740D2878229E0038F666 /* MNTP3DObjCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FA2878229E0038F666 /* MNTP3DObjCache.m */; };
+		158A740E2878229E0038F666 /* MNTP3DAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FB2878229E0038F666 /* MNTP3DAsset.m */; };
+		158A740F2878229E0038F666 /* MNTP3DAssetLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FE2878229E0038F666 /* MNTP3DAssetLoader.mm */; };
+		158A74122878229E0038F666 /* MNTPSubmesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158A74062878229E0038F666 /* MNTPSubmesh.mm */; };
+		158A74132878229E0038F666 /* MNTPMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A740A2878229E0038F666 /* MNTPMaterial.m */; };
+		158A741F287836260038F666 /* MNTPMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A741D287836260038F666 /* MNTPMathUtils.m */; };
+		158A7422287836310038F666 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A7421287836310038F666 /* AAPLMathUtilities.m */; };
+		158A742528783B9C0038F666 /* NSArray+MNTExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A742428783B9C0038F666 /* NSArray+MNTExtend.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1561F2BA28751B6500CEBCE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1561F29628751B6400CEBCE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1561F29D28751B6400CEBCE6;
+			remoteInfo = "opengl-test";
+		};
+		1561F2C428751B6500CEBCE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1561F29628751B6400CEBCE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1561F29D28751B6400CEBCE6;
+			remoteInfo = "opengl-test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1517ADDD287D561E00CF0087 /* THBLightTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBLightTestVC.h; sourceTree = "<group>"; };
+		1517ADDE287D561E00CF0087 /* THBLightTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBLightTestVC.xib; sourceTree = "<group>"; };
+		1517ADDF287D561E00CF0087 /* THBLightTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBLightTestVC.m; sourceTree = "<group>"; };
+		1517ADE4287D57A000CF0087 /* THBTestRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTestRenderNode.m; sourceTree = "<group>"; };
+		1517ADE7287D57A000CF0087 /* THBTestRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTestRenderNode.h; sourceTree = "<group>"; };
+		1517ADEC287D595000CF0087 /* THBTestRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTestRenderer.m; sourceTree = "<group>"; };
+		1517ADED287D595000CF0087 /* THBTestRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTestRenderer.h; sourceTree = "<group>"; };
+		1517ADF6287D694400CF0087 /* UIImage+EAVExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EAVExtend.m"; sourceTree = "<group>"; };
+		1517ADF7287D694400CF0087 /* UIImage+EAVExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EAVExtend.h"; sourceTree = "<group>"; };
+		1517ADFD287D788700CF0087 /* comics_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comics_22.png; sourceTree = "<group>"; };
+		1517ADFF287D78C500CF0087 /* Cutout_002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cutout_002.jpg; sourceTree = "<group>"; };
+		15444EE3287EA00600F5E6DC /* light_fs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_fs.fsh; sourceTree = "<group>"; };
+		15444EE4287EA00600F5E6DC /* light_vs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_vs.fsh; sourceTree = "<group>"; };
+		15444EF0287EAD5400F5E6DC /* resultImage_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resultImage_1.png; sourceTree = "<group>"; };
+		15444F0E287EE83700F5E6DC /* THBTBNLightTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTBNLightTestVC.m; sourceTree = "<group>"; };
+		15444F14287EE83700F5E6DC /* light_tbn_fs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_tbn_fs.fsh; sourceTree = "<group>"; };
+		15444F15287EE83700F5E6DC /* THBTBNTestRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTBNTestRenderer.h; sourceTree = "<group>"; };
+		15444F16287EE83700F5E6DC /* THBTBNTestRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTBNTestRenderNode.h; sourceTree = "<group>"; };
+		15444F17287EE83700F5E6DC /* light_tbn_vs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_tbn_vs.fsh; sourceTree = "<group>"; };
+		15444F18287EE83700F5E6DC /* THBTBNTestRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTBNTestRenderer.m; sourceTree = "<group>"; };
+		15444F19287EE83700F5E6DC /* THBTBNTestRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTBNTestRenderNode.m; sourceTree = "<group>"; };
+		15444F1A287EE83700F5E6DC /* THBTBNLightTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTBNLightTestVC.h; sourceTree = "<group>"; };
+		15444F1B287EE83700F5E6DC /* THBTBNLightTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBTBNLightTestVC.xib; sourceTree = "<group>"; };
+		1561F29E28751B6400CEBCE6 /* opengl-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "opengl-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1561F2A128751B6400CEBCE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1561F2A228751B6400CEBCE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1561F2A428751B6400CEBCE6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		1561F2A528751B6400CEBCE6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		1561F2A728751B6400CEBCE6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1561F2A828751B6400CEBCE6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1561F2AB28751B6400CEBCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1561F2AD28751B6500CEBCE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1561F2B028751B6500CEBCE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1561F2B228751B6500CEBCE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1561F2B328751B6500CEBCE6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1561F2B928751B6500CEBCE6 /* opengl-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "opengl-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1561F2BD28751B6500CEBCE6 /* opengl_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = opengl_testTests.m; sourceTree = "<group>"; };
+		1561F2C328751B6500CEBCE6 /* opengl-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "opengl-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1561F2C728751B6500CEBCE6 /* opengl_testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = opengl_testUITests.m; sourceTree = "<group>"; };
+		1561F2C928751B6500CEBCE6 /* opengl_testUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = opengl_testUITestsLaunchTests.m; sourceTree = "<group>"; };
+		1561F2DD28751BF300CEBCE6 /* THBGestTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBGestTestVC.h; sourceTree = "<group>"; };
+		1561F2DE28751BF300CEBCE6 /* THBGestTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBGestTestVC.m; sourceTree = "<group>"; };
+		1561F2DF28751BF300CEBCE6 /* THBGestTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THBGestTestVC.xib; sourceTree = "<group>"; };
+		1561F2F62875AC6B00CEBCE6 /* THBTestAView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBTestAView.h; sourceTree = "<group>"; };
+		1561F2F72875AC6B00CEBCE6 /* THBTestAView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBTestAView.m; sourceTree = "<group>"; };
+		1561F2F92875AC7C00CEBCE6 /* THBTestBView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTestBView.h; sourceTree = "<group>"; };
+		1561F2FA2875AC7C00CEBCE6 /* THBTestCView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTestCView.m; sourceTree = "<group>"; };
+		1561F2FB2875AC7C00CEBCE6 /* THBTestCView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTestCView.h; sourceTree = "<group>"; };
+		1561F2FC2875AC7C00CEBCE6 /* THBTestBView..m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTestBView..m; sourceTree = "<group>"; };
+		1561F3002875AFFA00CEBCE6 /* UITestTap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITestTap.h; sourceTree = "<group>"; };
+		1561F3012875AFFA00CEBCE6 /* UITestTap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITestTap.m; sourceTree = "<group>"; };
+		1561F3032875B07500CEBCE6 /* UITestATap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITestATap.m; sourceTree = "<group>"; };
+		1561F3042875B07500CEBCE6 /* UITestATap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITestATap.h; sourceTree = "<group>"; };
+		1561F3062875B46E00CEBCE6 /* THBTestBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBTestBtn.h; sourceTree = "<group>"; };
+		1561F3072875B46E00CEBCE6 /* THBTestBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBTestBtn.m; sourceTree = "<group>"; };
+		1561F30B2875BF5400CEBCE6 /* PXCShadowTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PXCShadowTestVC.m; sourceTree = "<group>"; };
+		1561F30D2875BF5400CEBCE6 /* ipad_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_1.png; sourceTree = "<group>"; };
+		1561F30E2875BF5400CEBCE6 /* PXCShadowTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PXCShadowTestVC.h; sourceTree = "<group>"; };
+		1561F30F2875BF5400CEBCE6 /* PXCShadowTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXCShadowTestVC.xib; sourceTree = "<group>"; };
+		1561F3182875BFD400CEBCE6 /* THBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBContext.h; sourceTree = "<group>"; };
+		1561F3192875BFD400CEBCE6 /* THBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBContext.m; sourceTree = "<group>"; };
+		1561F31B2875BFDC00CEBCE6 /* THBGLESTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBGLESTexture.h; sourceTree = "<group>"; };
+		1561F31C2875BFDC00CEBCE6 /* THBGLESTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBGLESTexture.m; sourceTree = "<group>"; };
+		1561F31F2875BFE800CEBCE6 /* THBPixelBufferUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferUtil.m; sourceTree = "<group>"; };
+		1561F3202875BFE800CEBCE6 /* THBPixelBufferUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferUtil.h; sourceTree = "<group>"; };
+		1561F3252875BFFE00CEBCE6 /* THBPixelBufferPoolAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPoolAdaptor.m; sourceTree = "<group>"; };
+		1561F3262875BFFF00CEBCE6 /* THBPixelBufferPoolAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPoolAdaptor.h; sourceTree = "<group>"; };
+		1561F3282875C00600CEBCE6 /* CXXFillColorRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXXFillColorRenderNode.h; sourceTree = "<group>"; };
+		1561F3292875C00600CEBCE6 /* CXXFillColorRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXXFillColorRenderNode.m; sourceTree = "<group>"; };
+		1561F32B2875C04E00CEBCE6 /* GPUImageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageContext.h; sourceTree = "<group>"; };
+		1561F32C2875C04E00CEBCE6 /* GPUImageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageContext.m; sourceTree = "<group>"; };
+		1561F32E2875C06300CEBCE6 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
+		1561F32F2875C06300CEBCE6 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
+		1561F3342875C17500CEBCE6 /* THBPixelBufferPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPool.m; sourceTree = "<group>"; };
+		1561F3352875C17500CEBCE6 /* THBPixelBufferPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPool.h; sourceTree = "<group>"; };
+		158A73F72878229E0038F666 /* MNTPMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMesh.h; sourceTree = "<group>"; };
+		158A73F82878229E0038F666 /* MNTPMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPMesh.mm; sourceTree = "<group>"; };
+		158A73FA2878229E0038F666 /* MNTP3DObjCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DObjCache.m; sourceTree = "<group>"; };
+		158A73FB2878229E0038F666 /* MNTP3DAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DAsset.m; sourceTree = "<group>"; };
+		158A73FC2878229E0038F666 /* MNTP3DAssetLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DAssetLoader.h; sourceTree = "<group>"; };
+		158A73FD2878229E0038F666 /* MNTP3DObjCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DObjCache.h; sourceTree = "<group>"; };
+		158A73FE2878229E0038F666 /* MNTP3DAssetLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTP3DAssetLoader.mm; sourceTree = "<group>"; };
+		158A73FF2878229E0038F666 /* MNTP3DAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DAsset.h; sourceTree = "<group>"; };
+		158A74062878229E0038F666 /* MNTPSubmesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPSubmesh.mm; sourceTree = "<group>"; };
+		158A74072878229E0038F666 /* MNTPSubmesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPSubmesh.h; sourceTree = "<group>"; };
+		158A74092878229E0038F666 /* MNTPMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMaterial.h; sourceTree = "<group>"; };
+		158A740A2878229E0038F666 /* MNTPMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTPMaterial.m; sourceTree = "<group>"; };
+		158A741D287836260038F666 /* MNTPMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTPMathUtils.m; sourceTree = "<group>"; };
+		158A741E287836260038F666 /* MNTPMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMathUtils.h; sourceTree = "<group>"; };
+		158A7420287836310038F666 /* AAPLMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLMathUtilities.h; sourceTree = "<group>"; };
+		158A7421287836310038F666 /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
+		158A742328783B9C0038F666 /* NSArray+MNTExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MNTExtend.h"; sourceTree = "<group>"; };
+		158A742428783B9C0038F666 /* NSArray+MNTExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MNTExtend.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1561F29B28751B6400CEBCE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1561F2B628751B6500CEBCE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1561F2C028751B6500CEBCE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1517ADDC287D560400CF0087 /* light */ = {
+			isa = PBXGroup;
+			children = (
+				15444EE2287E9F7E00F5E6DC /* image */,
+				1517ADE2287D57A000CF0087 /* render */,
+				1517ADDD287D561E00CF0087 /* THBLightTestVC.h */,
+				1517ADDF287D561E00CF0087 /* THBLightTestVC.m */,
+				1517ADDE287D561E00CF0087 /* THBLightTestVC.xib */,
+			);
+			path = light;
+			sourceTree = "<group>";
+		};
+		1517ADE2287D57A000CF0087 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				15444EE3287EA00600F5E6DC /* light_fs.fsh */,
+				15444EE4287EA00600F5E6DC /* light_vs.fsh */,
+				1517ADED287D595000CF0087 /* THBTestRenderer.h */,
+				1517ADEC287D595000CF0087 /* THBTestRenderer.m */,
+				1517ADE7287D57A000CF0087 /* THBTestRenderNode.h */,
+				1517ADE4287D57A000CF0087 /* THBTestRenderNode.m */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
+		15444EE2287E9F7E00F5E6DC /* image */ = {
+			isa = PBXGroup;
+			children = (
+				15444EF0287EAD5400F5E6DC /* resultImage_1.png */,
+				1517ADFF287D78C500CF0087 /* Cutout_002.jpg */,
+				1517ADFD287D788700CF0087 /* comics_22.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		15444F0C287EE7E300F5E6DC /* category */ = {
+			isa = PBXGroup;
+			children = (
+				1517ADF7287D694400CF0087 /* UIImage+EAVExtend.h */,
+				1517ADF6287D694400CF0087 /* UIImage+EAVExtend.m */,
+				158A742328783B9C0038F666 /* NSArray+MNTExtend.h */,
+				158A742428783B9C0038F666 /* NSArray+MNTExtend.m */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		15444F0D287EE81D00F5E6DC /* tbnLight */ = {
+			isa = PBXGroup;
+			children = (
+				15444F13287EE83700F5E6DC /* render */,
+				15444F1A287EE83700F5E6DC /* THBTBNLightTestVC.h */,
+				15444F0E287EE83700F5E6DC /* THBTBNLightTestVC.m */,
+				15444F1B287EE83700F5E6DC /* THBTBNLightTestVC.xib */,
+			);
+			path = tbnLight;
+			sourceTree = "<group>";
+		};
+		15444F13287EE83700F5E6DC /* render */ = {
+			isa = PBXGroup;
+			children = (
+				15444F14287EE83700F5E6DC /* light_tbn_fs.fsh */,
+				15444F17287EE83700F5E6DC /* light_tbn_vs.fsh */,
+				15444F15287EE83700F5E6DC /* THBTBNTestRenderer.h */,
+				15444F18287EE83700F5E6DC /* THBTBNTestRenderer.m */,
+				15444F16287EE83700F5E6DC /* THBTBNTestRenderNode.h */,
+				15444F19287EE83700F5E6DC /* THBTBNTestRenderNode.m */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
+		1561F29528751B6400CEBCE6 = {
+			isa = PBXGroup;
+			children = (
+				1561F2A028751B6400CEBCE6 /* opengl-test */,
+				1561F2BC28751B6500CEBCE6 /* opengl-testTests */,
+				1561F2C628751B6500CEBCE6 /* opengl-testUITests */,
+				1561F29F28751B6400CEBCE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1561F29F28751B6400CEBCE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1561F29E28751B6400CEBCE6 /* opengl-test.app */,
+				1561F2B928751B6500CEBCE6 /* opengl-testTests.xctest */,
+				1561F2C328751B6500CEBCE6 /* opengl-testUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1561F2A028751B6400CEBCE6 /* opengl-test */ = {
+			isa = PBXGroup;
+			children = (
+				15444F0D287EE81D00F5E6DC /* tbnLight */,
+				1517ADDC287D560400CF0087 /* light */,
+				1561F3172875BFC900CEBCE6 /* opengllib */,
+				1561F30A2875BF5400CEBCE6 /* shadow */,
+				1561F3092875BF4400CEBCE6 /* gest&control */,
+				1561F2A128751B6400CEBCE6 /* AppDelegate.h */,
+				1561F2A228751B6400CEBCE6 /* AppDelegate.m */,
+				1561F2A428751B6400CEBCE6 /* SceneDelegate.h */,
+				1561F2A528751B6400CEBCE6 /* SceneDelegate.m */,
+				1561F2A728751B6400CEBCE6 /* ViewController.h */,
+				1561F2A828751B6400CEBCE6 /* ViewController.m */,
+				1561F2AA28751B6400CEBCE6 /* Main.storyboard */,
+				1561F2AD28751B6500CEBCE6 /* Assets.xcassets */,
+				1561F2AF28751B6500CEBCE6 /* LaunchScreen.storyboard */,
+				1561F2B228751B6500CEBCE6 /* Info.plist */,
+				1561F2B328751B6500CEBCE6 /* main.m */,
+			);
+			path = "opengl-test";
+			sourceTree = "<group>";
+		};
+		1561F2BC28751B6500CEBCE6 /* opengl-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				1561F2BD28751B6500CEBCE6 /* opengl_testTests.m */,
+			);
+			path = "opengl-testTests";
+			sourceTree = "<group>";
+		};
+		1561F2C628751B6500CEBCE6 /* opengl-testUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1561F2C728751B6500CEBCE6 /* opengl_testUITests.m */,
+				1561F2C928751B6500CEBCE6 /* opengl_testUITestsLaunchTests.m */,
+			);
+			path = "opengl-testUITests";
+			sourceTree = "<group>";
+		};
+		1561F2E228751C1700CEBCE6 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				1561F2DD28751BF300CEBCE6 /* THBGestTestVC.h */,
+				1561F2DE28751BF300CEBCE6 /* THBGestTestVC.m */,
+				1561F2DF28751BF300CEBCE6 /* THBGestTestVC.xib */,
+			);
+			path = vc;
+			sourceTree = "<group>";
+		};
+		1561F2F52875AC5300CEBCE6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1561F3042875B07500CEBCE6 /* UITestATap.h */,
+				1561F3032875B07500CEBCE6 /* UITestATap.m */,
+				1561F2FB2875AC7C00CEBCE6 /* THBTestCView.h */,
+				1561F2FA2875AC7C00CEBCE6 /* THBTestCView.m */,
+				1561F2F92875AC7C00CEBCE6 /* THBTestBView.h */,
+				1561F2FC2875AC7C00CEBCE6 /* THBTestBView..m */,
+				1561F2F62875AC6B00CEBCE6 /* THBTestAView.h */,
+				1561F2F72875AC6B00CEBCE6 /* THBTestAView.m */,
+				1561F3002875AFFA00CEBCE6 /* UITestTap.h */,
+				1561F3012875AFFA00CEBCE6 /* UITestTap.m */,
+				1561F3062875B46E00CEBCE6 /* THBTestBtn.h */,
+				1561F3072875B46E00CEBCE6 /* THBTestBtn.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1561F3092875BF4400CEBCE6 /* gest&control */ = {
+			isa = PBXGroup;
+			children = (
+				1561F2F52875AC5300CEBCE6 /* view */,
+				1561F2E228751C1700CEBCE6 /* vc */,
+			);
+			path = "gest&control";
+			sourceTree = "<group>";
+		};
+		1561F30A2875BF5400CEBCE6 /* shadow */ = {
+			isa = PBXGroup;
+			children = (
+				1561F30D2875BF5400CEBCE6 /* ipad_1.png */,
+				1561F30E2875BF5400CEBCE6 /* PXCShadowTestVC.h */,
+				1561F30B2875BF5400CEBCE6 /* PXCShadowTestVC.m */,
+				1561F30F2875BF5400CEBCE6 /* PXCShadowTestVC.xib */,
+			);
+			path = shadow;
+			sourceTree = "<group>";
+		};
+		1561F3172875BFC900CEBCE6 /* opengllib */ = {
+			isa = PBXGroup;
+			children = (
+				15444F0C287EE7E300F5E6DC /* category */,
+				158A73F32878229E0038F666 /* Model */,
+				159FFE662876D9C1000D9E36 /* texture */,
+				159FFE652876D9B3000D9E36 /* opengl */,
+				1561F3282875C00600CEBCE6 /* CXXFillColorRenderNode.h */,
+				1561F3292875C00600CEBCE6 /* CXXFillColorRenderNode.m */,
+			);
+			path = opengllib;
+			sourceTree = "<group>";
+		};
+		158A73F32878229E0038F666 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				158A7420287836310038F666 /* AAPLMathUtilities.h */,
+				158A7421287836310038F666 /* AAPLMathUtilities.m */,
+				158A741E287836260038F666 /* MNTPMathUtils.h */,
+				158A741D287836260038F666 /* MNTPMathUtils.m */,
+				158A73F92878229E0038F666 /* Asset */,
+				158A74082878229E0038F666 /* Material */,
+				158A73F42878229E0038F666 /* Mesh */,
+				158A74002878229E0038F666 /* Submesh */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		158A73F42878229E0038F666 /* Mesh */ = {
+			isa = PBXGroup;
+			children = (
+				158A73F72878229E0038F666 /* MNTPMesh.h */,
+				158A73F82878229E0038F666 /* MNTPMesh.mm */,
+			);
+			path = Mesh;
+			sourceTree = "<group>";
+		};
+		158A73F92878229E0038F666 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				158A73FF2878229E0038F666 /* MNTP3DAsset.h */,
+				158A73FB2878229E0038F666 /* MNTP3DAsset.m */,
+				158A73FC2878229E0038F666 /* MNTP3DAssetLoader.h */,
+				158A73FE2878229E0038F666 /* MNTP3DAssetLoader.mm */,
+				158A73FD2878229E0038F666 /* MNTP3DObjCache.h */,
+				158A73FA2878229E0038F666 /* MNTP3DObjCache.m */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		158A74002878229E0038F666 /* Submesh */ = {
+			isa = PBXGroup;
+			children = (
+				158A74072878229E0038F666 /* MNTPSubmesh.h */,
+				158A74062878229E0038F666 /* MNTPSubmesh.mm */,
+			);
+			path = Submesh;
+			sourceTree = "<group>";
+		};
+		158A74082878229E0038F666 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				158A74092878229E0038F666 /* MNTPMaterial.h */,
+				158A740A2878229E0038F666 /* MNTPMaterial.m */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		159FFE652876D9B3000D9E36 /* opengl */ = {
+			isa = PBXGroup;
+			children = (
+				1561F3182875BFD400CEBCE6 /* THBContext.h */,
+				1561F3192875BFD400CEBCE6 /* THBContext.m */,
+				1561F32B2875C04E00CEBCE6 /* GPUImageContext.h */,
+				1561F32C2875C04E00CEBCE6 /* GPUImageContext.m */,
+				1561F32E2875C06300CEBCE6 /* GLProgram.h */,
+				1561F32F2875C06300CEBCE6 /* GLProgram.m */,
+			);
+			path = opengl;
+			sourceTree = "<group>";
+		};
+		159FFE662876D9C1000D9E36 /* texture */ = {
+			isa = PBXGroup;
+			children = (
+				1561F31B2875BFDC00CEBCE6 /* THBGLESTexture.h */,
+				1561F31C2875BFDC00CEBCE6 /* THBGLESTexture.m */,
+				1561F3352875C17500CEBCE6 /* THBPixelBufferPool.h */,
+				1561F3342875C17500CEBCE6 /* THBPixelBufferPool.m */,
+				1561F3262875BFFF00CEBCE6 /* THBPixelBufferPoolAdaptor.h */,
+				1561F3252875BFFE00CEBCE6 /* THBPixelBufferPoolAdaptor.m */,
+				1561F3202875BFE800CEBCE6 /* THBPixelBufferUtil.h */,
+				1561F31F2875BFE800CEBCE6 /* THBPixelBufferUtil.m */,
+			);
+			path = texture;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1561F29D28751B6400CEBCE6 /* opengl-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1561F2CD28751B6500CEBCE6 /* Build configuration list for PBXNativeTarget "opengl-test" */;
+			buildPhases = (
+				1561F29A28751B6400CEBCE6 /* Sources */,
+				1561F29B28751B6400CEBCE6 /* Frameworks */,
+				1561F29C28751B6400CEBCE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "opengl-test";
+			productName = "opengl-test";
+			productReference = 1561F29E28751B6400CEBCE6 /* opengl-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1561F2B828751B6500CEBCE6 /* opengl-testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1561F2D028751B6500CEBCE6 /* Build configuration list for PBXNativeTarget "opengl-testTests" */;
+			buildPhases = (
+				1561F2B528751B6500CEBCE6 /* Sources */,
+				1561F2B628751B6500CEBCE6 /* Frameworks */,
+				1561F2B728751B6500CEBCE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1561F2BB28751B6500CEBCE6 /* PBXTargetDependency */,
+			);
+			name = "opengl-testTests";
+			productName = "opengl-testTests";
+			productReference = 1561F2B928751B6500CEBCE6 /* opengl-testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1561F2C228751B6500CEBCE6 /* opengl-testUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1561F2D328751B6500CEBCE6 /* Build configuration list for PBXNativeTarget "opengl-testUITests" */;
+			buildPhases = (
+				1561F2BF28751B6500CEBCE6 /* Sources */,
+				1561F2C028751B6500CEBCE6 /* Frameworks */,
+				1561F2C128751B6500CEBCE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1561F2C528751B6500CEBCE6 /* PBXTargetDependency */,
+			);
+			name = "opengl-testUITests";
+			productName = "opengl-testUITests";
+			productReference = 1561F2C328751B6500CEBCE6 /* opengl-testUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1561F29628751B6400CEBCE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					1561F29D28751B6400CEBCE6 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					1561F2B828751B6500CEBCE6 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 1561F29D28751B6400CEBCE6;
+					};
+					1561F2C228751B6500CEBCE6 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 1561F29D28751B6400CEBCE6;
+					};
+				};
+			};
+			buildConfigurationList = 1561F29928751B6400CEBCE6 /* Build configuration list for PBXProject "opengl-test" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1561F29528751B6400CEBCE6;
+			productRefGroup = 1561F29F28751B6400CEBCE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1561F29D28751B6400CEBCE6 /* opengl-test */,
+				1561F2B828751B6500CEBCE6 /* opengl-testTests */,
+				1561F2C228751B6500CEBCE6 /* opengl-testUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1561F29C28751B6400CEBCE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1561F2E128751BF300CEBCE6 /* THBGestTestVC.xib in Resources */,
+				15444EE6287EA00600F5E6DC /* light_vs.fsh in Resources */,
+				15444EF1287EAD5400F5E6DC /* resultImage_1.png in Resources */,
+				1517AE00287D78C500CF0087 /* Cutout_002.jpg in Resources */,
+				1517ADFE287D788700CF0087 /* comics_22.png in Resources */,
+				1561F2B128751B6500CEBCE6 /* LaunchScreen.storyboard in Resources */,
+				1561F2AE28751B6500CEBCE6 /* Assets.xcassets in Resources */,
+				1561F3142875BF5400CEBCE6 /* PXCShadowTestVC.xib in Resources */,
+				1517ADE0287D561E00CF0087 /* THBLightTestVC.xib in Resources */,
+				15444F20287EE83700F5E6DC /* light_tbn_fs.fsh in Resources */,
+				1561F2AC28751B6400CEBCE6 /* Main.storyboard in Resources */,
+				1561F3132875BF5400CEBCE6 /* ipad_1.png in Resources */,
+				15444EE5287EA00600F5E6DC /* light_fs.fsh in Resources */,
+				15444F24287EE83700F5E6DC /* THBTBNLightTestVC.xib in Resources */,
+				15444F21287EE83700F5E6DC /* light_tbn_vs.fsh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1561F2B728751B6500CEBCE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1561F2C128751B6500CEBCE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1561F29A28751B6400CEBCE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1561F31D2875BFDC00CEBCE6 /* THBGLESTexture.m in Sources */,
+				1561F3362875C17500CEBCE6 /* THBPixelBufferPool.m in Sources */,
+				1561F2A928751B6400CEBCE6 /* ViewController.m in Sources */,
+				1561F32A2875C00600CEBCE6 /* CXXFillColorRenderNode.m in Sources */,
+				1561F2A328751B6400CEBCE6 /* AppDelegate.m in Sources */,
+				158A741F287836260038F666 /* MNTPMathUtils.m in Sources */,
+				158A742528783B9C0038F666 /* NSArray+MNTExtend.m in Sources */,
+				1561F32D2875C04E00CEBCE6 /* GPUImageContext.m in Sources */,
+				1517ADF8287D694400CF0087 /* UIImage+EAVExtend.m in Sources */,
+				1561F2B428751B6500CEBCE6 /* main.m in Sources */,
+				1561F3082875B46E00CEBCE6 /* THBTestBtn.m in Sources */,
+				1561F31A2875BFD400CEBCE6 /* THBContext.m in Sources */,
+				1561F3272875BFFF00CEBCE6 /* THBPixelBufferPoolAdaptor.m in Sources */,
+				158A7422287836310038F666 /* AAPLMathUtilities.m in Sources */,
+				1561F3052875B07500CEBCE6 /* UITestATap.m in Sources */,
+				1561F3302875C06300CEBCE6 /* GLProgram.m in Sources */,
+				158A740D2878229E0038F666 /* MNTP3DObjCache.m in Sources */,
+				158A740E2878229E0038F666 /* MNTP3DAsset.m in Sources */,
+				1561F2FE2875AC7C00CEBCE6 /* THBTestBView..m in Sources */,
+				1561F2E028751BF300CEBCE6 /* THBGestTestVC.m in Sources */,
+				158A740C2878229E0038F666 /* MNTPMesh.mm in Sources */,
+				1561F2FD2875AC7C00CEBCE6 /* THBTestCView.m in Sources */,
+				1561F2F82875AC6B00CEBCE6 /* THBTestAView.m in Sources */,
+				1517ADE1287D561E00CF0087 /* THBLightTestVC.m in Sources */,
+				1517ADEE287D595000CF0087 /* THBTestRenderer.m in Sources */,
+				158A74122878229E0038F666 /* MNTPSubmesh.mm in Sources */,
+				1561F3212875BFE800CEBCE6 /* THBPixelBufferUtil.m in Sources */,
+				1561F3022875AFFA00CEBCE6 /* UITestTap.m in Sources */,
+				1561F3112875BF5400CEBCE6 /* PXCShadowTestVC.m in Sources */,
+				1561F2A628751B6400CEBCE6 /* SceneDelegate.m in Sources */,
+				15444F22287EE83700F5E6DC /* THBTBNTestRenderer.m in Sources */,
+				1517ADE9287D57A000CF0087 /* THBTestRenderNode.m in Sources */,
+				158A74132878229E0038F666 /* MNTPMaterial.m in Sources */,
+				15444F1C287EE83700F5E6DC /* THBTBNLightTestVC.m in Sources */,
+				15444F23287EE83700F5E6DC /* THBTBNTestRenderNode.m in Sources */,
+				158A740F2878229E0038F666 /* MNTP3DAssetLoader.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1561F2B528751B6500CEBCE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1561F2BE28751B6500CEBCE6 /* opengl_testTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1561F2BF28751B6500CEBCE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1561F2C828751B6500CEBCE6 /* opengl_testUITests.m in Sources */,
+				1561F2CA28751B6500CEBCE6 /* opengl_testUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1561F2BB28751B6500CEBCE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1561F29D28751B6400CEBCE6 /* opengl-test */;
+			targetProxy = 1561F2BA28751B6500CEBCE6 /* PBXContainerItemProxy */;
+		};
+		1561F2C528751B6500CEBCE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1561F29D28751B6400CEBCE6 /* opengl-test */;
+			targetProxy = 1561F2C428751B6500CEBCE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1561F2AA28751B6400CEBCE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1561F2AB28751B6400CEBCE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1561F2AF28751B6500CEBCE6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1561F2B028751B6500CEBCE6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1561F2CB28751B6500CEBCE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1561F2CC28751B6500CEBCE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1561F2CE28751B6500CEBCE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D345JDMWWU;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"GLES_SILENCE_DEPRECATION=1",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "opengl-test/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.opengl-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1561F2CF28751B6500CEBCE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D345JDMWWU;
+				GCC_PREPROCESSOR_DEFINITIONS = "GLES_SILENCE_DEPRECATION=1";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "opengl-test/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.opengl-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1561F2D128751B6500CEBCE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D345JDMWWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.opengl-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/opengl-test.app/opengl-test";
+			};
+			name = Debug;
+		};
+		1561F2D228751B6500CEBCE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D345JDMWWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.opengl-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/opengl-test.app/opengl-test";
+			};
+			name = Release;
+		};
+		1561F2D428751B6500CEBCE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D345JDMWWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.opengl-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "opengl-test";
+			};
+			name = Debug;
+		};
+		1561F2D528751B6500CEBCE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D345JDMWWU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "test.opengl-testUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "opengl-test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1561F29928751B6400CEBCE6 /* Build configuration list for PBXProject "opengl-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1561F2CB28751B6500CEBCE6 /* Debug */,
+				1561F2CC28751B6500CEBCE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1561F2CD28751B6500CEBCE6 /* Build configuration list for PBXNativeTarget "opengl-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1561F2CE28751B6500CEBCE6 /* Debug */,
+				1561F2CF28751B6500CEBCE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1561F2D028751B6500CEBCE6 /* Build configuration list for PBXNativeTarget "opengl-testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1561F2D128751B6500CEBCE6 /* Debug */,
+				1561F2D228751B6500CEBCE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1561F2D328751B6500CEBCE6 /* Build configuration list for PBXNativeTarget "opengl-testUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1561F2D428751B6500CEBCE6 /* Debug */,
+				1561F2D528751B6500CEBCE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1561F29628751B6400CEBCE6 /* Project object */;
+}
