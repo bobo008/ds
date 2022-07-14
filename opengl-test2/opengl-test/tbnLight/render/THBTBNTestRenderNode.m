@@ -93,7 +93,12 @@
     glUniformMatrix4fv([glProgram uniformIndex:@"vMatrix"], 1, GL_FALSE, (GLfloat *)&(_vMatrix));
     glUniformMatrix4fv([glProgram uniformIndex:@"mMatrix"], 1, GL_FALSE, (GLfloat *)&(_mMatrix));
     
+    glUniformMatrix4fv([glProgram uniformIndex:@"TBN"], 1, GL_FALSE, (GLfloat *)&(_tbnMatrix));
+    
+    
     glUniform3f([glProgram uniformIndex:@"lightPos"], -0, 0, 1);
+    
+    glUniform3f([glProgram uniformIndex:@"lightColor"], 1, 1, 1);
     
     glUniform3f([glProgram uniformIndex:@"viewPos"], _cameraPos.x, _cameraPos.y, _cameraPos.z);
 

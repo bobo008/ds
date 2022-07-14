@@ -2,7 +2,7 @@
 #import "THBTBNTestRenderer.h"
 
 
-#import "THBTestRenderNode.h"
+#import "THBTBNTestRenderNode.h"
 
 
 #ifdef DEBUG
@@ -60,10 +60,11 @@ typedef struct THBVertexData {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ipad_1.png" ofType:nil];
     _imageTexture = [self textureForMatrialPath:path];
     
-    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"resultImage_1.png" ofType:nil];
+    NSString *path2 = [[NSBundle mainBundle] pathForResource:@"resultImage_2.png" ofType:nil];
     _normalTexture = [self textureForMatrialPath:path2];
 
-
+    _scale = 1;
+    
 }
 
 - (void)dispose {
@@ -134,7 +135,7 @@ typedef struct THBVertexData {
     [self aaa];
 
     
-    THBTestRenderNode *renderNode = [[THBTestRenderNode alloc] init];
+    THBTBNTestRenderNode *renderNode = [[THBTBNTestRenderNode alloc] init];
     renderNode.outputTexture = canvasGlesTexture;
     [renderNode prepareRender];
 
@@ -148,6 +149,14 @@ typedef struct THBVertexData {
     renderNode.pMatrix = [self obtainP];
     renderNode.vMatrix = [self obtainV];
     renderNode.mMatrix = [self obtainM];
+    
+    
+    
+    renderNode.tbnMatrix = simd_transpose((simd_mul([self obtainM], [self obtainTBN])));
+    
+    
+//    renderNode.tbnMatrix = [self obtainTBN];
+    
     
     simd_float3 cameraPos = simd_make_float3(0, 0, 1.0 / tan(FOV));
     renderNode.cameraPos = cameraPos;
@@ -229,30 +238,22 @@ typedef struct THBVertexData {
 
 
 - (simd_float4x4)obtainP {
-
-
     simd_float4x4 mProj = [self projectionMatrixWithCanvasWidth:1000 canvasHeight:1000];
-
     return mProj;
 }
 
 
 
 - (simd_float4x4)obtainV {
-
-
-
     simd_float4x4 mView = [self viewMatrixWithCanvasWidth:1000 canvasHeight:1000];
-    
-
     return mView;
 }
 
+
+
 - (simd_float4x4)obtainM {
-
-
     simd_float4x4 mModel = ({
-        float scale = 1;
+        float scale = self.scale;
         simd_float4x4 mScale = {
             simd_make_float4(scale, 0, 0, 0),
             simd_make_float4(0, scale, 0, 0),
@@ -260,7 +261,7 @@ typedef struct THBVertexData {
             simd_make_float4(0, 0, 0, 1),
         };
 
-        simd_float4x4 mRotate = [self x:0 y:0 z:0.0];
+        simd_float4x4 mRotate = [self x:self.x y:self.y z:self.z];
         
         simd_float4x4 mTranslate = {
             simd_make_float4(1, 0, 0, 0),
@@ -271,10 +272,21 @@ typedef struct THBVertexData {
         
         simd_mul(simd_mul(mTranslate, mRotate), mScale);
     });
-  
-
     return mModel;
 }
+
+
+- (simd_float4x4)obtainTBN {
+    simd_float4x4 TBN = { /// 因为切线空间 T B 直接可以用1  0  0 1
+        simd_make_float4(1, 0, 0, 0),
+        simd_make_float4(0, 1, 0, 0),
+        simd_make_float4(0, 0, 1, 0),
+        simd_make_float4(0, 0, 0, 1),
+    };
+    
+    return TBN;
+}
+
 
 
 
@@ -344,7 +356,7 @@ typedef struct THBVertexData {
 
 - (simd_float4x4)projectionMatrixWithCanvasWidth:(size_t)canvasWidth canvasHeight:(size_t)canvasHeight {
     
-    const CGFloat n = 1.0;
+    const CGFloat n = 0.1;
     const CGFloat f = 1000.0;
     const CGFloat r = n * tan(FOV);
     const CGFloat t = r * (CGFloat)canvasHeight / (CGFloat)canvasWidth;
@@ -359,7 +371,28 @@ typedef struct THBVertexData {
 
 
 
+- (void)TBN {
+    simd_float2 B = simd_make_float2(0,0.5);
+    simd_float2 A = simd_make_float2(0.5,0);
+    simd_float2 C = simd_make_float2(1,0.6);
+    
+    simd_float2 edge1 = C - A;//E1
+    simd_float2 edge2 = B - A;//E2
+    simd_float2 uv1 = C - A;//纹理坐标向量
+    simd_float2 uv2 = B - A;//纹理坐标向量
 
+    simd_float2x2 T2 = {
+        simd_make_float2(uv1.x, uv1.y),
+        simd_make_float2(uv2.x, uv2.y),
+    };
+    
+    simd_float2x3 TTT2 = {
+        simd_make_float3(edge1, 0),
+        simd_make_float3(edge2, 0),
+    };
+
+    simd_float3x2 ret2 = simd_mul(simd_inverse(simd_transpose(T2)),simd_transpose(TTT2));
+}
 
 
 

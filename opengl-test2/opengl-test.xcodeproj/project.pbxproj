@@ -52,6 +52,7 @@
 		1561F32D2875C04E00CEBCE6 /* GPUImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F32C2875C04E00CEBCE6 /* GPUImageContext.m */; };
 		1561F3302875C06300CEBCE6 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F32F2875C06300CEBCE6 /* GLProgram.m */; };
 		1561F3362875C17500CEBCE6 /* THBPixelBufferPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3342875C17500CEBCE6 /* THBPixelBufferPool.m */; };
+		156BAF39287FAFB500672D06 /* resultImage_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 156BAF38287FAFB500672D06 /* resultImage_2.png */; };
 		158A740C2878229E0038F666 /* MNTPMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158A73F82878229E0038F666 /* MNTPMesh.mm */; };
 		158A740D2878229E0038F666 /* MNTP3DObjCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FA2878229E0038F666 /* MNTP3DObjCache.m */; };
 		158A740E2878229E0038F666 /* MNTP3DAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FB2878229E0038F666 /* MNTP3DAsset.m */; };
@@ -156,6 +157,7 @@
 		1561F32F2875C06300CEBCE6 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
 		1561F3342875C17500CEBCE6 /* THBPixelBufferPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPool.m; sourceTree = "<group>"; };
 		1561F3352875C17500CEBCE6 /* THBPixelBufferPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPool.h; sourceTree = "<group>"; };
+		156BAF38287FAFB500672D06 /* resultImage_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resultImage_2.png; sourceTree = "<group>"; };
 		158A73F72878229E0038F666 /* MNTPMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMesh.h; sourceTree = "<group>"; };
 		158A73F82878229E0038F666 /* MNTPMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPMesh.mm; sourceTree = "<group>"; };
 		158A73FA2878229E0038F666 /* MNTP3DObjCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DObjCache.m; sourceTree = "<group>"; };
@@ -204,7 +206,6 @@
 		1517ADDC287D560400CF0087 /* light */ = {
 			isa = PBXGroup;
 			children = (
-				15444EE2287E9F7E00F5E6DC /* image */,
 				1517ADE2287D57A000CF0087 /* render */,
 				1517ADDD287D561E00CF0087 /* THBLightTestVC.h */,
 				1517ADDF287D561E00CF0087 /* THBLightTestVC.m */,
@@ -229,6 +230,7 @@
 		15444EE2287E9F7E00F5E6DC /* image */ = {
 			isa = PBXGroup;
 			children = (
+				156BAF38287FAFB500672D06 /* resultImage_2.png */,
 				15444EF0287EAD5400F5E6DC /* resultImage_1.png */,
 				1517ADFF287D78C500CF0087 /* Cutout_002.jpg */,
 				1517ADFD287D788700CF0087 /* comics_22.png */,
@@ -294,6 +296,7 @@
 		1561F2A028751B6400CEBCE6 /* opengl-test */ = {
 			isa = PBXGroup;
 			children = (
+				15444EE2287E9F7E00F5E6DC /* image */,
 				15444F0D287EE81D00F5E6DC /* tbnLight */,
 				1517ADDC287D560400CF0087 /* light */,
 				1561F3172875BFC900CEBCE6 /* opengllib */,
@@ -581,6 +584,7 @@
 			files = (
 				1561F2E128751BF300CEBCE6 /* THBGestTestVC.xib in Resources */,
 				15444EE6287EA00600F5E6DC /* light_vs.fsh in Resources */,
+				156BAF39287FAFB500672D06 /* resultImage_2.png in Resources */,
 				15444EF1287EAD5400F5E6DC /* resultImage_1.png in Resources */,
 				1517AE00287D78C500CF0087 /* Cutout_002.jpg in Resources */,
 				1517ADFE287D788700CF0087 /* comics_22.png in Resources */,

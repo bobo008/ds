@@ -65,6 +65,7 @@ typedef struct THBVertexData {
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"resultImage_1.png" ofType:nil];
     _normalTexture = [self textureForMatrialPath:path2];
 
+    _scale = 1;
 
 }
 
@@ -254,7 +255,7 @@ typedef struct THBVertexData {
 
 
     simd_float4x4 mModel = ({
-        float scale = 1;
+        float scale = self.scale;
         simd_float4x4 mScale = {
             simd_make_float4(scale, 0, 0, 0),
             simd_make_float4(0, scale, 0, 0),
@@ -262,7 +263,7 @@ typedef struct THBVertexData {
             simd_make_float4(0, 0, 0, 1),
         };
 
-        simd_float4x4 mRotate = [self x:0 y:0 z:0.0];
+        simd_float4x4 mRotate = [self x:self.x y:self.y z:self.z];
         
         simd_float4x4 mTranslate = {
             simd_make_float4(1, 0, 0, 0),

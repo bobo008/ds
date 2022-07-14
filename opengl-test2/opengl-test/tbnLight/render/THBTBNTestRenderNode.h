@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) simd_float4x4 vMatrix;
 @property (nonatomic) simd_float4x4 mMatrix;
 
+@property (nonatomic) simd_float4x4 tbnMatrix;
+
 @property (nonatomic) simd_float3 cameraPos;
 
 @property (nonatomic) GLuint vertexArrayBuffer;
