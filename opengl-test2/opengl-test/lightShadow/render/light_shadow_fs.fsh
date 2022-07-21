@@ -5,7 +5,7 @@ precision highp float;
 precision mediump int;
 
 in highp vec2 textureCoordinate;
-//in vec3 normal;// 具备发现贴图以后这个normal就失效了
+in highp vec3 shadowMapTextureCoord;
 in vec3 FragPos;
 in vec3 FragPos_tbn;
 in vec3 lightPos_tbn;
@@ -14,6 +14,7 @@ in vec3 viewPos_tbn;
 
 uniform sampler2D inputImageTexture;
 uniform sampler2D inputImageTexture2;
+uniform sampler2D inputImageTexture3;
 uniform vec3 lightPos;
 uniform vec3 viewPos;
 uniform vec3 lightColor;
@@ -82,8 +83,18 @@ void main() {
     vec3 ret3 = getSpecula(objColor, normal2);
     FragColor = vec4((ret + ret2 + ret3) * objColor.xyz, 1.0);
     
-
     
-//    gl_FragColor = texture2D(inputImageTexture, textureCoordinate);
-//    gl_FragColor = vec4(0.5,0.5,1.,1.);
+    
+
+    vec4 aaaa = texture(inputImageTexture3, shadowMapTextureCoord.xy);
+    if (aaaa.a == 0.) {
+        FragColor = vec4((ret + ret2 + ret3) * objColor.xyz, 1.0);
+    } else if(aaaa.g - shadowMapTextureCoord.z < (1. / 255.) && aaaa.g - shadowMapTextureCoord.z > (-1. / 255.)) {/// 效果不太对劲，不应该用这个存，应该用每个比特存8位再读出来，精度太辣鸡
+        FragColor = vec4((ret + ret2 + ret3) * objColor.xyz, 1.0);
+    } else {
+        FragColor = vec4(ret * objColor.xyz, 1.0);
+    }
+    
+    
+
 }

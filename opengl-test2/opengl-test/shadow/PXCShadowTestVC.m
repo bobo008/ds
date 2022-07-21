@@ -63,9 +63,6 @@ static NSString * const shadowFs = SHADER_STRING
 //    gl_FragColor = texture2D(inputImageTexture, textureCoordinate);
 
  }
-
-
- 
  );
 
 
@@ -430,7 +427,7 @@ static THBGLESTexture * _Nullable GLESTextureFromImage(UIImage * _Nullable image
             
             simd_float4x4 aa = simd_mul(modelMatix2, positionMatix);
             simd_float4x4 aaa = simd_mul(viewMatix, aa);
-            simd_float4x4 aaaa = simd_mul(projectionMatix, aaa);
+//            simd_float4x4 aaaa = simd_mul(projectionMatix, aaa);
             
             glUniform1i([glProgram uniformIndex:CXX_GLSL_UNIFORM_INPUT_TEXTURE], 0);
             glActiveTexture(GL_TEXTURE0);

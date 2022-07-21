@@ -62,6 +62,13 @@
 		158A741F287836260038F666 /* MNTPMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A741D287836260038F666 /* MNTPMathUtils.m */; };
 		158A7422287836310038F666 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A7421287836310038F666 /* AAPLMathUtilities.m */; };
 		158A742528783B9C0038F666 /* NSArray+MNTExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A742428783B9C0038F666 /* NSArray+MNTExtend.m */; };
+		15B9B6272889371800EBA315 /* THBShadowMapRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */; };
+		15DF389E2880423D00D041D7 /* THBLightShadowTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */; };
+		15DF389F2880423D00D041D7 /* THBLightShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DF38952880423D00D041D7 /* THBLightShadowTestVC.m */; };
+		15DF38A02880423D00D041D7 /* light_shadow_vs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15DF38972880423D00D041D7 /* light_shadow_vs.fsh */; };
+		15DF38A12880423D00D041D7 /* THBShadowTestRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DF389A2880423D00D041D7 /* THBShadowTestRenderNode.m */; };
+		15DF38A22880423D00D041D7 /* light_shadow_fs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15DF389B2880423D00D041D7 /* light_shadow_fs.fsh */; };
+		15DF38A32880423D00D041D7 /* THBShadowTestRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DF389C2880423D00D041D7 /* THBShadowTestRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +183,17 @@
 		158A7421287836310038F666 /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
 		158A742328783B9C0038F666 /* NSArray+MNTExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MNTExtend.h"; sourceTree = "<group>"; };
 		158A742428783B9C0038F666 /* NSArray+MNTExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MNTExtend.m"; sourceTree = "<group>"; };
+		15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBShadowMapRenderNode.m; sourceTree = "<group>"; };
+		15B9B6262889371800EBA315 /* THBShadowMapRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBShadowMapRenderNode.h; sourceTree = "<group>"; };
+		15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBLightShadowTestVC.xib; sourceTree = "<group>"; };
+		15DF38952880423D00D041D7 /* THBLightShadowTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBLightShadowTestVC.m; sourceTree = "<group>"; };
+		15DF38972880423D00D041D7 /* light_shadow_vs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_shadow_vs.fsh; sourceTree = "<group>"; };
+		15DF38982880423D00D041D7 /* THBShadowTestRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBShadowTestRenderer.h; sourceTree = "<group>"; };
+		15DF38992880423D00D041D7 /* THBShadowTestRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBShadowTestRenderNode.h; sourceTree = "<group>"; };
+		15DF389A2880423D00D041D7 /* THBShadowTestRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBShadowTestRenderNode.m; sourceTree = "<group>"; };
+		15DF389B2880423D00D041D7 /* light_shadow_fs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_shadow_fs.fsh; sourceTree = "<group>"; };
+		15DF389C2880423D00D041D7 /* THBShadowTestRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBShadowTestRenderer.m; sourceTree = "<group>"; };
+		15DF389D2880423D00D041D7 /* THBLightShadowTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBLightShadowTestVC.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +314,7 @@
 		1561F2A028751B6400CEBCE6 /* opengl-test */ = {
 			isa = PBXGroup;
 			children = (
+				15DF38932880423D00D041D7 /* lightShadow */,
 				15444EE2287E9F7E00F5E6DC /* image */,
 				15444F0D287EE81D00F5E6DC /* tbnLight */,
 				1517ADDC287D560400CF0087 /* light */,
@@ -479,6 +498,32 @@
 			path = texture;
 			sourceTree = "<group>";
 		};
+		15DF38932880423D00D041D7 /* lightShadow */ = {
+			isa = PBXGroup;
+			children = (
+				15DF38962880423D00D041D7 /* render */,
+				15DF389D2880423D00D041D7 /* THBLightShadowTestVC.h */,
+				15DF38952880423D00D041D7 /* THBLightShadowTestVC.m */,
+				15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */,
+			);
+			path = lightShadow;
+			sourceTree = "<group>";
+		};
+		15DF38962880423D00D041D7 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				15B9B6262889371800EBA315 /* THBShadowMapRenderNode.h */,
+				15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */,
+				15DF389B2880423D00D041D7 /* light_shadow_fs.fsh */,
+				15DF38972880423D00D041D7 /* light_shadow_vs.fsh */,
+				15DF38982880423D00D041D7 /* THBShadowTestRenderer.h */,
+				15DF389C2880423D00D041D7 /* THBShadowTestRenderer.m */,
+				15DF38992880423D00D041D7 /* THBShadowTestRenderNode.h */,
+				15DF389A2880423D00D041D7 /* THBShadowTestRenderNode.m */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -594,6 +639,9 @@
 				1517ADE0287D561E00CF0087 /* THBLightTestVC.xib in Resources */,
 				15444F20287EE83700F5E6DC /* light_tbn_fs.fsh in Resources */,
 				1561F2AC28751B6400CEBCE6 /* Main.storyboard in Resources */,
+				15DF38A02880423D00D041D7 /* light_shadow_vs.fsh in Resources */,
+				15DF389E2880423D00D041D7 /* THBLightShadowTestVC.xib in Resources */,
+				15DF38A22880423D00D041D7 /* light_shadow_fs.fsh in Resources */,
 				1561F3132875BF5400CEBCE6 /* ipad_1.png in Resources */,
 				15444EE5287EA00600F5E6DC /* light_fs.fsh in Resources */,
 				15444F24287EE83700F5E6DC /* THBTBNLightTestVC.xib in Resources */,
@@ -625,11 +673,14 @@
 				1561F31D2875BFDC00CEBCE6 /* THBGLESTexture.m in Sources */,
 				1561F3362875C17500CEBCE6 /* THBPixelBufferPool.m in Sources */,
 				1561F2A928751B6400CEBCE6 /* ViewController.m in Sources */,
+				15DF38A32880423D00D041D7 /* THBShadowTestRenderer.m in Sources */,
 				1561F32A2875C00600CEBCE6 /* CXXFillColorRenderNode.m in Sources */,
 				1561F2A328751B6400CEBCE6 /* AppDelegate.m in Sources */,
 				158A741F287836260038F666 /* MNTPMathUtils.m in Sources */,
 				158A742528783B9C0038F666 /* NSArray+MNTExtend.m in Sources */,
+				15B9B6272889371800EBA315 /* THBShadowMapRenderNode.m in Sources */,
 				1561F32D2875C04E00CEBCE6 /* GPUImageContext.m in Sources */,
+				15DF389F2880423D00D041D7 /* THBLightShadowTestVC.m in Sources */,
 				1517ADF8287D694400CF0087 /* UIImage+EAVExtend.m in Sources */,
 				1561F2B428751B6500CEBCE6 /* main.m in Sources */,
 				1561F3082875B46E00CEBCE6 /* THBTestBtn.m in Sources */,
@@ -638,6 +689,7 @@
 				158A7422287836310038F666 /* AAPLMathUtilities.m in Sources */,
 				1561F3052875B07500CEBCE6 /* UITestATap.m in Sources */,
 				1561F3302875C06300CEBCE6 /* GLProgram.m in Sources */,
+				15DF38A12880423D00D041D7 /* THBShadowTestRenderNode.m in Sources */,
 				158A740D2878229E0038F666 /* MNTP3DObjCache.m in Sources */,
 				158A740E2878229E0038F666 /* MNTP3DAsset.m in Sources */,
 				1561F2FE2875AC7C00CEBCE6 /* THBTestBView..m in Sources */,

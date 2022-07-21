@@ -15,6 +15,7 @@
 
 #import "THBLightTestVC.h"
 
+#import "THBLightShadowTestVC.h"
 
 #import "THBContext.h"
 
@@ -29,14 +30,18 @@
     // Do any additional setup after loading the view.
     
     
-    THBTBNLightTestVC *vc = [[THBTBNLightTestVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-    
-    
     
     
     
 }
 
+- (IBAction)onBtn:(id)sender {
+    
+    THBLightShadowTestVC *vc = [[THBLightShadowTestVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    
+}
 
 @end

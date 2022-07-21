@@ -1,11 +1,11 @@
 
 
-#import "THBTBNTestRenderNode.h"
+#import "THBShadowTestRenderNode.h"
 
 
 
 
-@interface THBTBNTestRenderNode () {
+@interface THBShadowTestRenderNode () {
     GLuint _rbo;
     GLuint _framebuffer;
 }
@@ -13,7 +13,7 @@
 
 @end
 
-@implementation THBTBNTestRenderNode
+@implementation THBShadowTestRenderNode
 
 
 - (void)prepareRender {
@@ -87,11 +87,22 @@
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
     
+    glUniform1i([glProgram uniformIndex:@"inputImageTexture3"], 2);
+    glActiveTexture(GL_TEXTURE2);
+    glBindTexture(CVOpenGLESTextureGetTarget(_inputTexture3.texture), CVOpenGLESTextureGetName(_inputTexture3.texture));
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_MIRRORED_REPEAT);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_MIRRORED_REPEAT);
+    
     
 
     glUniformMatrix4fv([glProgram uniformIndex:@"pMatrix"], 1, GL_FALSE, (GLfloat *)&(_pMatrix));
     glUniformMatrix4fv([glProgram uniformIndex:@"vMatrix"], 1, GL_FALSE, (GLfloat *)&(_vMatrix));
     glUniformMatrix4fv([glProgram uniformIndex:@"mMatrix"], 1, GL_FALSE, (GLfloat *)&(_mMatrix));
+    
+    
+    glUniformMatrix4fv([glProgram uniformIndex:@"shadowMapMVP"], 1, GL_FALSE, (GLfloat *)&(_shadowMVP));
     
 
     glUniform3f([glProgram uniformIndex:@"lightPos"], _lightPos.x, _lightPos.y, _lightPos.z);
@@ -127,12 +138,12 @@
     if (!glProgram) {
         NSArray<NSString *> *attributeNames = @[
             @"position",
-            @"inputImageTexture",
+            @"inputTextureCoordinate",
             @"aNormal",
             @"tangent",
         ];
         
-        glProgram = CXXLoadGLProgram([self shaderWithNamed:@"light_tbn_vs.fsh"], [self shaderWithNamed:@"light_tbn_fs.fsh"], attributeNames);
+        glProgram = CXXLoadGLProgram([self shaderWithNamed:@"light_shadow_vs.fsh"], [self shaderWithNamed:@"light_shadow_fs.fsh"], attributeNames);
         [glProgramMap setObject:glProgram forKey:key];
     }
     return glProgram;

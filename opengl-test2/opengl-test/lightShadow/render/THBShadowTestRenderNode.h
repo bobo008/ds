@@ -9,17 +9,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface THBTBNTestRenderNode : NSObject
+@interface THBShadowTestRenderNode : NSObject
 
 @property (nonatomic) THBGLESTexture *inputTexture;
 @property (nonatomic) THBGLESTexture *outputTexture;
 
 @property (nonatomic) THBGLESTexture *inputTexture2;
 
+@property (nonatomic) THBGLESTexture *inputTexture3;
+
 
 @property (nonatomic) simd_float4x4 pMatrix;
 @property (nonatomic) simd_float4x4 vMatrix;
 @property (nonatomic) simd_float4x4 mMatrix;
+@property (nonatomic) simd_float4x4 shadowMVP;
 
 
 @property (nonatomic) simd_float3 lightPos;

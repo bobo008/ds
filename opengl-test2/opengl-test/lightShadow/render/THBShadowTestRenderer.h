@@ -10,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 
-@interface THBTBNTestRenderer : NSObject
+@interface THBShadowTestRenderer : NSObject
 
 @property (nonatomic, readonly) THBPixelBufferPoolAdaptor *pixelPool;
 
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (THBGLESTexture *)drawCanvas;
 
 
-
+- (THBGLESTexture *)drawShadowMap;
 
 
 

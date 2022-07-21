@@ -1,13 +1,15 @@
 
-#import "THBTBNLightTestVC.h"
+#import "THBLightShadowTestVC.h"
 
-#import "THBTBNTestRenderer.h"
+#import "THBShadowTestRenderer.h"
 #import "THBTestRenderer.h"
 
 #import "UIImage+EAVExtend.h"
 
+/// 残缺版阴影贴图
 
-@interface THBTBNLightTestVC ()
+
+@interface THBLightShadowTestVC ()
 
 @property (weak, nonatomic) IBOutlet UIView *renderView;
 @property (nonatomic) UIImageView *imageView;
@@ -26,11 +28,11 @@
 @property (weak, nonatomic) IBOutlet UISlider *slider8;
 
 
-@property (nonatomic) THBTBNTestRenderer *render;
+@property (nonatomic) THBShadowTestRenderer *render;
 
 @end
 
-@implementation THBTBNLightTestVC
+@implementation THBLightShadowTestVC
 
 
 
@@ -51,7 +53,7 @@
 
 
 
-    THBTBNTestRenderer *render = [[THBTBNTestRenderer alloc] init];
+    THBShadowTestRenderer *render = [[THBShadowTestRenderer alloc] init];
     self.render = render;
 
     [[THBContext sharedInstance] runSyncOnRenderingQueue:^{
@@ -65,10 +67,7 @@
     [self.slider2 setValue:0.5];
     [self.slider3 setValue:0.5];
     [self.slider4 setValue:0.5];
-    
-    
     [self.slider5 setValue:0.5];
-    
 }
 
 
@@ -96,8 +95,6 @@
 
 
 - (IBAction)onReset:(id)sender {
-    
-    
     self.render.scale = 1;
     self.render.x = 0;
     self.render.y = 0;
@@ -141,9 +138,6 @@
         self.render.offset_z = slider.value * 6 - 3;
         [self renderIfNeed];
     }
-    
-    
-    
 }
 
 

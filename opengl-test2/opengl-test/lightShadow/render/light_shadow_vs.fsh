@@ -7,6 +7,9 @@ in vec3 aNormal;
 in vec3 tangent;
 
 
+
+uniform highp mat4 shadowMapMVP;
+
 uniform highp mat4 pMatrix;
 uniform highp mat4 vMatrix;
 uniform highp mat4 mMatrix;
@@ -16,8 +19,9 @@ uniform vec3 lightColor;
 uniform vec3 viewPos;
 
 
-//out vec3 normal;
+
 out vec2 textureCoordinate;
+out vec3 shadowMapTextureCoord;
 out vec3 FragPos;
 
 out vec3 FragPos_tbn;
@@ -32,9 +36,11 @@ void main()
     gl_Position = pMatrix * vMatrix * mMatrix * position;
     textureCoordinate = inputTextureCoordinate.xy;
     
-    FragPos = vec3(mMatrix * position);
+    highp vec4  ass =  shadowMapMVP * position;
+    shadowMapTextureCoord = vec3(ass.x / ass.w * 0.5 + 0.5,ass.y / ass.w * 0.5 + 0.5, ass.z / ass.w * 0.5 + 0.5);
     
-//    normal = aNormal;
+    FragPos = vec3(mMatrix * position);
+
     
     /// 将 灯光位置 眼睛位置 片段位置 转换到TBN空间
 //    vec3 T = normalize(tangent);
@@ -54,6 +60,9 @@ void main()
     FragPos_tbn = inverseTBN * FragPos;
     lightPos_tbn = inverseTBN * lightPos;
     viewPos_tbn = inverseTBN * viewPos;
+    
+    
+    
     
     
 }
