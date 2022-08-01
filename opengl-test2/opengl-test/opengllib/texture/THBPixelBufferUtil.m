@@ -4,6 +4,7 @@
 #import <VideoToolbox/VideoToolbox.h>
 #import <OpenGLES/ES3/gl.h>
 #import <OpenGLES/ES3/glext.h>
+#import <Accelerate/Accelerate.h>
 
 void CGImageToPixelBufferReleaseBytesCallback(void * CV_NULLABLE releaseRefCon, const void * CV_NULLABLE baseAddress) {
     CFTypeRef cf = releaseRefCon;
@@ -162,6 +163,110 @@ void CGImageToPixelBufferReleaseBytesCallback(void * CV_NULLABLE releaseRefCon, 
     free(data);
     return cgImage;
 }
+
+
+
+
++ (CVPixelBufferRef)correct:(CVPixelBufferRef)pixel orientation:(UIImageOrientation)orientation {
+    CVPixelBufferLockBaseAddress(pixel, 0);
+    vImage_Buffer sourceBuffer = {
+        .data = CVPixelBufferGetBaseAddress(pixel),
+        .height = CVPixelBufferGetHeight(pixel),
+        .width = CVPixelBufferGetWidth(pixel),
+        .rowBytes = CVPixelBufferGetBytesPerRow(pixel)
+    };
+    CVPixelBufferUnlockBaseAddress(pixel, 0);
+    OSType pixelFormat = CVPixelBufferGetPixelFormatType(pixel);
+    if (   pixelFormat == kCVPixelFormatType_OneComponent8
+        || pixelFormat == kCVPixelFormatType_32BGRA
+        ) {
+        // 希望的格式
+    } else {
+        NSAssert(NO, @"格式不支持，请扩充");
+    }
+    
+    CGSize size = (orientation == UIImageOrientationRight || orientation == UIImageOrientationLeft || orientation == UIImageOrientationRightMirrored || orientation == UIImageOrientationLeftMirrored) ? CGSizeMake(CVPixelBufferGetHeight(pixel), CVPixelBufferGetWidth(pixel)) : CGSizeMake(CVPixelBufferGetWidth(pixel), CVPixelBufferGetHeight(pixel));
+    
+    CVPixelBufferRef dstPixel = [THBPixelBufferUtil pixelBufferForWidth:size.width height:size.height format:pixelFormat];
+    
+    
+    CVPixelBufferLockBaseAddress(dstPixel, 0);
+    vImage_Buffer destinationBuffer = {
+        .data = CVPixelBufferGetBaseAddress(dstPixel),
+        .height = CVPixelBufferGetHeight(dstPixel),
+        .width = CVPixelBufferGetWidth(dstPixel),
+        .rowBytes = CVPixelBufferGetBytesPerRow(dstPixel)
+    };
+
+    if (pixelFormat == kCVPixelFormatType_OneComponent8) {
+        vImage_CGAffineTransform transform = [self transformWithOrientation:orientation x:CVPixelBufferGetWidth(pixel) y:CVPixelBufferGetHeight(pixel)];
+        vImage_Error scaleErr = vImageAffineWarpCG_Planar8(&sourceBuffer, &destinationBuffer, 0, &transform, 0, kvImageBackgroundColorFill);
+        NSCAssert(scaleErr == kvImageNoError, @"[vImageAffineWarp_Planar8]: %d", (int)scaleErr);
+    } else if (pixelFormat == kCVPixelFormatType_32BGRA) {
+        vImage_CGAffineTransform transform = [self transformWithOrientation:orientation x:CVPixelBufferGetWidth(pixel) y:CVPixelBufferGetHeight(pixel)];
+        Pixel_8888 backgroundColor = {255, 255, 255, 255};
+        vImage_Error scaleErr = vImageAffineWarpCG_ARGB8888(&sourceBuffer, &destinationBuffer, 0, &transform, backgroundColor, kvImageBackgroundColorFill);
+        NSCAssert(scaleErr == kvImageNoError, @"[vImageAffineWarp_ARGB8888]: %d", (int)scaleErr);
+    }
+    CVPixelBufferUnlockBaseAddress(dstPixel, 0);
+    
+    return dstPixel;
+}
+
++ (vImage_CGAffineTransform)transformWithOrientation:(UIImageOrientation)orientation x:(float)x y:(float)y {
+    CGAffineTransform transform = CGAffineTransformIdentity;
+
+    if (orientation == UIImageOrientationUp) {
+
+    }
+    if (orientation == UIImageOrientationUpMirrored) {
+        transform = CGAffineTransformTranslate(transform, x, 0);
+        transform = CGAffineTransformScale(transform, -1, 1);
+    }
+    
+    if (orientation == UIImageOrientationDown) {
+        transform = CGAffineTransformTranslate(transform, x, y);
+        transform = CGAffineTransformRotate(transform, M_PI);
+
+    }
+    if (orientation == UIImageOrientationDownMirrored) {
+        transform = CGAffineTransformTranslate(transform, x, y);
+        transform = CGAffineTransformRotate(transform, M_PI);
+        transform = CGAffineTransformTranslate(transform, x, 0);
+        transform = CGAffineTransformScale(transform, -1, 1);
+    }
+    
+    
+    if (orientation == UIImageOrientationLeft) {
+        transform = CGAffineTransformTranslate(transform, y, 0);
+        transform = CGAffineTransformRotate(transform, M_PI_2);
+    }
+    if (orientation == UIImageOrientationLeftMirrored) {
+        transform = CGAffineTransformTranslate(transform, y, 0);
+        transform = CGAffineTransformRotate(transform, M_PI_2);
+        transform = CGAffineTransformTranslate(transform, x, 0);
+        transform = CGAffineTransformScale(transform, -1, 1);
+    }
+    
+    
+    if (orientation == UIImageOrientationRight) {
+        transform = CGAffineTransformTranslate(transform, 0, x);
+        transform = CGAffineTransformRotate(transform, -M_PI_2);
+    }
+    if (orientation == UIImageOrientationRightMirrored) {
+        transform = CGAffineTransformTranslate(transform, 0, x);
+        transform = CGAffineTransformRotate(transform, -M_PI_2);
+        transform = CGAffineTransformTranslate(transform, x, 0);
+        transform = CGAffineTransformScale(transform, -1, 1);
+    }
+
+    vImage_CGAffineTransform cg_transform = *((vImage_CGAffineTransform *)&transform);
+    return cg_transform;
+}
+
+
+
+
 
 @end
 

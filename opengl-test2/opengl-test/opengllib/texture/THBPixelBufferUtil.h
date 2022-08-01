@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (UIImage *)imageForPixelBuffer:(CVPixelBufferRef)pixelBuffer;
 + (CGImageRef)cgImageForPixelBuffer:(CVPixelBufferRef)pixelBuffer;
+
+
++ (CVPixelBufferRef)correct:(CVPixelBufferRef)pixel orientation:(UIImageOrientation)orientation;
+
 @end
 
 @interface THBPixelBufferUtil (INP)

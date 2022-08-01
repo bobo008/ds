@@ -69,15 +69,21 @@ typedef struct THBTNData {
     _coreTextureCache = [GPUImageContext sharedImageProcessingContext].coreVideoTextureCache;
     
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"ipad_1.png" ofType:nil];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Cutout_002.jpg" ofType:nil];
     _imageTexture = [self textureForMatrialPath:path];
     
+//    CVPixelBufferRef aaa = [self render2:_imageTexture.pixel orientation:UIImageOrientationLeftMirrored];
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"resultImage_2.png" ofType:nil];
     _normalTexture = [self textureForMatrialPath:path2];
 
     _scale = 1;
     
 }
+
+
+
+
+
 
 - (void)dispose {
     @autoreleasepool {
