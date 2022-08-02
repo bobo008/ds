@@ -19,6 +19,9 @@
 
 #import "THBContext.h"
 
+
+#import "THBMSAARenderNode.h"
+
 @interface ViewController ()
 
 @end
@@ -37,11 +40,17 @@
 
 - (IBAction)onBtn:(id)sender {
     
-    THBLightShadowTestVC *vc = [[THBLightShadowTestVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    THBLightShadowTestVC *vc = [[THBLightShadowTestVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
     
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Cutout_002.jpg" ofType:nil];
+    CVPixelBufferRef pixel = [THBPixelBufferUtil pixelBufferForLocalURL:[NSURL fileURLWithPath:path]];
     
+    
+    THBMSAARenderNode *renderNode = [[THBMSAARenderNode alloc] init];
+    renderNode.input = pixel;
+    [renderNode render];
 }
 
 @end

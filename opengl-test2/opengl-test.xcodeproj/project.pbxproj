@@ -26,6 +26,8 @@
 		155E2E702898FA48004D979C /* EAVOrientationRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E6C2898FA48004D979C /* EAVOrientationRenderNode.m */; };
 		155E2E712898FA48004D979C /* AAPLShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E6F2898FA48004D979C /* AAPLShaders.metal */; };
 		155E2E7628990AB2004D979C /* THBMsaaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E7528990AB2004D979C /* THBMsaaTest.m */; };
+		155E2E7C28990E41004D979C /* MsaaShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E7928990E41004D979C /* MsaaShaders.metal */; };
+		155E2E7D28990E41004D979C /* THBMSAARenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E7B28990E41004D979C /* THBMSAARenderNode.m */; };
 		1561F2A328751B6400CEBCE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A228751B6400CEBCE6 /* AppDelegate.m */; };
 		1561F2A628751B6400CEBCE6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A528751B6400CEBCE6 /* SceneDelegate.m */; };
 		1561F2A928751B6400CEBCE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A828751B6400CEBCE6 /* ViewController.m */; };
@@ -121,6 +123,10 @@
 		155E2E6F2898FA48004D979C /* AAPLShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = AAPLShaders.metal; sourceTree = "<group>"; };
 		155E2E7428990AB2004D979C /* THBMsaaTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBMsaaTest.h; sourceTree = "<group>"; };
 		155E2E7528990AB2004D979C /* THBMsaaTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBMsaaTest.m; sourceTree = "<group>"; };
+		155E2E7828990E41004D979C /* THBMSAARenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBMSAARenderNode.h; sourceTree = "<group>"; };
+		155E2E7928990E41004D979C /* MsaaShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MsaaShaders.metal; sourceTree = "<group>"; };
+		155E2E7A28990E41004D979C /* MsaaShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsaaShaderTypes.h; sourceTree = "<group>"; };
+		155E2E7B28990E41004D979C /* THBMSAARenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBMSAARenderNode.m; sourceTree = "<group>"; };
 		1561F29E28751B6400CEBCE6 /* opengl-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "opengl-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1561F2A128751B6400CEBCE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1561F2A228751B6400CEBCE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -322,10 +328,22 @@
 		155E2E7328990A8D004D979C /* openglMSAA */ = {
 			isa = PBXGroup;
 			children = (
+				155E2E7728990E2D004D979C /* New Group */,
 				155E2E7428990AB2004D979C /* THBMsaaTest.h */,
 				155E2E7528990AB2004D979C /* THBMsaaTest.m */,
 			);
 			path = openglMSAA;
+			sourceTree = "<group>";
+		};
+		155E2E7728990E2D004D979C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				155E2E7928990E41004D979C /* MsaaShaders.metal */,
+				155E2E7A28990E41004D979C /* MsaaShaderTypes.h */,
+				155E2E7828990E41004D979C /* THBMSAARenderNode.h */,
+				155E2E7B28990E41004D979C /* THBMSAARenderNode.m */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		1561F29528751B6400CEBCE6 = {
@@ -745,8 +763,10 @@
 				1561F3212875BFE800CEBCE6 /* THBPixelBufferUtil.m in Sources */,
 				1561F3022875AFFA00CEBCE6 /* UITestTap.m in Sources */,
 				1561F3112875BF5400CEBCE6 /* PXCShadowTestVC.m in Sources */,
+				155E2E7D28990E41004D979C /* THBMSAARenderNode.m in Sources */,
 				1561F2A628751B6400CEBCE6 /* SceneDelegate.m in Sources */,
 				15444F22287EE83700F5E6DC /* THBTBNTestRenderer.m in Sources */,
+				155E2E7C28990E41004D979C /* MsaaShaders.metal in Sources */,
 				1517ADE9287D57A000CF0087 /* THBTestRenderNode.m in Sources */,
 				158A74132878229E0038F666 /* MNTPMaterial.m in Sources */,
 				15444F1C287EE83700F5E6DC /* THBTBNLightTestVC.m in Sources */,
