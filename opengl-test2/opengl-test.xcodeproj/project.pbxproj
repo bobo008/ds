@@ -23,6 +23,8 @@
 		15444F22287EE83700F5E6DC /* THBTBNTestRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15444F18287EE83700F5E6DC /* THBTBNTestRenderer.m */; };
 		15444F23287EE83700F5E6DC /* THBTBNTestRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15444F19287EE83700F5E6DC /* THBTBNTestRenderNode.m */; };
 		15444F24287EE83700F5E6DC /* THBTBNLightTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15444F1B287EE83700F5E6DC /* THBTBNLightTestVC.xib */; };
+		155E2E702898FA48004D979C /* EAVOrientationRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E6C2898FA48004D979C /* EAVOrientationRenderNode.m */; };
+		155E2E712898FA48004D979C /* AAPLShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E6F2898FA48004D979C /* AAPLShaders.metal */; };
 		1561F2A328751B6400CEBCE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A228751B6400CEBCE6 /* AppDelegate.m */; };
 		1561F2A628751B6400CEBCE6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A528751B6400CEBCE6 /* SceneDelegate.m */; };
 		1561F2A928751B6400CEBCE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A828751B6400CEBCE6 /* ViewController.m */; };
@@ -112,6 +114,10 @@
 		15444F19287EE83700F5E6DC /* THBTBNTestRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTBNTestRenderNode.m; sourceTree = "<group>"; };
 		15444F1A287EE83700F5E6DC /* THBTBNLightTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTBNLightTestVC.h; sourceTree = "<group>"; };
 		15444F1B287EE83700F5E6DC /* THBTBNLightTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBTBNLightTestVC.xib; sourceTree = "<group>"; };
+		155E2E6C2898FA48004D979C /* EAVOrientationRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAVOrientationRenderNode.m; sourceTree = "<group>"; };
+		155E2E6D2898FA48004D979C /* AAPLShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLShaderTypes.h; sourceTree = "<group>"; };
+		155E2E6E2898FA48004D979C /* EAVOrientationRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAVOrientationRenderNode.h; sourceTree = "<group>"; };
+		155E2E6F2898FA48004D979C /* AAPLShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = AAPLShaders.metal; sourceTree = "<group>"; };
 		1561F29E28751B6400CEBCE6 /* opengl-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "opengl-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1561F2A128751B6400CEBCE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1561F2A228751B6400CEBCE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -291,6 +297,25 @@
 			path = render;
 			sourceTree = "<group>";
 		};
+		155E2E6A2898FA48004D979C /* metallib */ = {
+			isa = PBXGroup;
+			children = (
+				155E2E6B2898FA48004D979C /* orientation */,
+			);
+			path = metallib;
+			sourceTree = "<group>";
+		};
+		155E2E6B2898FA48004D979C /* orientation */ = {
+			isa = PBXGroup;
+			children = (
+				155E2E6F2898FA48004D979C /* AAPLShaders.metal */,
+				155E2E6D2898FA48004D979C /* AAPLShaderTypes.h */,
+				155E2E6E2898FA48004D979C /* EAVOrientationRenderNode.h */,
+				155E2E6C2898FA48004D979C /* EAVOrientationRenderNode.m */,
+			);
+			path = orientation;
+			sourceTree = "<group>";
+		};
 		1561F29528751B6400CEBCE6 = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +339,7 @@
 		1561F2A028751B6400CEBCE6 /* opengl-test */ = {
 			isa = PBXGroup;
 			children = (
+				155E2E6A2898FA48004D979C /* metallib */,
 				15DF38932880423D00D041D7 /* lightShadow */,
 				15444EE2287E9F7E00F5E6DC /* image */,
 				15444F0D287EE81D00F5E6DC /* tbnLight */,
@@ -695,10 +721,12 @@
 				1561F2FE2875AC7C00CEBCE6 /* THBTestBView..m in Sources */,
 				1561F2E028751BF300CEBCE6 /* THBGestTestVC.m in Sources */,
 				158A740C2878229E0038F666 /* MNTPMesh.mm in Sources */,
+				155E2E702898FA48004D979C /* EAVOrientationRenderNode.m in Sources */,
 				1561F2FD2875AC7C00CEBCE6 /* THBTestCView.m in Sources */,
 				1561F2F82875AC6B00CEBCE6 /* THBTestAView.m in Sources */,
 				1517ADE1287D561E00CF0087 /* THBLightTestVC.m in Sources */,
 				1517ADEE287D595000CF0087 /* THBTestRenderer.m in Sources */,
+				155E2E712898FA48004D979C /* AAPLShaders.metal in Sources */,
 				158A74122878229E0038F666 /* MNTPSubmesh.mm in Sources */,
 				1561F3212875BFE800CEBCE6 /* THBPixelBufferUtil.m in Sources */,
 				1561F3022875AFFA00CEBCE6 /* UITestTap.m in Sources */,
