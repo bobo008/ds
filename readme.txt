@@ -1,2 +1,12 @@
-使用opengl 实现冯氏光照模型 切线空间计算光照 阴影贴图实现阴影等功能
-后续待实现 延迟光照
+已实现效果：
+1.opengl 冯氏光照模型
+2.opengl 切线空间计算光照
+3.opengl 阴影贴图实现阴影
+4.opengl metal mipmap
+5.opengl metal msaa
+
+后续待实现：
+1.延迟光照
+2.加载obj模型
+3.简单粒子
+4.Accelerate 加速对比

@@ -28,6 +28,9 @@
 		155E2E7628990AB2004D979C /* THBMsaaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E7528990AB2004D979C /* THBMsaaTest.m */; };
 		155E2E7C28990E41004D979C /* MsaaShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E7928990E41004D979C /* MsaaShaders.metal */; };
 		155E2E7D28990E41004D979C /* THBMSAARenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E7B28990E41004D979C /* THBMSAARenderNode.m */; };
+		155E2E8128992872004D979C /* THBMipmapRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E8028992872004D979C /* THBMipmapRenderNode.m */; };
+		155E2E8728992953004D979C /* MipmapShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E8328992953004D979C /* MipmapShaders.metal */; };
+		155E2E8828992953004D979C /* THBMipmapMetalNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E8428992953004D979C /* THBMipmapMetalNode.m */; };
 		1561F2A328751B6400CEBCE6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A228751B6400CEBCE6 /* AppDelegate.m */; };
 		1561F2A628751B6400CEBCE6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A528751B6400CEBCE6 /* SceneDelegate.m */; };
 		1561F2A928751B6400CEBCE6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F2A828751B6400CEBCE6 /* ViewController.m */; };
@@ -125,8 +128,12 @@
 		155E2E7528990AB2004D979C /* THBMsaaTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBMsaaTest.m; sourceTree = "<group>"; };
 		155E2E7828990E41004D979C /* THBMSAARenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBMSAARenderNode.h; sourceTree = "<group>"; };
 		155E2E7928990E41004D979C /* MsaaShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MsaaShaders.metal; sourceTree = "<group>"; };
-		155E2E7A28990E41004D979C /* MsaaShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsaaShaderTypes.h; sourceTree = "<group>"; };
 		155E2E7B28990E41004D979C /* THBMSAARenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBMSAARenderNode.m; sourceTree = "<group>"; };
+		155E2E7F28992872004D979C /* THBMipmapRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBMipmapRenderNode.h; sourceTree = "<group>"; };
+		155E2E8028992872004D979C /* THBMipmapRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBMipmapRenderNode.m; sourceTree = "<group>"; };
+		155E2E8328992953004D979C /* MipmapShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MipmapShaders.metal; sourceTree = "<group>"; };
+		155E2E8428992953004D979C /* THBMipmapMetalNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBMipmapMetalNode.m; sourceTree = "<group>"; };
+		155E2E8628992953004D979C /* THBMipmapMetalNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBMipmapMetalNode.h; sourceTree = "<group>"; };
 		1561F29E28751B6400CEBCE6 /* opengl-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "opengl-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1561F2A128751B6400CEBCE6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1561F2A228751B6400CEBCE6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -309,6 +316,10 @@
 		155E2E6A2898FA48004D979C /* metallib */ = {
 			isa = PBXGroup;
 			children = (
+				155E2E8328992953004D979C /* MipmapShaders.metal */,
+				155E2E7928990E41004D979C /* MsaaShaders.metal */,
+				155E2E6F2898FA48004D979C /* AAPLShaders.metal */,
+				155E2E6D2898FA48004D979C /* AAPLShaderTypes.h */,
 				155E2E6B2898FA48004D979C /* orientation */,
 			);
 			path = metallib;
@@ -317,33 +328,48 @@
 		155E2E6B2898FA48004D979C /* orientation */ = {
 			isa = PBXGroup;
 			children = (
-				155E2E6F2898FA48004D979C /* AAPLShaders.metal */,
-				155E2E6D2898FA48004D979C /* AAPLShaderTypes.h */,
 				155E2E6E2898FA48004D979C /* EAVOrientationRenderNode.h */,
 				155E2E6C2898FA48004D979C /* EAVOrientationRenderNode.m */,
 			);
 			path = orientation;
 			sourceTree = "<group>";
 		};
-		155E2E7328990A8D004D979C /* openglMSAA */ = {
+		155E2E7328990A8D004D979C /* MSAA */ = {
 			isa = PBXGroup;
 			children = (
-				155E2E7728990E2D004D979C /* New Group */,
+				155E2E7728990E2D004D979C /* metal */,
 				155E2E7428990AB2004D979C /* THBMsaaTest.h */,
 				155E2E7528990AB2004D979C /* THBMsaaTest.m */,
 			);
-			path = openglMSAA;
+			path = MSAA;
 			sourceTree = "<group>";
 		};
-		155E2E7728990E2D004D979C /* New Group */ = {
+		155E2E7728990E2D004D979C /* metal */ = {
 			isa = PBXGroup;
 			children = (
-				155E2E7928990E41004D979C /* MsaaShaders.metal */,
-				155E2E7A28990E41004D979C /* MsaaShaderTypes.h */,
 				155E2E7828990E41004D979C /* THBMSAARenderNode.h */,
 				155E2E7B28990E41004D979C /* THBMSAARenderNode.m */,
 			);
-			path = "New Group";
+			path = metal;
+			sourceTree = "<group>";
+		};
+		155E2E7E28992849004D979C /* mipmap */ = {
+			isa = PBXGroup;
+			children = (
+				155E2E822899293B004D979C /* metal */,
+				155E2E7F28992872004D979C /* THBMipmapRenderNode.h */,
+				155E2E8028992872004D979C /* THBMipmapRenderNode.m */,
+			);
+			path = mipmap;
+			sourceTree = "<group>";
+		};
+		155E2E822899293B004D979C /* metal */ = {
+			isa = PBXGroup;
+			children = (
+				155E2E8628992953004D979C /* THBMipmapMetalNode.h */,
+				155E2E8428992953004D979C /* THBMipmapMetalNode.m */,
+			);
+			path = metal;
 			sourceTree = "<group>";
 		};
 		1561F29528751B6400CEBCE6 = {
@@ -369,15 +395,16 @@
 		1561F2A028751B6400CEBCE6 /* opengl-test */ = {
 			isa = PBXGroup;
 			children = (
-				155E2E7328990A8D004D979C /* openglMSAA */,
-				155E2E6A2898FA48004D979C /* metallib */,
+				155E2E7E28992849004D979C /* mipmap */,
+				155E2E7328990A8D004D979C /* MSAA */,
 				15DF38932880423D00D041D7 /* lightShadow */,
-				15444EE2287E9F7E00F5E6DC /* image */,
 				15444F0D287EE81D00F5E6DC /* tbnLight */,
 				1517ADDC287D560400CF0087 /* light */,
+				155E2E6A2898FA48004D979C /* metallib */,
 				1561F3172875BFC900CEBCE6 /* opengllib */,
 				1561F30A2875BF5400CEBCE6 /* shadow */,
 				1561F3092875BF4400CEBCE6 /* gest&control */,
+				15444EE2287E9F7E00F5E6DC /* image */,
 				1561F2A128751B6400CEBCE6 /* AppDelegate.h */,
 				1561F2A228751B6400CEBCE6 /* AppDelegate.m */,
 				1561F2A428751B6400CEBCE6 /* SceneDelegate.h */,
@@ -737,6 +764,7 @@
 				158A742528783B9C0038F666 /* NSArray+MNTExtend.m in Sources */,
 				155E2E7628990AB2004D979C /* THBMsaaTest.m in Sources */,
 				15B9B6272889371800EBA315 /* THBShadowMapRenderNode.m in Sources */,
+				155E2E8128992872004D979C /* THBMipmapRenderNode.m in Sources */,
 				1561F32D2875C04E00CEBCE6 /* GPUImageContext.m in Sources */,
 				15DF389F2880423D00D041D7 /* THBLightShadowTestVC.m in Sources */,
 				1517ADF8287D694400CF0087 /* UIImage+EAVExtend.m in Sources */,
@@ -755,12 +783,14 @@
 				158A740C2878229E0038F666 /* MNTPMesh.mm in Sources */,
 				155E2E702898FA48004D979C /* EAVOrientationRenderNode.m in Sources */,
 				1561F2FD2875AC7C00CEBCE6 /* THBTestCView.m in Sources */,
+				155E2E8728992953004D979C /* MipmapShaders.metal in Sources */,
 				1561F2F82875AC6B00CEBCE6 /* THBTestAView.m in Sources */,
 				1517ADE1287D561E00CF0087 /* THBLightTestVC.m in Sources */,
 				1517ADEE287D595000CF0087 /* THBTestRenderer.m in Sources */,
 				155E2E712898FA48004D979C /* AAPLShaders.metal in Sources */,
 				158A74122878229E0038F666 /* MNTPSubmesh.mm in Sources */,
 				1561F3212875BFE800CEBCE6 /* THBPixelBufferUtil.m in Sources */,
+				155E2E8828992953004D979C /* THBMipmapMetalNode.m in Sources */,
 				1561F3022875AFFA00CEBCE6 /* UITestTap.m in Sources */,
 				1561F3112875BF5400CEBCE6 /* PXCShadowTestVC.m in Sources */,
 				155E2E7D28990E41004D979C /* THBMSAARenderNode.m in Sources */,

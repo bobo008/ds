@@ -2,6 +2,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "THBGLESTexture.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface THBPixelBufferUtil : NSObject
@@ -36,6 +38,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface THBPixelBufferUtil (GLTexture)
 + (CVOpenGLESTextureRef)textureForPixelBuffer:(CVPixelBufferRef)pixelBuffer glTextureCache:(CVOpenGLESTextureCacheRef)glTextureCache;
+
+
++ (THBGLESTexture *)createTextureWithSize:(CGSize)size;
+
++ (THBGLESTexture *)textureForLocalURL:(NSURL *)localURL;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -24,7 +24,7 @@
 @end
 
 
-/// opengl 上实现msaa 相比较于metal还是比较复杂的，因为从cvpixelbuffer转换的texture是不支持MSAA的，只能使用renderbuffer去实现，metal实现略有不同，metal有一个辅助的buffer去做MSAA
+/// opengl 上实现msaa 相比较于metal还是比较复杂的，因为从cvpixelbuffer转换的texture是不支持MSAA的，只能使用renderbuffer去实现，metal可以通过创建mtltexture实现,相对简单些
 @implementation THBMsaaTest
 
 

@@ -3,7 +3,7 @@
 
 using namespace metal;
 
-#include "MsaaShaderTypes.h"
+#include "AAPLShaderTypes.h"
 
 
 // Vertex shader outputs and fragment shader inputs for simple pipeline 顶点着色器传给片段着色器 需要插值的数据

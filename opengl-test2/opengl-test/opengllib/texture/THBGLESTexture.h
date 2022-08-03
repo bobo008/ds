@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)createTextureWithPixel:(CVPixelBufferRef)pixel texture:(CVOpenGLESTextureRef)texture orientation:(UIImageOrientation)orientation;
 + (instancetype)createTextureWithPixel:(CVPixelBufferRef)pixel texture:(CVOpenGLESTextureRef)texture lod:(CXXGLESTextureLOD)lod;
 + (instancetype)createTextureWithPixel:(CVPixelBufferRef)pixel texture:(CVOpenGLESTextureRef)texture orientation:(UIImageOrientation)orientation lod:(CXXGLESTextureLOD)lod;
-- (instancetype)init OBJC_UNAVAILABLE("");
+- (instancetype)init;
 - (void)retainGLESTexture;
 - (void)releaseGLESTexture;
 

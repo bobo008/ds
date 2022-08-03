@@ -19,8 +19,9 @@
 
 #import "THBContext.h"
 
+#import "THBMipmapRenderNode.h"
 
-#import "THBMSAARenderNode.h"
+#import "THBMipmapMetalNode.h"
 
 @interface ViewController ()
 
@@ -40,17 +41,16 @@
 
 - (IBAction)onBtn:(id)sender {
     
-//    THBLightShadowTestVC *vc = [[THBLightShadowTestVC alloc] init];
+//    TTTEffectCreatorTestVC *vc = [[TTTEffectCreatorTestVC alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Cutout_002.jpg" ofType:nil];
-    CVPixelBufferRef pixel = [THBPixelBufferUtil pixelBufferForLocalURL:[NSURL fileURLWithPath:path]];
-    
-    
-    THBMSAARenderNode *renderNode = [[THBMSAARenderNode alloc] init];
-    renderNode.input = pixel;
-    [renderNode render];
+    [self test];
 }
 
+
+- (void)test {
+    THBMipmapRenderNode *renderNode = [[THBMipmapRenderNode alloc] init];
+    [renderNode render];
+}
 @end

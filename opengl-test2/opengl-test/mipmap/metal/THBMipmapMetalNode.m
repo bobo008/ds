@@ -1,6 +1,6 @@
 //  Created on 2022/3/9.
 
-#import "THBMSAARenderNode.h"
+#import "THBMipmapMetalNode.h"
 
 
 #import "THBPixelBufferUtil.h"
@@ -9,10 +9,11 @@
 
 #import "THBContext.h"
 
-#import <Metal/Metal.h>
-#import <Accelerate/Accelerate.h>
+//#import <Metal/Metal.h>
 
-@interface THBMSAARenderNode ()
+@import MetalKit;
+
+@interface THBMipmapMetalNode ()
 
 @property (nonatomic) id<MTLTexture> dstTexture;
 
@@ -25,13 +26,33 @@
 
 @end
 
-@implementation THBMSAARenderNode
+@implementation THBMipmapMetalNode
 
 
 
 - (CVPixelBufferRef)render {
-  
-    id<MTLTexture> srcTexture  = [self obtainTextureWithPixel:self.input];
+
+    /// 想要使用mipmap就不能用cpu共享的pixelbuffer 只能讲数据创建在gpu buffer下，MSAA也相同，数据格式不一样
+    id<MTLDevice> device = MTLCreateSystemDefaultDevice();
+
+    MTKTextureLoader *textureLoader = [[MTKTextureLoader alloc] initWithDevice:device];
+    
+    NSDictionary *textureLoaderOptions =
+    @{
+      MTKTextureLoaderOptionTextureUsage       : @(MTLTextureUsageShaderRead),
+      MTKTextureLoaderOptionTextureStorageMode : @(MTLStorageModePrivate),
+      MTKTextureLoaderOptionAllocateMipmaps    : @YES,
+      MTKTextureLoaderOptionGenerateMipmaps    : @YES,
+      MTKTextureLoaderOptionSRGB               : @NO
+      };
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"comics_22.png" ofType:nil];
+
+    NSError *error;
+    
+    UIImage *image = [UIImage imageWithContentsOfFile:path];
+    id<MTLTexture> srcTexture = [textureLoader newTextureWithCGImage:image.CGImage options:textureLoaderOptions error:&error];
+    /// MTLTexture png 图片透明通道显示有问题，转成image又没有问题，可能只是显示问题，这个问题待研究
     
     id<MTLCommandBuffer> commandBuffer = [self.commandQueue commandBuffer];
     commandBuffer.label = @"Command Buffer";
@@ -41,12 +62,12 @@
     
     [renderEncoder setRenderPipelineState:self.renderToTextureRenderPipeline];
     
-
+    static const float scale = 0.2;
     static const vector_float2 pos[] = {
-        {-1.0,  1.0},
-        { 1.0,  1.0},
-        {-1.0, -1.0},
-        { 1.0, -1.0},
+        {-1.0 * scale,  1.0 * scale},
+        { 1.0 * scale,  1.0 * scale},
+        {-1.0 * scale, -1.0 * scale},
+        { 1.0 * scale, -1.0 * scale},
     };
     static const vector_float2 tex[] = {
         {0.0f, 0.0f},
@@ -69,7 +90,7 @@
     /// 传送数据
     [renderEncoder setFragmentTexture:srcTexture atIndex:AAPLTextureInputIndexColor];
 
-    [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:3];
+    [renderEncoder drawPrimitives:MTLPrimitiveTypeTriangleStrip vertexStart:0 vertexCount:4];
     // End encoding commands for this render pass.
     [renderEncoder endEncoding];
 
@@ -77,8 +98,9 @@
     
     [commandBuffer waitUntilCompleted];
     
-//    CVPixelBufferRef ret = [self getPixelBufferFromBGRAMTLTexture:self.dstTexture];
-    return NULL;
+    CVPixelBufferRef ret = [self getPixelBufferFromBGRAMTLTexture:self.dstTexture];
+    UIImage *image2 = [THBPixelBufferUtil imageForPixelBuffer:ret];
+    return ret;
 }
 
 - (instancetype)init {
@@ -93,11 +115,11 @@
     id<MTLDevice> device = MTLCreateSystemDefaultDevice();
     
     MTLTextureDescriptor *texDescriptor = [MTLTextureDescriptor new];
-    texDescriptor.textureType = MTLTextureType2DMultisample;
+    texDescriptor.textureType = MTLTextureType2D;
     texDescriptor.width = 1001;
     texDescriptor.height = 1001;
-    texDescriptor.sampleCount = 2;/// 通过拿步长可以看到其步长 * 4 * 2 了（所有的四个点，放在同一行中了） 所以 这个性能影响挺大的，要求 2^2 的计算量，这个东西最后呈现到屏幕上可能也有性能问题，最好重绘到一个sampleCount = 1的纹理上再呈现到屏幕上
-    texDescriptor.pixelFormat = MTLPixelFormatRGBA8Unorm;
+    texDescriptor.sampleCount = 1;
+    texDescriptor.pixelFormat = MTLPixelFormatBGRA8Unorm;
     texDescriptor.storageMode = MTLStorageModeShared;
     texDescriptor.usage = MTLTextureUsageRenderTarget | MTLTextureUsageShaderRead;
     self.dstTexture = [device newTextureWithDescriptor:texDescriptor];
@@ -108,17 +130,17 @@
     renderToTextureRenderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
     renderToTextureRenderPassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0, 0, 0, 0);
     renderToTextureRenderPassDescriptor.colorAttachments[0].storeAction = MTLStoreActionStore;
-    
+
     self.renderToTextureRenderPassDescriptor = renderToTextureRenderPassDescriptor;
     
     id<MTLLibrary> defaultLibrary = [device newDefaultLibrary];
     MTLRenderPipelineDescriptor *pipelineStateDescriptor = [[MTLRenderPipelineDescriptor alloc] init];
     pipelineStateDescriptor.label = @"MSAA Render Pipeline";
     pipelineStateDescriptor.sampleCount = self.dstTexture.sampleCount;
-    pipelineStateDescriptor.vertexFunction =  [defaultLibrary newFunctionWithName:@"msaaVertexShader"];
-    pipelineStateDescriptor.fragmentFunction =  [defaultLibrary newFunctionWithName:@"msaaFragmentShader"];
+    pipelineStateDescriptor.vertexFunction =  [defaultLibrary newFunctionWithName:@"mipmapVertexShader"];
+    pipelineStateDescriptor.fragmentFunction =  [defaultLibrary newFunctionWithName:@"mipmapFragmentShader"];
     pipelineStateDescriptor.colorAttachments[0].pixelFormat = self.dstTexture.pixelFormat;
-    
+
     self.renderToTextureRenderPipeline = [device newRenderPipelineStateWithDescriptor:pipelineStateDescriptor error:nil];
     
     self.commandQueue = [device newCommandQueue];
@@ -166,7 +188,7 @@
     
     CVPixelBufferCreateWithBytes(kCFAllocatorDefault,texture.width,texture.height,kCVPixelFormatType_32BGRA,imageBytes,bytesPerRow,NULL,NULL,(__bridge CFDictionaryRef)options,&pxbuffer);
     
-    free(imageBytes);
+//    free(imageBytes); CVPixelBufferCreateWithBytes 不会拷贝 因此这里不能直接释放
     
     return pxbuffer;
 }
