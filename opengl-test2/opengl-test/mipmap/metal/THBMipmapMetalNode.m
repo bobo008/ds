@@ -124,7 +124,7 @@
     texDescriptor.usage = MTLTextureUsageRenderTarget | MTLTextureUsageShaderRead;
     self.dstTexture = [device newTextureWithDescriptor:texDescriptor];
     
-
+    
     MTLRenderPassDescriptor *renderToTextureRenderPassDescriptor = [MTLRenderPassDescriptor new];
     renderToTextureRenderPassDescriptor.colorAttachments[0].texture = self.dstTexture;
     renderToTextureRenderPassDescriptor.colorAttachments[0].loadAction = MTLLoadActionClear;
