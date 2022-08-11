@@ -7,6 +7,8 @@
 
 #import "ViewController.h"
 
+#import "THBVideoTestVC.h"
+
 @interface ViewController ()
 
 @end
@@ -16,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+
+- (IBAction)onBtn:(id)sender {
+    THBVideoTestVC *vc = [[THBVideoTestVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
