@@ -11,10 +11,10 @@
 
 @interface THBMsaaTest()
 
-@property (nonatomic) THBGLESTexture *targetTexture;
+@property (nonatomic) THBTexture *targetTexture;
 
 
-@property (nonatomic) THBGLESTexture *inputTexture;
+@property (nonatomic) THBTexture *inputTexture;
 
 @property (nonatomic) GLfloat *positionData;
 
@@ -111,7 +111,7 @@
             @"position",
             @"inputTextureCoordinate"
         ];
-        glProgram = CXXLoadGLProgram(@"", @"", attributeNames);
+        glProgram = GLLoadGLProgram(@"", @"", attributeNames);
         [glProgramMap setObject:glProgram forKey:key];
     }
     return glProgram;

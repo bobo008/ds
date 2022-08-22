@@ -1,7 +1,7 @@
 
 
 #import <UIKit/UIKit.h>
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 #import "THBContext.h"
 
 
@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface THBShadowMapRenderNode : NSObject
 
-@property (nonatomic) THBGLESTexture *outputTexture;
+@property (nonatomic) THBTexture *outputTexture;
 
 @property (nonatomic) simd_float4x4 pMatrix;
 @property (nonatomic) simd_float4x4 vMatrix;

@@ -143,7 +143,7 @@
             @"tangent",
         ];
         
-        glProgram = CXXLoadGLProgram([self shaderWithNamed:@"light_shadow_vs.fsh"], [self shaderWithNamed:@"light_shadow_fs.fsh"], attributeNames);
+        glProgram = GLLoadGLProgram([self shaderWithNamed:@"light_shadow_vs.fsh"], [self shaderWithNamed:@"light_shadow_fs.fsh"], attributeNames);
         [glProgramMap setObject:glProgram forKey:key];
     }
     return glProgram;

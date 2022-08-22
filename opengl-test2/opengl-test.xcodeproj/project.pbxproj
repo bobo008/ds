@@ -11,7 +11,6 @@
 		1517ADE1287D561E00CF0087 /* THBLightTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517ADDF287D561E00CF0087 /* THBLightTestVC.m */; };
 		1517ADE9287D57A000CF0087 /* THBTestRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517ADE4287D57A000CF0087 /* THBTestRenderNode.m */; };
 		1517ADEE287D595000CF0087 /* THBTestRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517ADEC287D595000CF0087 /* THBTestRenderer.m */; };
-		1517ADF8287D694400CF0087 /* UIImage+EAVExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1517ADF6287D694400CF0087 /* UIImage+EAVExtend.m */; };
 		1517ADFE287D788700CF0087 /* comics_22.png in Resources */ = {isa = PBXBuildFile; fileRef = 1517ADFD287D788700CF0087 /* comics_22.png */; };
 		1517AE00287D78C500CF0087 /* Cutout_002.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1517ADFF287D78C500CF0087 /* Cutout_002.jpg */; };
 		15444EE5287EA00600F5E6DC /* light_fs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15444EE3287EA00600F5E6DC /* light_fs.fsh */; };
@@ -23,7 +22,12 @@
 		15444F22287EE83700F5E6DC /* THBTBNTestRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 15444F18287EE83700F5E6DC /* THBTBNTestRenderer.m */; };
 		15444F23287EE83700F5E6DC /* THBTBNTestRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15444F19287EE83700F5E6DC /* THBTBNTestRenderNode.m */; };
 		15444F24287EE83700F5E6DC /* THBTBNLightTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15444F1B287EE83700F5E6DC /* THBTBNLightTestVC.xib */; };
-		155E2E702898FA48004D979C /* EAVOrientationRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E6C2898FA48004D979C /* EAVOrientationRenderNode.m */; };
+		1546152128B3993B00E68CF1 /* THBPixelBufferPoolAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546151A28B3993B00E68CF1 /* THBPixelBufferPoolAdaptor.m */; };
+		1546152228B3993B00E68CF1 /* THBPixelBufferUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546151C28B3993B00E68CF1 /* THBPixelBufferUtil.m */; };
+		1546152328B3993B00E68CF1 /* THBTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546151D28B3993B00E68CF1 /* THBTexture.m */; };
+		1546152428B3993B00E68CF1 /* THBPixelBufferPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546152028B3993B00E68CF1 /* THBPixelBufferPool.m */; };
+		1546152728B3995400E68CF1 /* UIImage+THBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546152628B3995400E68CF1 /* UIImage+THBExtend.m */; };
+		1546152A28B3AE5B00E68CF1 /* THBOrientationRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1546152928B3AE5B00E68CF1 /* THBOrientationRenderNode.m */; };
 		155E2E712898FA48004D979C /* AAPLShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E6F2898FA48004D979C /* AAPLShaders.metal */; };
 		155E2E7628990AB2004D979C /* THBMsaaTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E7528990AB2004D979C /* THBMsaaTest.m */; };
 		155E2E7C28990E41004D979C /* MsaaShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155E2E7928990E41004D979C /* MsaaShaders.metal */; };
@@ -53,13 +57,9 @@
 		1561F3132875BF5400CEBCE6 /* ipad_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1561F30D2875BF5400CEBCE6 /* ipad_1.png */; };
 		1561F3142875BF5400CEBCE6 /* PXCShadowTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1561F30F2875BF5400CEBCE6 /* PXCShadowTestVC.xib */; };
 		1561F31A2875BFD400CEBCE6 /* THBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3192875BFD400CEBCE6 /* THBContext.m */; };
-		1561F31D2875BFDC00CEBCE6 /* THBGLESTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F31C2875BFDC00CEBCE6 /* THBGLESTexture.m */; };
-		1561F3212875BFE800CEBCE6 /* THBPixelBufferUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F31F2875BFE800CEBCE6 /* THBPixelBufferUtil.m */; };
-		1561F3272875BFFF00CEBCE6 /* THBPixelBufferPoolAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3252875BFFE00CEBCE6 /* THBPixelBufferPoolAdaptor.m */; };
 		1561F32A2875C00600CEBCE6 /* CXXFillColorRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3292875C00600CEBCE6 /* CXXFillColorRenderNode.m */; };
 		1561F32D2875C04E00CEBCE6 /* GPUImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F32C2875C04E00CEBCE6 /* GPUImageContext.m */; };
 		1561F3302875C06300CEBCE6 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F32F2875C06300CEBCE6 /* GLProgram.m */; };
-		1561F3362875C17500CEBCE6 /* THBPixelBufferPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F3342875C17500CEBCE6 /* THBPixelBufferPool.m */; };
 		156BAF39287FAFB500672D06 /* resultImage_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 156BAF38287FAFB500672D06 /* resultImage_2.png */; };
 		158A740C2878229E0038F666 /* MNTPMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158A73F82878229E0038F666 /* MNTPMesh.mm */; };
 		158A740D2878229E0038F666 /* MNTP3DObjCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FA2878229E0038F666 /* MNTP3DObjCache.m */; };
@@ -69,7 +69,7 @@
 		158A74132878229E0038F666 /* MNTPMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A740A2878229E0038F666 /* MNTPMaterial.m */; };
 		158A741F287836260038F666 /* MNTPMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A741D287836260038F666 /* MNTPMathUtils.m */; };
 		158A7422287836310038F666 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A7421287836310038F666 /* AAPLMathUtilities.m */; };
-		158A742528783B9C0038F666 /* NSArray+MNTExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A742428783B9C0038F666 /* NSArray+MNTExtend.m */; };
+		158EECC428B3AF9700F04514 /* NSArray+THBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECC228B3AF9700F04514 /* NSArray+THBExtend.m */; };
 		15B9B6272889371800EBA315 /* THBShadowMapRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */; };
 		15DF389E2880423D00D041D7 /* THBLightShadowTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */; };
 		15DF389F2880423D00D041D7 /* THBLightShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DF38952880423D00D041D7 /* THBLightShadowTestVC.m */; };
@@ -104,8 +104,6 @@
 		1517ADE7287D57A000CF0087 /* THBTestRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTestRenderNode.h; sourceTree = "<group>"; };
 		1517ADEC287D595000CF0087 /* THBTestRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTestRenderer.m; sourceTree = "<group>"; };
 		1517ADED287D595000CF0087 /* THBTestRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTestRenderer.h; sourceTree = "<group>"; };
-		1517ADF6287D694400CF0087 /* UIImage+EAVExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EAVExtend.m"; sourceTree = "<group>"; };
-		1517ADF7287D694400CF0087 /* UIImage+EAVExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EAVExtend.h"; sourceTree = "<group>"; };
 		1517ADFD287D788700CF0087 /* comics_22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comics_22.png; sourceTree = "<group>"; };
 		1517ADFF287D78C500CF0087 /* Cutout_002.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Cutout_002.jpg; sourceTree = "<group>"; };
 		15444EE3287EA00600F5E6DC /* light_fs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_fs.fsh; sourceTree = "<group>"; };
@@ -120,9 +118,19 @@
 		15444F19287EE83700F5E6DC /* THBTBNTestRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTBNTestRenderNode.m; sourceTree = "<group>"; };
 		15444F1A287EE83700F5E6DC /* THBTBNLightTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTBNLightTestVC.h; sourceTree = "<group>"; };
 		15444F1B287EE83700F5E6DC /* THBTBNLightTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBTBNLightTestVC.xib; sourceTree = "<group>"; };
-		155E2E6C2898FA48004D979C /* EAVOrientationRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAVOrientationRenderNode.m; sourceTree = "<group>"; };
+		1546151928B3993B00E68CF1 /* THBTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTexture.h; sourceTree = "<group>"; };
+		1546151A28B3993B00E68CF1 /* THBPixelBufferPoolAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPoolAdaptor.m; sourceTree = "<group>"; };
+		1546151B28B3993B00E68CF1 /* THBPixelBufferPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPool.h; sourceTree = "<group>"; };
+		1546151C28B3993B00E68CF1 /* THBPixelBufferUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferUtil.m; sourceTree = "<group>"; };
+		1546151D28B3993B00E68CF1 /* THBTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTexture.m; sourceTree = "<group>"; };
+		1546151E28B3993B00E68CF1 /* THBPixelBufferPoolAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPoolAdaptor.h; sourceTree = "<group>"; };
+		1546151F28B3993B00E68CF1 /* THBPixelBufferUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferUtil.h; sourceTree = "<group>"; };
+		1546152028B3993B00E68CF1 /* THBPixelBufferPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPool.m; sourceTree = "<group>"; };
+		1546152528B3995400E68CF1 /* UIImage+THBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+THBExtend.h"; sourceTree = "<group>"; };
+		1546152628B3995400E68CF1 /* UIImage+THBExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+THBExtend.m"; sourceTree = "<group>"; };
+		1546152828B3AE5B00E68CF1 /* THBOrientationRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBOrientationRenderNode.h; sourceTree = "<group>"; };
+		1546152928B3AE5B00E68CF1 /* THBOrientationRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBOrientationRenderNode.m; sourceTree = "<group>"; };
 		155E2E6D2898FA48004D979C /* AAPLShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLShaderTypes.h; sourceTree = "<group>"; };
-		155E2E6E2898FA48004D979C /* EAVOrientationRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAVOrientationRenderNode.h; sourceTree = "<group>"; };
 		155E2E6F2898FA48004D979C /* AAPLShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = AAPLShaders.metal; sourceTree = "<group>"; };
 		155E2E7428990AB2004D979C /* THBMsaaTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBMsaaTest.h; sourceTree = "<group>"; };
 		155E2E7528990AB2004D979C /* THBMsaaTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBMsaaTest.m; sourceTree = "<group>"; };
@@ -172,20 +180,12 @@
 		1561F30F2875BF5400CEBCE6 /* PXCShadowTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXCShadowTestVC.xib; sourceTree = "<group>"; };
 		1561F3182875BFD400CEBCE6 /* THBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBContext.h; sourceTree = "<group>"; };
 		1561F3192875BFD400CEBCE6 /* THBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBContext.m; sourceTree = "<group>"; };
-		1561F31B2875BFDC00CEBCE6 /* THBGLESTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBGLESTexture.h; sourceTree = "<group>"; };
-		1561F31C2875BFDC00CEBCE6 /* THBGLESTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBGLESTexture.m; sourceTree = "<group>"; };
-		1561F31F2875BFE800CEBCE6 /* THBPixelBufferUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferUtil.m; sourceTree = "<group>"; };
-		1561F3202875BFE800CEBCE6 /* THBPixelBufferUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferUtil.h; sourceTree = "<group>"; };
-		1561F3252875BFFE00CEBCE6 /* THBPixelBufferPoolAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPoolAdaptor.m; sourceTree = "<group>"; };
-		1561F3262875BFFF00CEBCE6 /* THBPixelBufferPoolAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPoolAdaptor.h; sourceTree = "<group>"; };
 		1561F3282875C00600CEBCE6 /* CXXFillColorRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXXFillColorRenderNode.h; sourceTree = "<group>"; };
 		1561F3292875C00600CEBCE6 /* CXXFillColorRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXXFillColorRenderNode.m; sourceTree = "<group>"; };
 		1561F32B2875C04E00CEBCE6 /* GPUImageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageContext.h; sourceTree = "<group>"; };
 		1561F32C2875C04E00CEBCE6 /* GPUImageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageContext.m; sourceTree = "<group>"; };
 		1561F32E2875C06300CEBCE6 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
 		1561F32F2875C06300CEBCE6 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
-		1561F3342875C17500CEBCE6 /* THBPixelBufferPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPool.m; sourceTree = "<group>"; };
-		1561F3352875C17500CEBCE6 /* THBPixelBufferPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPool.h; sourceTree = "<group>"; };
 		156BAF38287FAFB500672D06 /* resultImage_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resultImage_2.png; sourceTree = "<group>"; };
 		158A73F72878229E0038F666 /* MNTPMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMesh.h; sourceTree = "<group>"; };
 		158A73F82878229E0038F666 /* MNTPMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPMesh.mm; sourceTree = "<group>"; };
@@ -203,8 +203,8 @@
 		158A741E287836260038F666 /* MNTPMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMathUtils.h; sourceTree = "<group>"; };
 		158A7420287836310038F666 /* AAPLMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLMathUtilities.h; sourceTree = "<group>"; };
 		158A7421287836310038F666 /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
-		158A742328783B9C0038F666 /* NSArray+MNTExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MNTExtend.h"; sourceTree = "<group>"; };
-		158A742428783B9C0038F666 /* NSArray+MNTExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MNTExtend.m"; sourceTree = "<group>"; };
+		158EECC228B3AF9700F04514 /* NSArray+THBExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+THBExtend.m"; sourceTree = "<group>"; };
+		158EECC328B3AF9700F04514 /* NSArray+THBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+THBExtend.h"; sourceTree = "<group>"; };
 		15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBShadowMapRenderNode.m; sourceTree = "<group>"; };
 		15B9B6262889371800EBA315 /* THBShadowMapRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBShadowMapRenderNode.h; sourceTree = "<group>"; };
 		15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBLightShadowTestVC.xib; sourceTree = "<group>"; };
@@ -278,17 +278,6 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		15444F0C287EE7E300F5E6DC /* category */ = {
-			isa = PBXGroup;
-			children = (
-				1517ADF7287D694400CF0087 /* UIImage+EAVExtend.h */,
-				1517ADF6287D694400CF0087 /* UIImage+EAVExtend.m */,
-				158A742328783B9C0038F666 /* NSArray+MNTExtend.h */,
-				158A742428783B9C0038F666 /* NSArray+MNTExtend.m */,
-			);
-			path = category;
-			sourceTree = "<group>";
-		};
 		15444F0D287EE81D00F5E6DC /* tbnLight */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +302,21 @@
 			path = render;
 			sourceTree = "<group>";
 		};
+		1546151828B3993B00E68CF1 /* texture */ = {
+			isa = PBXGroup;
+			children = (
+				1546151B28B3993B00E68CF1 /* THBPixelBufferPool.h */,
+				1546152028B3993B00E68CF1 /* THBPixelBufferPool.m */,
+				1546151E28B3993B00E68CF1 /* THBPixelBufferPoolAdaptor.h */,
+				1546151A28B3993B00E68CF1 /* THBPixelBufferPoolAdaptor.m */,
+				1546151F28B3993B00E68CF1 /* THBPixelBufferUtil.h */,
+				1546151C28B3993B00E68CF1 /* THBPixelBufferUtil.m */,
+				1546151928B3993B00E68CF1 /* THBTexture.h */,
+				1546151D28B3993B00E68CF1 /* THBTexture.m */,
+			);
+			path = texture;
+			sourceTree = "<group>";
+		};
 		155E2E6A2898FA48004D979C /* metallib */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,8 +332,8 @@
 		155E2E6B2898FA48004D979C /* orientation */ = {
 			isa = PBXGroup;
 			children = (
-				155E2E6E2898FA48004D979C /* EAVOrientationRenderNode.h */,
-				155E2E6C2898FA48004D979C /* EAVOrientationRenderNode.m */,
+				1546152828B3AE5B00E68CF1 /* THBOrientationRenderNode.h */,
+				1546152928B3AE5B00E68CF1 /* THBOrientationRenderNode.m */,
 			);
 			path = orientation;
 			sourceTree = "<group>";
@@ -489,9 +493,12 @@
 		1561F3172875BFC900CEBCE6 /* opengllib */ = {
 			isa = PBXGroup;
 			children = (
-				15444F0C287EE7E300F5E6DC /* category */,
+				158EECC328B3AF9700F04514 /* NSArray+THBExtend.h */,
+				158EECC228B3AF9700F04514 /* NSArray+THBExtend.m */,
+				1546152528B3995400E68CF1 /* UIImage+THBExtend.h */,
+				1546152628B3995400E68CF1 /* UIImage+THBExtend.m */,
+				1546151828B3993B00E68CF1 /* texture */,
 				158A73F32878229E0038F666 /* Model */,
-				159FFE662876D9C1000D9E36 /* texture */,
 				159FFE652876D9B3000D9E36 /* opengl */,
 				1561F3282875C00600CEBCE6 /* CXXFillColorRenderNode.h */,
 				1561F3292875C00600CEBCE6 /* CXXFillColorRenderNode.m */,
@@ -565,21 +572,6 @@
 				1561F32F2875C06300CEBCE6 /* GLProgram.m */,
 			);
 			path = opengl;
-			sourceTree = "<group>";
-		};
-		159FFE662876D9C1000D9E36 /* texture */ = {
-			isa = PBXGroup;
-			children = (
-				1561F31B2875BFDC00CEBCE6 /* THBGLESTexture.h */,
-				1561F31C2875BFDC00CEBCE6 /* THBGLESTexture.m */,
-				1561F3352875C17500CEBCE6 /* THBPixelBufferPool.h */,
-				1561F3342875C17500CEBCE6 /* THBPixelBufferPool.m */,
-				1561F3262875BFFF00CEBCE6 /* THBPixelBufferPoolAdaptor.h */,
-				1561F3252875BFFE00CEBCE6 /* THBPixelBufferPoolAdaptor.m */,
-				1561F3202875BFE800CEBCE6 /* THBPixelBufferUtil.h */,
-				1561F31F2875BFE800CEBCE6 /* THBPixelBufferUtil.m */,
-			);
-			path = texture;
 			sourceTree = "<group>";
 		};
 		15DF38932880423D00D041D7 /* lightShadow */ = {
@@ -754,44 +746,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1561F31D2875BFDC00CEBCE6 /* THBGLESTexture.m in Sources */,
-				1561F3362875C17500CEBCE6 /* THBPixelBufferPool.m in Sources */,
 				1561F2A928751B6400CEBCE6 /* ViewController.m in Sources */,
 				15DF38A32880423D00D041D7 /* THBShadowTestRenderer.m in Sources */,
 				1561F32A2875C00600CEBCE6 /* CXXFillColorRenderNode.m in Sources */,
 				1561F2A328751B6400CEBCE6 /* AppDelegate.m in Sources */,
+				1546152A28B3AE5B00E68CF1 /* THBOrientationRenderNode.m in Sources */,
 				158A741F287836260038F666 /* MNTPMathUtils.m in Sources */,
-				158A742528783B9C0038F666 /* NSArray+MNTExtend.m in Sources */,
 				155E2E7628990AB2004D979C /* THBMsaaTest.m in Sources */,
 				15B9B6272889371800EBA315 /* THBShadowMapRenderNode.m in Sources */,
 				155E2E8128992872004D979C /* THBMipmapRenderNode.m in Sources */,
 				1561F32D2875C04E00CEBCE6 /* GPUImageContext.m in Sources */,
 				15DF389F2880423D00D041D7 /* THBLightShadowTestVC.m in Sources */,
-				1517ADF8287D694400CF0087 /* UIImage+EAVExtend.m in Sources */,
 				1561F2B428751B6500CEBCE6 /* main.m in Sources */,
+				1546152328B3993B00E68CF1 /* THBTexture.m in Sources */,
 				1561F3082875B46E00CEBCE6 /* THBTestBtn.m in Sources */,
 				1561F31A2875BFD400CEBCE6 /* THBContext.m in Sources */,
-				1561F3272875BFFF00CEBCE6 /* THBPixelBufferPoolAdaptor.m in Sources */,
 				158A7422287836310038F666 /* AAPLMathUtilities.m in Sources */,
+				1546152128B3993B00E68CF1 /* THBPixelBufferPoolAdaptor.m in Sources */,
 				1561F3052875B07500CEBCE6 /* UITestATap.m in Sources */,
+				1546152428B3993B00E68CF1 /* THBPixelBufferPool.m in Sources */,
 				1561F3302875C06300CEBCE6 /* GLProgram.m in Sources */,
 				15DF38A12880423D00D041D7 /* THBShadowTestRenderNode.m in Sources */,
 				158A740D2878229E0038F666 /* MNTP3DObjCache.m in Sources */,
+				1546152728B3995400E68CF1 /* UIImage+THBExtend.m in Sources */,
 				158A740E2878229E0038F666 /* MNTP3DAsset.m in Sources */,
 				1561F2FE2875AC7C00CEBCE6 /* THBTestBView..m in Sources */,
 				1561F2E028751BF300CEBCE6 /* THBGestTestVC.m in Sources */,
 				158A740C2878229E0038F666 /* MNTPMesh.mm in Sources */,
-				155E2E702898FA48004D979C /* EAVOrientationRenderNode.m in Sources */,
 				1561F2FD2875AC7C00CEBCE6 /* THBTestCView.m in Sources */,
 				155E2E8728992953004D979C /* MipmapShaders.metal in Sources */,
 				1561F2F82875AC6B00CEBCE6 /* THBTestAView.m in Sources */,
 				1517ADE1287D561E00CF0087 /* THBLightTestVC.m in Sources */,
+				158EECC428B3AF9700F04514 /* NSArray+THBExtend.m in Sources */,
 				1517ADEE287D595000CF0087 /* THBTestRenderer.m in Sources */,
 				155E2E712898FA48004D979C /* AAPLShaders.metal in Sources */,
 				158A74122878229E0038F666 /* MNTPSubmesh.mm in Sources */,
-				1561F3212875BFE800CEBCE6 /* THBPixelBufferUtil.m in Sources */,
 				155E2E8828992953004D979C /* THBMipmapMetalNode.m in Sources */,
 				1561F3022875AFFA00CEBCE6 /* UITestTap.m in Sources */,
+				1546152228B3993B00E68CF1 /* THBPixelBufferUtil.m in Sources */,
 				1561F3112875BF5400CEBCE6 /* PXCShadowTestVC.m in Sources */,
 				155E2E7D28990E41004D979C /* THBMSAARenderNode.m in Sources */,
 				1561F2A628751B6400CEBCE6 /* SceneDelegate.m in Sources */,

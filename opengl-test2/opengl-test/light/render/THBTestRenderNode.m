@@ -126,7 +126,7 @@
             @"aNormal"
         ];
         
-        glProgram = CXXLoadGLProgram([self shaderWithNamed:@"light_vs.fsh"], [self shaderWithNamed:@"light_fs.fsh"], attributeNames);
+        glProgram = GLLoadGLProgram([self shaderWithNamed:@"light_vs.fsh"], [self shaderWithNamed:@"light_fs.fsh"], attributeNames);
         [glProgramMap setObject:glProgram forKey:key];
     }
     return glProgram;

@@ -8,7 +8,7 @@
 #import "PXCShadowTestVC.h"
 
 #import "THBContext.h"
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 
 //#import "GPUImageContext.h"
 #import "THBPixelBufferUtil.h"
@@ -243,12 +243,12 @@ static simd_float4x4 getProjectionMatrix2(size_t canvasWidth, size_t canvasHeigh
 }
 
 
-static THBGLESTexture * _Nullable GLESTextureFromPixel(CVPixelBufferRef _Nullable pixel) {
+static THBTexture * _Nullable GLESTextureFromPixel(CVPixelBufferRef _Nullable pixel) {
     if (pixel) {
         GPUImageContext *ctx = [GPUImageContext sharedImageProcessingContext];
         CVOpenGLESTextureRef texture = [THBPixelBufferUtil textureForPixelBuffer:pixel glTextureCache:ctx.coreVideoTextureCache];
         if (texture) {
-            return [THBGLESTexture createTextureWithPixel:pixel texture:texture];
+            return [THBTexture createTextureWithPixel:pixel texture:texture];
         } else {
             CVPixelBufferRelease(pixel);
         }
@@ -256,7 +256,7 @@ static THBGLESTexture * _Nullable GLESTextureFromPixel(CVPixelBufferRef _Nullabl
     return nil;
 }
 
-static THBGLESTexture * _Nullable GLESTextureFromImage(UIImage * _Nullable image) {
+static THBTexture * _Nullable GLESTextureFromImage(UIImage * _Nullable image) {
     if (image.imageOrientation != UIImageOrientationUp) {
         UIGraphicsBeginImageContextWithOptions(image.size, NO, image.scale);
         [image drawInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
@@ -307,9 +307,9 @@ static THBGLESTexture * _Nullable GLESTextureFromImage(UIImage * _Nullable image
 
     UIImage *image = [UIImage imageNamed:@"ipad_1"];
     
-    THBGLESTexture *texture = GLESTextureFromImage(image);
-    THBGLESTexture *texture2 = GLESTextureFromImage(image);
-    THBGLESTexture *texture3 = GLESTextureFromImage(image);
+    THBTexture *texture = GLESTextureFromImage(image);
+    THBTexture *texture2 = GLESTextureFromImage(image);
+    THBTexture *texture3 = GLESTextureFromImage(image);
     
     [[THBContext sharedInstance] runSyncOnRenderingQueue:^{
 
@@ -727,7 +727,7 @@ static THBGLESTexture * _Nullable GLESTextureFromImage(UIImage * _Nullable image
             CXX_GLSL_ATTRIBUTES_POSITION,
             CXX_GLSL_ATTRIBUTES_TEXTURE_COORDINATE,
         ];
-        glProgram = CXXLoadGLProgram(shadowVs, shadowFs, attributeNames);
+        glProgram = GLLoadGLProgram(shadowVs, shadowFs, attributeNames);
     });
     return glProgram;
 }
@@ -743,7 +743,7 @@ static THBGLESTexture * _Nullable GLESTextureFromImage(UIImage * _Nullable image
             @"position3",
             CXX_GLSL_ATTRIBUTES_TEXTURE_COORDINATE,
         ];
-        glProgram = CXXLoadGLProgram(shadowVs2, shadowFs2, attributeNames);
+        glProgram = GLLoadGLProgram(shadowVs2, shadowFs2, attributeNames);
     });
     return glProgram;
 }

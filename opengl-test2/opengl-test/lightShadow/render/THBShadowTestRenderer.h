@@ -19,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)dispose;
 
-- (THBGLESTexture *)drawCanvas;
+- (THBTexture *)drawCanvas;
 
 
-- (THBGLESTexture *)drawShadowMap;
+- (THBTexture *)drawShadowMap;
 
 
 

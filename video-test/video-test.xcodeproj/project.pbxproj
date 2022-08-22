@@ -19,26 +19,10 @@
 		1553277128A4EDFF00C206DC /* THBVideoTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553276F28A4EDFF00C206DC /* THBVideoTestVC.m */; };
 		1553277228A4EDFF00C206DC /* THBVideoTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1553277028A4EDFF00C206DC /* THBVideoTestVC.xib */; };
 		155327A328A4FC4E00C206DC /* UIImage+THBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553277828A4FC4E00C206DC /* UIImage+THBExtend.m */; };
-		155327A428A4FC4E00C206DC /* MNTPMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1553277F28A4FC4E00C206DC /* MNTPMesh.mm */; };
-		155327A528A4FC4E00C206DC /* MNTP3DObjCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553278128A4FC4E00C206DC /* MNTP3DObjCache.m */; };
-		155327A628A4FC4E00C206DC /* MNTP3DAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553278228A4FC4E00C206DC /* MNTP3DAsset.m */; };
-		155327A728A4FC4E00C206DC /* MNTP3DAssetLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1553278528A4FC4E00C206DC /* MNTP3DAssetLoader.mm */; };
-		155327A828A4FC4E00C206DC /* MNTPSubmesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1553278A28A4FC4E00C206DC /* MNTPSubmesh.mm */; };
-		155327A928A4FC4E00C206DC /* MNTPMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553278C28A4FC4E00C206DC /* MNTPMathUtils.m */; };
-		155327AA28A4FC4E00C206DC /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553278D28A4FC4E00C206DC /* AAPLMathUtilities.m */; };
-		155327AB28A4FC4E00C206DC /* MNTPMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279028A4FC4E00C206DC /* MNTPMaterial.m */; };
 		155327AC28A4FC4E00C206DC /* THBTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279228A4FC4E00C206DC /* THBTexture.m */; };
 		155327AD28A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279328A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.m */; };
 		155327AE28A4FC4E00C206DC /* THBPixelBufferUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279528A4FC4E00C206DC /* THBPixelBufferUtil.m */; };
 		155327AF28A4FC4E00C206DC /* THBPixelBufferPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279928A4FC4E00C206DC /* THBPixelBufferPool.m */; };
-		155327B028A4FC4E00C206DC /* CXXFillColorRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279A28A4FC4E00C206DC /* CXXFillColorRenderNode.m */; };
-		155327B128A4FC4E00C206DC /* THBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279C28A4FC4E00C206DC /* THBContext.m */; };
-		155327B228A4FC4E00C206DC /* GPUImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279D28A4FC4E00C206DC /* GPUImageContext.m */; };
-		155327B328A4FC4E00C206DC /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279E28A4FC4E00C206DC /* GLProgram.m */; };
-		155327BC28A4FC5200C206DC /* THBOrientationRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327B628A4FC5200C206DC /* THBOrientationRenderNode.m */; };
-		155327BD28A4FC5200C206DC /* MipmapShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155327B928A4FC5200C206DC /* MipmapShaders.metal */; };
-		155327BE28A4FC5200C206DC /* MsaaShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155327BA28A4FC5200C206DC /* MsaaShaders.metal */; };
-		155327BF28A4FC5200C206DC /* AAPLShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155327BB28A4FC5200C206DC /* AAPLShaders.metal */; };
 		155327D728A659A300C206DC /* THBBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327CC28A659A300C206DC /* THBBuilder.m */; };
 		155327D828A659A300C206DC /* THBVideoMedium.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327CF28A659A300C206DC /* THBVideoMedium.m */; };
 		155327D928A659A300C206DC /* THBAudioMixMedium.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327D028A659A300C206DC /* THBAudioMixMedium.m */; };
@@ -48,6 +32,22 @@
 		155327E328A659E300C206DC /* THBVideoCompositionInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327DE28A659E300C206DC /* THBVideoCompositionInstruction.m */; };
 		155327E628A66FA500C206DC /* NSArray+THBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327E428A66FA500C206DC /* NSArray+THBExtend.m */; };
 		155327E928A66FE900C206DC /* THBAVFoundationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327E828A66FE900C206DC /* THBAVFoundationUtil.m */; };
+		158EECFB28B3AFF300F04514 /* MNTPMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158EECCC28B3AFF300F04514 /* MNTPMesh.mm */; };
+		158EECFC28B3AFF300F04514 /* MNTP3DObjCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECCE28B3AFF300F04514 /* MNTP3DObjCache.m */; };
+		158EECFD28B3AFF300F04514 /* MNTP3DAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECCF28B3AFF300F04514 /* MNTP3DAsset.m */; };
+		158EECFE28B3AFF300F04514 /* MNTP3DAssetLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158EECD228B3AFF300F04514 /* MNTP3DAssetLoader.mm */; };
+		158EECFF28B3AFF300F04514 /* MNTPSubmesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158EECD728B3AFF300F04514 /* MNTPSubmesh.mm */; };
+		158EED0028B3AFF300F04514 /* MNTPMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECD928B3AFF300F04514 /* MNTPMathUtils.m */; };
+		158EED0128B3AFF300F04514 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECDA28B3AFF300F04514 /* AAPLMathUtilities.m */; };
+		158EED0228B3AFF300F04514 /* MNTPMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECDD28B3AFF300F04514 /* MNTPMaterial.m */; };
+		158EED0728B3AFF300F04514 /* CXXFillColorRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECE928B3AFF300F04514 /* CXXFillColorRenderNode.m */; };
+		158EED0828B3AFF300F04514 /* THBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECEB28B3AFF300F04514 /* THBContext.m */; };
+		158EED0928B3AFF300F04514 /* GPUImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECEC28B3AFF300F04514 /* GPUImageContext.m */; };
+		158EED0A28B3AFF300F04514 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECED28B3AFF300F04514 /* GLProgram.m */; };
+		158EED0B28B3AFF300F04514 /* THBOrientationRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECF328B3AFF300F04514 /* THBOrientationRenderNode.m */; };
+		158EED0C28B3AFF300F04514 /* MipmapShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 158EECF628B3AFF300F04514 /* MipmapShaders.metal */; };
+		158EED0D28B3AFF300F04514 /* MsaaShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 158EECF728B3AFF300F04514 /* MsaaShaders.metal */; };
+		158EED0E28B3AFF300F04514 /* AAPLShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 158EECF828B3AFF300F04514 /* AAPLShaders.metal */; };
 		15D9C5D328A4EBB70094642F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D228A4EBB70094642F /* AppDelegate.m */; };
 		15D9C5D628A4EBB70094642F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D528A4EBB70094642F /* SceneDelegate.m */; };
 		15D9C5D928A4EBB70094642F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D828A4EBB70094642F /* ViewController.m */; };
@@ -75,23 +75,6 @@
 		1553277028A4EDFF00C206DC /* THBVideoTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THBVideoTestVC.xib; sourceTree = "<group>"; };
 		1553277828A4FC4E00C206DC /* UIImage+THBExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+THBExtend.m"; sourceTree = "<group>"; };
 		1553277A28A4FC4E00C206DC /* UIImage+THBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+THBExtend.h"; sourceTree = "<group>"; };
-		1553277B28A4FC4E00C206DC /* CXXFillColorRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXXFillColorRenderNode.h; sourceTree = "<group>"; };
-		1553277E28A4FC4E00C206DC /* MNTPMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMesh.h; sourceTree = "<group>"; };
-		1553277F28A4FC4E00C206DC /* MNTPMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPMesh.mm; sourceTree = "<group>"; };
-		1553278128A4FC4E00C206DC /* MNTP3DObjCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DObjCache.m; sourceTree = "<group>"; };
-		1553278228A4FC4E00C206DC /* MNTP3DAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DAsset.m; sourceTree = "<group>"; };
-		1553278328A4FC4E00C206DC /* MNTP3DAssetLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DAssetLoader.h; sourceTree = "<group>"; };
-		1553278428A4FC4E00C206DC /* MNTP3DObjCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DObjCache.h; sourceTree = "<group>"; };
-		1553278528A4FC4E00C206DC /* MNTP3DAssetLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTP3DAssetLoader.mm; sourceTree = "<group>"; };
-		1553278628A4FC4E00C206DC /* MNTP3DAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DAsset.h; sourceTree = "<group>"; };
-		1553278728A4FC4E00C206DC /* MNTPMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMathUtils.h; sourceTree = "<group>"; };
-		1553278828A4FC4E00C206DC /* AAPLMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLMathUtilities.h; sourceTree = "<group>"; };
-		1553278A28A4FC4E00C206DC /* MNTPSubmesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPSubmesh.mm; sourceTree = "<group>"; };
-		1553278B28A4FC4E00C206DC /* MNTPSubmesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPSubmesh.h; sourceTree = "<group>"; };
-		1553278C28A4FC4E00C206DC /* MNTPMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTPMathUtils.m; sourceTree = "<group>"; };
-		1553278D28A4FC4E00C206DC /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
-		1553278F28A4FC4E00C206DC /* MNTPMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMaterial.h; sourceTree = "<group>"; };
-		1553279028A4FC4E00C206DC /* MNTPMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTPMaterial.m; sourceTree = "<group>"; };
 		1553279228A4FC4E00C206DC /* THBTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTexture.m; sourceTree = "<group>"; };
 		1553279328A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPoolAdaptor.m; sourceTree = "<group>"; };
 		1553279428A4FC4E00C206DC /* THBPixelBufferPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPool.h; sourceTree = "<group>"; };
@@ -100,19 +83,6 @@
 		1553279728A4FC4E00C206DC /* THBTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTexture.h; sourceTree = "<group>"; };
 		1553279828A4FC4E00C206DC /* THBPixelBufferUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferUtil.h; sourceTree = "<group>"; };
 		1553279928A4FC4E00C206DC /* THBPixelBufferPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPool.m; sourceTree = "<group>"; };
-		1553279A28A4FC4E00C206DC /* CXXFillColorRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXXFillColorRenderNode.m; sourceTree = "<group>"; };
-		1553279C28A4FC4E00C206DC /* THBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBContext.m; sourceTree = "<group>"; };
-		1553279D28A4FC4E00C206DC /* GPUImageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageContext.m; sourceTree = "<group>"; };
-		1553279E28A4FC4E00C206DC /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
-		1553279F28A4FC4E00C206DC /* THBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBContext.h; sourceTree = "<group>"; };
-		155327A028A4FC4E00C206DC /* GPUImageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageContext.h; sourceTree = "<group>"; };
-		155327A128A4FC4E00C206DC /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
-		155327B628A4FC5200C206DC /* THBOrientationRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBOrientationRenderNode.m; sourceTree = "<group>"; };
-		155327B728A4FC5200C206DC /* THBOrientationRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBOrientationRenderNode.h; sourceTree = "<group>"; };
-		155327B828A4FC5200C206DC /* AAPLShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLShaderTypes.h; sourceTree = "<group>"; };
-		155327B928A4FC5200C206DC /* MipmapShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MipmapShaders.metal; sourceTree = "<group>"; };
-		155327BA28A4FC5200C206DC /* MsaaShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MsaaShaders.metal; sourceTree = "<group>"; };
-		155327BB28A4FC5200C206DC /* AAPLShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = AAPLShaders.metal; sourceTree = "<group>"; };
 		155327CC28A659A300C206DC /* THBBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBBuilder.m; sourceTree = "<group>"; };
 		155327CE28A659A300C206DC /* THBMedium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBMedium.h; sourceTree = "<group>"; };
 		155327CF28A659A300C206DC /* THBVideoMedium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBVideoMedium.m; sourceTree = "<group>"; };
@@ -132,6 +102,36 @@
 		155327E528A66FA500C206DC /* NSArray+THBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+THBExtend.h"; sourceTree = "<group>"; };
 		155327E728A66FE900C206DC /* THBAVFoundationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBAVFoundationUtil.h; sourceTree = "<group>"; };
 		155327E828A66FE900C206DC /* THBAVFoundationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBAVFoundationUtil.m; sourceTree = "<group>"; };
+		158EECC728B3AFF300F04514 /* CXXFillColorRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXXFillColorRenderNode.h; sourceTree = "<group>"; };
+		158EECCB28B3AFF300F04514 /* MNTPMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMesh.h; sourceTree = "<group>"; };
+		158EECCC28B3AFF300F04514 /* MNTPMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPMesh.mm; sourceTree = "<group>"; };
+		158EECCE28B3AFF300F04514 /* MNTP3DObjCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DObjCache.m; sourceTree = "<group>"; };
+		158EECCF28B3AFF300F04514 /* MNTP3DAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DAsset.m; sourceTree = "<group>"; };
+		158EECD028B3AFF300F04514 /* MNTP3DAssetLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DAssetLoader.h; sourceTree = "<group>"; };
+		158EECD128B3AFF300F04514 /* MNTP3DObjCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DObjCache.h; sourceTree = "<group>"; };
+		158EECD228B3AFF300F04514 /* MNTP3DAssetLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTP3DAssetLoader.mm; sourceTree = "<group>"; };
+		158EECD328B3AFF300F04514 /* MNTP3DAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DAsset.h; sourceTree = "<group>"; };
+		158EECD428B3AFF300F04514 /* MNTPMathUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMathUtils.h; sourceTree = "<group>"; };
+		158EECD528B3AFF300F04514 /* AAPLMathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLMathUtilities.h; sourceTree = "<group>"; };
+		158EECD728B3AFF300F04514 /* MNTPSubmesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPSubmesh.mm; sourceTree = "<group>"; };
+		158EECD828B3AFF300F04514 /* MNTPSubmesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPSubmesh.h; sourceTree = "<group>"; };
+		158EECD928B3AFF300F04514 /* MNTPMathUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTPMathUtils.m; sourceTree = "<group>"; };
+		158EECDA28B3AFF300F04514 /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
+		158EECDC28B3AFF300F04514 /* MNTPMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMaterial.h; sourceTree = "<group>"; };
+		158EECDD28B3AFF300F04514 /* MNTPMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTPMaterial.m; sourceTree = "<group>"; };
+		158EECE928B3AFF300F04514 /* CXXFillColorRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXXFillColorRenderNode.m; sourceTree = "<group>"; };
+		158EECEB28B3AFF300F04514 /* THBContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBContext.m; sourceTree = "<group>"; };
+		158EECEC28B3AFF300F04514 /* GPUImageContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageContext.m; sourceTree = "<group>"; };
+		158EECED28B3AFF300F04514 /* GLProgram.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLProgram.m; sourceTree = "<group>"; };
+		158EECEE28B3AFF300F04514 /* THBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBContext.h; sourceTree = "<group>"; };
+		158EECEF28B3AFF300F04514 /* GPUImageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageContext.h; sourceTree = "<group>"; };
+		158EECF028B3AFF300F04514 /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
+		158EECF328B3AFF300F04514 /* THBOrientationRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBOrientationRenderNode.m; sourceTree = "<group>"; };
+		158EECF428B3AFF300F04514 /* THBOrientationRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBOrientationRenderNode.h; sourceTree = "<group>"; };
+		158EECF528B3AFF300F04514 /* AAPLShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLShaderTypes.h; sourceTree = "<group>"; };
+		158EECF628B3AFF300F04514 /* MipmapShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MipmapShaders.metal; sourceTree = "<group>"; };
+		158EECF728B3AFF300F04514 /* MsaaShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MsaaShaders.metal; sourceTree = "<group>"; };
+		158EECF828B3AFF300F04514 /* AAPLShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = AAPLShaders.metal; sourceTree = "<group>"; };
 		15D9C5CE28A4EBB70094642F /* video-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D9C5D128A4EBB70094642F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15D9C5D228A4EBB70094642F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -190,23 +190,11 @@
 		1553277428A4FC3C00C206DC /* renderlib */ = {
 			isa = PBXGroup;
 			children = (
+				158EECF128B3AFF300F04514 /* metallib */,
+				158EECC528B3AFF300F04514 /* opengllib */,
 				1553279128A4FC4E00C206DC /* texture */,
-				155327B428A4FC5200C206DC /* metallib */,
-				1553277528A4FC4E00C206DC /* opengllib */,
 			);
 			path = renderlib;
-			sourceTree = "<group>";
-		};
-		1553277528A4FC4E00C206DC /* opengllib */ = {
-			isa = PBXGroup;
-			children = (
-				1553277B28A4FC4E00C206DC /* CXXFillColorRenderNode.h */,
-				1553279A28A4FC4E00C206DC /* CXXFillColorRenderNode.m */,
-				1553277C28A4FC4E00C206DC /* Model */,
-				1553279B28A4FC4E00C206DC /* opengl */,
-			);
-			name = opengllib;
-			path = "../../../opengl-test2/opengl-test/opengllib";
 			sourceTree = "<group>";
 		};
 		1553277628A4FC4E00C206DC /* category */ = {
@@ -218,61 +206,6 @@
 				1553277828A4FC4E00C206DC /* UIImage+THBExtend.m */,
 			);
 			path = category;
-			sourceTree = "<group>";
-		};
-		1553277C28A4FC4E00C206DC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1553278828A4FC4E00C206DC /* AAPLMathUtilities.h */,
-				1553278D28A4FC4E00C206DC /* AAPLMathUtilities.m */,
-				1553278028A4FC4E00C206DC /* Asset */,
-				1553278E28A4FC4E00C206DC /* Material */,
-				1553277D28A4FC4E00C206DC /* Mesh */,
-				1553278728A4FC4E00C206DC /* MNTPMathUtils.h */,
-				1553278C28A4FC4E00C206DC /* MNTPMathUtils.m */,
-				1553278928A4FC4E00C206DC /* Submesh */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		1553277D28A4FC4E00C206DC /* Mesh */ = {
-			isa = PBXGroup;
-			children = (
-				1553277E28A4FC4E00C206DC /* MNTPMesh.h */,
-				1553277F28A4FC4E00C206DC /* MNTPMesh.mm */,
-			);
-			path = Mesh;
-			sourceTree = "<group>";
-		};
-		1553278028A4FC4E00C206DC /* Asset */ = {
-			isa = PBXGroup;
-			children = (
-				1553278128A4FC4E00C206DC /* MNTP3DObjCache.m */,
-				1553278228A4FC4E00C206DC /* MNTP3DAsset.m */,
-				1553278328A4FC4E00C206DC /* MNTP3DAssetLoader.h */,
-				1553278428A4FC4E00C206DC /* MNTP3DObjCache.h */,
-				1553278528A4FC4E00C206DC /* MNTP3DAssetLoader.mm */,
-				1553278628A4FC4E00C206DC /* MNTP3DAsset.h */,
-			);
-			path = Asset;
-			sourceTree = "<group>";
-		};
-		1553278928A4FC4E00C206DC /* Submesh */ = {
-			isa = PBXGroup;
-			children = (
-				1553278A28A4FC4E00C206DC /* MNTPSubmesh.mm */,
-				1553278B28A4FC4E00C206DC /* MNTPSubmesh.h */,
-			);
-			path = Submesh;
-			sourceTree = "<group>";
-		};
-		1553278E28A4FC4E00C206DC /* Material */ = {
-			isa = PBXGroup;
-			children = (
-				1553278F28A4FC4E00C206DC /* MNTPMaterial.h */,
-				1553279028A4FC4E00C206DC /* MNTPMaterial.m */,
-			);
-			path = Material;
 			sourceTree = "<group>";
 		};
 		1553279128A4FC4E00C206DC /* texture */ = {
@@ -288,41 +221,6 @@
 				1553279528A4FC4E00C206DC /* THBPixelBufferUtil.m */,
 			);
 			path = texture;
-			sourceTree = "<group>";
-		};
-		1553279B28A4FC4E00C206DC /* opengl */ = {
-			isa = PBXGroup;
-			children = (
-				155327A128A4FC4E00C206DC /* GLProgram.h */,
-				1553279E28A4FC4E00C206DC /* GLProgram.m */,
-				155327A028A4FC4E00C206DC /* GPUImageContext.h */,
-				1553279D28A4FC4E00C206DC /* GPUImageContext.m */,
-				1553279F28A4FC4E00C206DC /* THBContext.h */,
-				1553279C28A4FC4E00C206DC /* THBContext.m */,
-			);
-			path = opengl;
-			sourceTree = "<group>";
-		};
-		155327B428A4FC5200C206DC /* metallib */ = {
-			isa = PBXGroup;
-			children = (
-				155327B528A4FC5200C206DC /* orientation */,
-				155327B828A4FC5200C206DC /* AAPLShaderTypes.h */,
-				155327B928A4FC5200C206DC /* MipmapShaders.metal */,
-				155327BA28A4FC5200C206DC /* MsaaShaders.metal */,
-				155327BB28A4FC5200C206DC /* AAPLShaders.metal */,
-			);
-			name = metallib;
-			path = "../../../opengl-test2/opengl-test/metallib";
-			sourceTree = "<group>";
-		};
-		155327B528A4FC5200C206DC /* orientation */ = {
-			isa = PBXGroup;
-			children = (
-				155327B728A4FC5200C206DC /* THBOrientationRenderNode.h */,
-				155327B628A4FC5200C206DC /* THBOrientationRenderNode.m */,
-			);
-			path = orientation;
 			sourceTree = "<group>";
 		};
 		155327C828A6593400C206DC /* videolib */ = {
@@ -373,6 +271,106 @@
 				155327E128A659E300C206DC /* THBVideoRenderProtocol.h */,
 			);
 			path = Compositor;
+			sourceTree = "<group>";
+		};
+		158EECC528B3AFF300F04514 /* opengllib */ = {
+			isa = PBXGroup;
+			children = (
+				158EECC728B3AFF300F04514 /* CXXFillColorRenderNode.h */,
+				158EECE928B3AFF300F04514 /* CXXFillColorRenderNode.m */,
+				158EECC928B3AFF300F04514 /* Model */,
+				158EECEA28B3AFF300F04514 /* opengl */,
+			);
+			path = opengllib;
+			sourceTree = "<group>";
+		};
+		158EECC928B3AFF300F04514 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				158EECCA28B3AFF300F04514 /* Mesh */,
+				158EECCD28B3AFF300F04514 /* Asset */,
+				158EECD428B3AFF300F04514 /* MNTPMathUtils.h */,
+				158EECD528B3AFF300F04514 /* AAPLMathUtilities.h */,
+				158EECD628B3AFF300F04514 /* Submesh */,
+				158EECD928B3AFF300F04514 /* MNTPMathUtils.m */,
+				158EECDA28B3AFF300F04514 /* AAPLMathUtilities.m */,
+				158EECDB28B3AFF300F04514 /* Material */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		158EECCA28B3AFF300F04514 /* Mesh */ = {
+			isa = PBXGroup;
+			children = (
+				158EECCB28B3AFF300F04514 /* MNTPMesh.h */,
+				158EECCC28B3AFF300F04514 /* MNTPMesh.mm */,
+			);
+			path = Mesh;
+			sourceTree = "<group>";
+		};
+		158EECCD28B3AFF300F04514 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				158EECCE28B3AFF300F04514 /* MNTP3DObjCache.m */,
+				158EECCF28B3AFF300F04514 /* MNTP3DAsset.m */,
+				158EECD028B3AFF300F04514 /* MNTP3DAssetLoader.h */,
+				158EECD128B3AFF300F04514 /* MNTP3DObjCache.h */,
+				158EECD228B3AFF300F04514 /* MNTP3DAssetLoader.mm */,
+				158EECD328B3AFF300F04514 /* MNTP3DAsset.h */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		158EECD628B3AFF300F04514 /* Submesh */ = {
+			isa = PBXGroup;
+			children = (
+				158EECD728B3AFF300F04514 /* MNTPSubmesh.mm */,
+				158EECD828B3AFF300F04514 /* MNTPSubmesh.h */,
+			);
+			path = Submesh;
+			sourceTree = "<group>";
+		};
+		158EECDB28B3AFF300F04514 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				158EECDC28B3AFF300F04514 /* MNTPMaterial.h */,
+				158EECDD28B3AFF300F04514 /* MNTPMaterial.m */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		158EECEA28B3AFF300F04514 /* opengl */ = {
+			isa = PBXGroup;
+			children = (
+				158EECEB28B3AFF300F04514 /* THBContext.m */,
+				158EECEC28B3AFF300F04514 /* GPUImageContext.m */,
+				158EECED28B3AFF300F04514 /* GLProgram.m */,
+				158EECEE28B3AFF300F04514 /* THBContext.h */,
+				158EECEF28B3AFF300F04514 /* GPUImageContext.h */,
+				158EECF028B3AFF300F04514 /* GLProgram.h */,
+			);
+			path = opengl;
+			sourceTree = "<group>";
+		};
+		158EECF128B3AFF300F04514 /* metallib */ = {
+			isa = PBXGroup;
+			children = (
+				158EECF828B3AFF300F04514 /* AAPLShaders.metal */,
+				158EECF528B3AFF300F04514 /* AAPLShaderTypes.h */,
+				158EECF628B3AFF300F04514 /* MipmapShaders.metal */,
+				158EECF728B3AFF300F04514 /* MsaaShaders.metal */,
+				158EECF228B3AFF300F04514 /* orientation */,
+			);
+			path = metallib;
+			sourceTree = "<group>";
+		};
+		158EECF228B3AFF300F04514 /* orientation */ = {
+			isa = PBXGroup;
+			children = (
+				158EECF328B3AFF300F04514 /* THBOrientationRenderNode.m */,
+				158EECF428B3AFF300F04514 /* THBOrientationRenderNode.h */,
+			);
+			path = orientation;
 			sourceTree = "<group>";
 		};
 		15D9C5C528A4EBB70094642F = {
@@ -556,42 +554,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				155327D828A659A300C206DC /* THBVideoMedium.m in Sources */,
-				155327BF28A4FC5200C206DC /* AAPLShaders.metal in Sources */,
-				155327A728A4FC4E00C206DC /* MNTP3DAssetLoader.mm in Sources */,
+				158EED0E28B3AFF300F04514 /* AAPLShaders.metal in Sources */,
 				155327A328A4FC4E00C206DC /* UIImage+THBExtend.m in Sources */,
-				155327BC28A4FC5200C206DC /* THBOrientationRenderNode.m in Sources */,
-				155327A628A4FC4E00C206DC /* MNTP3DAsset.m in Sources */,
-				155327A528A4FC4E00C206DC /* MNTP3DObjCache.m in Sources */,
+				158EED0728B3AFF300F04514 /* CXXFillColorRenderNode.m in Sources */,
 				155327AC28A4FC4E00C206DC /* THBTexture.m in Sources */,
 				15D9C5D928A4EBB70094642F /* ViewController.m in Sources */,
+				158EED0B28B3AFF300F04514 /* THBOrientationRenderNode.m in Sources */,
 				155327E928A66FE900C206DC /* THBAVFoundationUtil.m in Sources */,
 				15D9C5D328A4EBB70094642F /* AppDelegate.m in Sources */,
 				1553277128A4EDFF00C206DC /* THBVideoTestVC.m in Sources */,
-				155327A928A4FC4E00C206DC /* MNTPMathUtils.m in Sources */,
-				155327B128A4FC4E00C206DC /* THBContext.m in Sources */,
-				155327BD28A4FC5200C206DC /* MipmapShaders.metal in Sources */,
 				1544568A28A6750C00585431 /* EAVVideoRenderer.m in Sources */,
-				155327A828A4FC4E00C206DC /* MNTPSubmesh.mm in Sources */,
-				155327AB28A4FC4E00C206DC /* MNTPMaterial.m in Sources */,
+				158EECFC28B3AFF300F04514 /* MNTP3DObjCache.m in Sources */,
 				155327AD28A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.m in Sources */,
+				158EED0928B3AFF300F04514 /* GPUImageContext.m in Sources */,
+				158EED0028B3AFF300F04514 /* MNTPMathUtils.m in Sources */,
 				1544569528A6828100585431 /* EAVYUV2RGBRenderNode.m in Sources */,
 				155327E328A659E300C206DC /* THBVideoCompositionInstruction.m in Sources */,
-				155327BE28A4FC5200C206DC /* MsaaShaders.metal in Sources */,
+				158EECFD28B3AFF300F04514 /* MNTP3DAsset.m in Sources */,
+				158EED0C28B3AFF300F04514 /* MipmapShaders.metal in Sources */,
 				155327E628A66FA500C206DC /* NSArray+THBExtend.m in Sources */,
+				158EED0128B3AFF300F04514 /* AAPLMathUtilities.m in Sources */,
 				155327D928A659A300C206DC /* THBAudioMixMedium.m in Sources */,
 				155327AF28A4FC4E00C206DC /* THBPixelBufferPool.m in Sources */,
-				155327B028A4FC4E00C206DC /* CXXFillColorRenderNode.m in Sources */,
-				155327B228A4FC4E00C206DC /* GPUImageContext.m in Sources */,
+				158EED0D28B3AFF300F04514 /* MsaaShaders.metal in Sources */,
 				155327E228A659E300C206DC /* THBVideoCompositor.m in Sources */,
+				158EED0828B3AFF300F04514 /* THBContext.m in Sources */,
 				155327AE28A4FC4E00C206DC /* THBPixelBufferUtil.m in Sources */,
+				158EECFF28B3AFF300F04514 /* MNTPSubmesh.mm in Sources */,
 				155327D728A659A300C206DC /* THBBuilder.m in Sources */,
-				155327AA28A4FC4E00C206DC /* AAPLMathUtilities.m in Sources */,
 				155327DB28A659A300C206DC /* THBAudioMedium.m in Sources */,
-				155327B328A4FC4E00C206DC /* GLProgram.m in Sources */,
 				155327DA28A659A300C206DC /* THBMedium.m in Sources */,
+				158EECFE28B3AFF300F04514 /* MNTP3DAssetLoader.mm in Sources */,
 				15D9C5E428A4EBB80094642F /* main.m in Sources */,
+				158EED0A28B3AFF300F04514 /* GLProgram.m in Sources */,
+				158EED0228B3AFF300F04514 /* MNTPMaterial.m in Sources */,
 				15D9C5D628A4EBB70094642F /* SceneDelegate.m in Sources */,
-				155327A428A4FC4E00C206DC /* MNTPMesh.mm in Sources */,
+				158EECFB28B3AFF300F04514 /* MNTPMesh.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

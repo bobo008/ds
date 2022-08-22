@@ -1,7 +1,7 @@
 
 
 #import <UIKit/UIKit.h>
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 #import "THBContext.h"
 
 
@@ -11,12 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface THBShadowTestRenderNode : NSObject
 
-@property (nonatomic) THBGLESTexture *inputTexture;
-@property (nonatomic) THBGLESTexture *outputTexture;
+@property (nonatomic) THBTexture *inputTexture;
+@property (nonatomic) THBTexture *outputTexture;
 
-@property (nonatomic) THBGLESTexture *inputTexture2;
+@property (nonatomic) THBTexture *inputTexture2;
 
-@property (nonatomic) THBGLESTexture *inputTexture3;
+@property (nonatomic) THBTexture *inputTexture3;
 
 
 @property (nonatomic) simd_float4x4 pMatrix;

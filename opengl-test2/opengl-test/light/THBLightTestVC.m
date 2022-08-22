@@ -4,7 +4,7 @@
 #import "THBTestRenderer.h"
 
 
-#import "UIImage+EAVExtend.h"
+#import "UIImage+THBExtend.h"
 
 
 @interface THBLightTestVC ()
@@ -38,7 +38,7 @@
     
     [[THBContext sharedInstance] runSyncOnRenderingQueue:^{
         [render setup];
-        THBGLESTexture *texture = [render drawCanvas];
+        THBTexture *texture = [render drawCanvas];
         
         UIImage *resultImage = [THBPixelBufferUtil imageForPixelBuffer:texture.pixel];
 //        resultImage = [resultImage cxx_flipImage];

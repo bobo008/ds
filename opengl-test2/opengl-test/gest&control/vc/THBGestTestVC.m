@@ -51,10 +51,10 @@
 //    [bView addSubview:scrollView];
     
     
-//    THBTestBtn *btn = [[THBTestBtn alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-//    [bView addSubview:btn];
-//    [btn addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
-//
+    THBTestBtn *btn = [[THBTestBtn alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    [bView addSubview:btn];
+    [btn addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+
 //
 //    THBTestCView *cView = [[THBTestCView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
 //    cView.backgroundColor = UIColor.blueColor;

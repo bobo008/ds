@@ -1,13 +1,13 @@
 
 
 #import <UIKit/UIKit.h>
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 //#import "THBContext.h"
 
 
 
 #import "THBPixelBufferUtil.h"
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 #import "THBPixelBufferPoolAdaptor.h"
 
 #import "GLProgram.h"
@@ -21,10 +21,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface THBTestRenderNode : NSObject
 
-@property (nonatomic) THBGLESTexture *inputTexture;
-@property (nonatomic) THBGLESTexture *outputTexture;
+@property (nonatomic) THBTexture *inputTexture;
+@property (nonatomic) THBTexture *outputTexture;
 
-@property (nonatomic) THBGLESTexture *inputTexture2;
+@property (nonatomic) THBTexture *inputTexture2;
 
 
 @property (nonatomic) simd_float4x4 pMatrix;

@@ -40,9 +40,9 @@ typedef struct THBVertexData {
     GLuint _vbo;
     GLuint _ebo;
     
-    THBGLESTexture *_imageTexture;
+    THBTexture *_imageTexture;
     
-    THBGLESTexture *_normalTexture;
+    THBTexture *_normalTexture;
 }
 
 
@@ -85,7 +85,7 @@ typedef struct THBVertexData {
 
 
 #pragma mark -
-- (THBGLESTexture *)textureForMatrialPath:(NSString *)path {
+- (THBTexture *)textureForMatrialPath:(NSString *)path {
     CVPixelBufferRef pixelBuffer = [THBPixelBufferUtil pixelBufferForLocalURL:[NSURL fileURLWithPath:path]];
     if (pixelBuffer) {
         CVOpenGLESTextureRef glTexture = [THBPixelBufferUtil textureForPixelBuffer:pixelBuffer glTextureCache:_coreTextureCache];
@@ -93,23 +93,23 @@ typedef struct THBVertexData {
             CVPixelBufferRelease(pixelBuffer);
         } else {
 
-            return [THBGLESTexture createTextureWithPixel:pixelBuffer texture:glTexture];
+            return [THBTexture createTextureWithPixel:pixelBuffer texture:glTexture];
         }
     }
     
     return nil;
 }
 
-- (nullable THBGLESTexture *)createGlesTextureWithWidth:(size_t)widthInPixels andHeight:(size_t)heightInPixels {
+- (nullable THBTexture *)createGlesTextureWithWidth:(size_t)widthInPixels andHeight:(size_t)heightInPixels {
     return [self createCxxTextureWithWidth:widthInPixels andHeight:heightInPixels format:kCVPixelFormatType_32BGRA];
 }
 
-- (nullable THBGLESTexture *)createCxxTextureWithWidth:(size_t)widthInPixels andHeight:(size_t)heightInPixels format:(OSType)format {
+- (nullable THBTexture *)createCxxTextureWithWidth:(size_t)widthInPixels andHeight:(size_t)heightInPixels format:(OSType)format {
     CVPixelBufferRef pixel = [_pixelPool pixelBufferWithSize:CGSizeMake(widthInPixels, heightInPixels) formatType:format];
     if (pixel) {
         CVOpenGLESTextureRef texture = [THBPixelBufferUtil textureForPixelBuffer:pixel glTextureCache:_coreTextureCache];
         if (texture) {
-            return [THBGLESTexture createTextureWithPixel:pixel texture:texture];;
+            return [THBTexture createTextureWithPixel:pixel texture:texture];;
         } else {
             CVPixelBufferRelease(pixel);
         }
@@ -121,10 +121,10 @@ typedef struct THBVertexData {
 #pragma mark -
 
 
-- (THBGLESTexture *)drawCanvas {
+- (THBTexture *)drawCanvas {
     [self.pixelPool enter];
 
-    THBGLESTexture *canvasGlesTexture; {
+    THBTexture *canvasGlesTexture; {
         int canvasWidth = 1000;
         int canvasHeight = 1000;
         canvasGlesTexture = [self createGlesTextureWithWidth:canvasWidth andHeight:canvasHeight];

@@ -53,10 +53,10 @@ NSString *const fs = SHADER_STRING
     [glContext useAsCurrentContext];
     
     
-    THBGLESTexture *outputTexture = [THBPixelBufferUtil createTextureWithSize:CGSizeMake(1000, 1000)];
+    THBTexture *outputTexture = [THBPixelBufferUtil createTextureWithSize:CGSizeMake(1000, 1000)];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"comics_22.png" ofType:nil];
-    THBGLESTexture *inputTexture = [THBPixelBufferUtil textureForLocalURL:[NSURL fileURLWithPath:path]];
+    THBTexture *inputTexture = [THBPixelBufferUtil textureForLocalURL:[NSURL fileURLWithPath:path]];
     
     glGenFramebuffers(1, &_framebuffer);
     glBindFramebuffer(GL_FRAMEBUFFER, _framebuffer);
@@ -154,7 +154,7 @@ NSString *const fs = SHADER_STRING
             @"inputTextureCoordinate",
         ];
         
-        glProgram = CXXLoadGLProgram(vs, fs, attributeNames);
+        glProgram = GLLoadGLProgram(vs, fs, attributeNames);
         [glProgramMap setObject:glProgram forKey:key];
     }
     return glProgram;

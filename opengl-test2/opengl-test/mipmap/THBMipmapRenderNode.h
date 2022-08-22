@@ -1,13 +1,13 @@
 
 
 #import <UIKit/UIKit.h>
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 //#import "THBContext.h"
 
 
 
 #import "THBPixelBufferUtil.h"
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 #import "THBPixelBufferPoolAdaptor.h"
 
 #import "GLProgram.h"

@@ -159,7 +159,7 @@ static NSString * const shadowFs = SHADER_STRING
             @"inputTextureCoordinate"
         ];
         
-        glProgram = CXXLoadGLProgram(shadowVs, shadowFs, attributeNames);
+        glProgram = GLLoadGLProgram(shadowVs, shadowFs, attributeNames);
         [glProgramMap setObject:glProgram forKey:key];
     }
     return glProgram;
