@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1544568128A673D100585431 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1544568028A673D100585431 /* AVFoundation.framework */; };
+		1544568328A6740200585431 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1544568228A6740200585431 /* VideoToolbox.framework */; };
+		1544568528A6741A00585431 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1544568428A6741A00585431 /* Accelerate.framework */; };
+		1544568A28A6750C00585431 /* EAVVideoRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1544568928A6750C00585431 /* EAVVideoRenderer.m */; };
+		1544568D28A67F5300585431 /* video_60.mov in Resources */ = {isa = PBXBuildFile; fileRef = 1544568C28A67F5300585431 /* video_60.mov */; };
+		1544568F28A67F7800585431 /* fullmoon_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1544568E28A67F7800585431 /* fullmoon_01.mp4 */; };
+		1544569528A6828100585431 /* EAVYUV2RGBRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1544569428A6828100585431 /* EAVYUV2RGBRenderNode.m */; };
+		1544569C28A687DD00585431 /* yue_vs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1544569A28A687DD00585431 /* yue_vs.fsh */; };
+		1544569D28A687DD00585431 /* yue_fs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1544569B28A687DD00585431 /* yue_fs.fsh */; };
 		1553277128A4EDFF00C206DC /* THBVideoTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553276F28A4EDFF00C206DC /* THBVideoTestVC.m */; };
 		1553277228A4EDFF00C206DC /* THBVideoTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1553277028A4EDFF00C206DC /* THBVideoTestVC.xib */; };
-		155327A228A4FC4E00C206DC /* NSArray+MNTExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553277728A4FC4E00C206DC /* NSArray+MNTExtend.m */; };
-		155327A328A4FC4E00C206DC /* UIImage+EAVExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553277828A4FC4E00C206DC /* UIImage+EAVExtend.m */; };
+		155327A328A4FC4E00C206DC /* UIImage+THBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553277828A4FC4E00C206DC /* UIImage+THBExtend.m */; };
 		155327A428A4FC4E00C206DC /* MNTPMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1553277F28A4FC4E00C206DC /* MNTPMesh.mm */; };
 		155327A528A4FC4E00C206DC /* MNTP3DObjCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553278128A4FC4E00C206DC /* MNTP3DObjCache.m */; };
 		155327A628A4FC4E00C206DC /* MNTP3DAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553278228A4FC4E00C206DC /* MNTP3DAsset.m */; };
@@ -19,7 +27,7 @@
 		155327A928A4FC4E00C206DC /* MNTPMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553278C28A4FC4E00C206DC /* MNTPMathUtils.m */; };
 		155327AA28A4FC4E00C206DC /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553278D28A4FC4E00C206DC /* AAPLMathUtilities.m */; };
 		155327AB28A4FC4E00C206DC /* MNTPMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279028A4FC4E00C206DC /* MNTPMaterial.m */; };
-		155327AC28A4FC4E00C206DC /* THBGLESTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279228A4FC4E00C206DC /* THBGLESTexture.m */; };
+		155327AC28A4FC4E00C206DC /* THBTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279228A4FC4E00C206DC /* THBTexture.m */; };
 		155327AD28A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279328A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.m */; };
 		155327AE28A4FC4E00C206DC /* THBPixelBufferUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279528A4FC4E00C206DC /* THBPixelBufferUtil.m */; };
 		155327AF28A4FC4E00C206DC /* THBPixelBufferPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279928A4FC4E00C206DC /* THBPixelBufferPool.m */; };
@@ -27,10 +35,19 @@
 		155327B128A4FC4E00C206DC /* THBContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279C28A4FC4E00C206DC /* THBContext.m */; };
 		155327B228A4FC4E00C206DC /* GPUImageContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279D28A4FC4E00C206DC /* GPUImageContext.m */; };
 		155327B328A4FC4E00C206DC /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1553279E28A4FC4E00C206DC /* GLProgram.m */; };
-		155327BC28A4FC5200C206DC /* EAVOrientationRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327B628A4FC5200C206DC /* EAVOrientationRenderNode.m */; };
+		155327BC28A4FC5200C206DC /* THBOrientationRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327B628A4FC5200C206DC /* THBOrientationRenderNode.m */; };
 		155327BD28A4FC5200C206DC /* MipmapShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155327B928A4FC5200C206DC /* MipmapShaders.metal */; };
 		155327BE28A4FC5200C206DC /* MsaaShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155327BA28A4FC5200C206DC /* MsaaShaders.metal */; };
 		155327BF28A4FC5200C206DC /* AAPLShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 155327BB28A4FC5200C206DC /* AAPLShaders.metal */; };
+		155327D728A659A300C206DC /* THBBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327CC28A659A300C206DC /* THBBuilder.m */; };
+		155327D828A659A300C206DC /* THBVideoMedium.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327CF28A659A300C206DC /* THBVideoMedium.m */; };
+		155327D928A659A300C206DC /* THBAudioMixMedium.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327D028A659A300C206DC /* THBAudioMixMedium.m */; };
+		155327DA28A659A300C206DC /* THBMedium.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327D228A659A300C206DC /* THBMedium.m */; };
+		155327DB28A659A300C206DC /* THBAudioMedium.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327D328A659A300C206DC /* THBAudioMedium.m */; };
+		155327E228A659E300C206DC /* THBVideoCompositor.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327DD28A659E300C206DC /* THBVideoCompositor.m */; };
+		155327E328A659E300C206DC /* THBVideoCompositionInstruction.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327DE28A659E300C206DC /* THBVideoCompositionInstruction.m */; };
+		155327E628A66FA500C206DC /* NSArray+THBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327E428A66FA500C206DC /* NSArray+THBExtend.m */; };
+		155327E928A66FE900C206DC /* THBAVFoundationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 155327E828A66FE900C206DC /* THBAVFoundationUtil.m */; };
 		15D9C5D328A4EBB70094642F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D228A4EBB70094642F /* AppDelegate.m */; };
 		15D9C5D628A4EBB70094642F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D528A4EBB70094642F /* SceneDelegate.m */; };
 		15D9C5D928A4EBB70094642F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D828A4EBB70094642F /* ViewController.m */; };
@@ -42,13 +59,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1544568028A673D100585431 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1544568228A6740200585431 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		1544568428A6741A00585431 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		1544568828A6750C00585431 /* EAVVideoRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAVVideoRenderer.h; sourceTree = "<group>"; };
+		1544568928A6750C00585431 /* EAVVideoRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAVVideoRenderer.m; sourceTree = "<group>"; };
+		1544568C28A67F5300585431 /* video_60.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video_60.mov; sourceTree = "<group>"; };
+		1544568E28A67F7800585431 /* fullmoon_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fullmoon_01.mp4; sourceTree = "<group>"; };
+		1544569328A6828100585431 /* EAVYUV2RGBRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAVYUV2RGBRenderNode.h; sourceTree = "<group>"; };
+		1544569428A6828100585431 /* EAVYUV2RGBRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAVYUV2RGBRenderNode.m; sourceTree = "<group>"; };
+		1544569A28A687DD00585431 /* yue_vs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = yue_vs.fsh; sourceTree = "<group>"; };
+		1544569B28A687DD00585431 /* yue_fs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = yue_fs.fsh; sourceTree = "<group>"; };
 		1553276E28A4EDFF00C206DC /* THBVideoTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THBVideoTestVC.h; sourceTree = "<group>"; };
 		1553276F28A4EDFF00C206DC /* THBVideoTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THBVideoTestVC.m; sourceTree = "<group>"; };
 		1553277028A4EDFF00C206DC /* THBVideoTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THBVideoTestVC.xib; sourceTree = "<group>"; };
-		1553277728A4FC4E00C206DC /* NSArray+MNTExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MNTExtend.m"; sourceTree = "<group>"; };
-		1553277828A4FC4E00C206DC /* UIImage+EAVExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EAVExtend.m"; sourceTree = "<group>"; };
-		1553277928A4FC4E00C206DC /* NSArray+MNTExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MNTExtend.h"; sourceTree = "<group>"; };
-		1553277A28A4FC4E00C206DC /* UIImage+EAVExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EAVExtend.h"; sourceTree = "<group>"; };
+		1553277828A4FC4E00C206DC /* UIImage+THBExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+THBExtend.m"; sourceTree = "<group>"; };
+		1553277A28A4FC4E00C206DC /* UIImage+THBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+THBExtend.h"; sourceTree = "<group>"; };
 		1553277B28A4FC4E00C206DC /* CXXFillColorRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXXFillColorRenderNode.h; sourceTree = "<group>"; };
 		1553277E28A4FC4E00C206DC /* MNTPMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMesh.h; sourceTree = "<group>"; };
 		1553277F28A4FC4E00C206DC /* MNTPMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPMesh.mm; sourceTree = "<group>"; };
@@ -66,12 +92,12 @@
 		1553278D28A4FC4E00C206DC /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
 		1553278F28A4FC4E00C206DC /* MNTPMaterial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMaterial.h; sourceTree = "<group>"; };
 		1553279028A4FC4E00C206DC /* MNTPMaterial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTPMaterial.m; sourceTree = "<group>"; };
-		1553279228A4FC4E00C206DC /* THBGLESTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBGLESTexture.m; sourceTree = "<group>"; };
+		1553279228A4FC4E00C206DC /* THBTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBTexture.m; sourceTree = "<group>"; };
 		1553279328A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPoolAdaptor.m; sourceTree = "<group>"; };
 		1553279428A4FC4E00C206DC /* THBPixelBufferPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPool.h; sourceTree = "<group>"; };
 		1553279528A4FC4E00C206DC /* THBPixelBufferUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferUtil.m; sourceTree = "<group>"; };
 		1553279628A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferPoolAdaptor.h; sourceTree = "<group>"; };
-		1553279728A4FC4E00C206DC /* THBGLESTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBGLESTexture.h; sourceTree = "<group>"; };
+		1553279728A4FC4E00C206DC /* THBTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBTexture.h; sourceTree = "<group>"; };
 		1553279828A4FC4E00C206DC /* THBPixelBufferUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBPixelBufferUtil.h; sourceTree = "<group>"; };
 		1553279928A4FC4E00C206DC /* THBPixelBufferPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBPixelBufferPool.m; sourceTree = "<group>"; };
 		1553279A28A4FC4E00C206DC /* CXXFillColorRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXXFillColorRenderNode.m; sourceTree = "<group>"; };
@@ -81,12 +107,31 @@
 		1553279F28A4FC4E00C206DC /* THBContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBContext.h; sourceTree = "<group>"; };
 		155327A028A4FC4E00C206DC /* GPUImageContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageContext.h; sourceTree = "<group>"; };
 		155327A128A4FC4E00C206DC /* GLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLProgram.h; sourceTree = "<group>"; };
-		155327B628A4FC5200C206DC /* EAVOrientationRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAVOrientationRenderNode.m; sourceTree = "<group>"; };
-		155327B728A4FC5200C206DC /* EAVOrientationRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAVOrientationRenderNode.h; sourceTree = "<group>"; };
+		155327B628A4FC5200C206DC /* THBOrientationRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBOrientationRenderNode.m; sourceTree = "<group>"; };
+		155327B728A4FC5200C206DC /* THBOrientationRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBOrientationRenderNode.h; sourceTree = "<group>"; };
 		155327B828A4FC5200C206DC /* AAPLShaderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLShaderTypes.h; sourceTree = "<group>"; };
 		155327B928A4FC5200C206DC /* MipmapShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MipmapShaders.metal; sourceTree = "<group>"; };
 		155327BA28A4FC5200C206DC /* MsaaShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MsaaShaders.metal; sourceTree = "<group>"; };
 		155327BB28A4FC5200C206DC /* AAPLShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = AAPLShaders.metal; sourceTree = "<group>"; };
+		155327CC28A659A300C206DC /* THBBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBBuilder.m; sourceTree = "<group>"; };
+		155327CE28A659A300C206DC /* THBMedium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBMedium.h; sourceTree = "<group>"; };
+		155327CF28A659A300C206DC /* THBVideoMedium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBVideoMedium.m; sourceTree = "<group>"; };
+		155327D028A659A300C206DC /* THBAudioMixMedium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBAudioMixMedium.m; sourceTree = "<group>"; };
+		155327D128A659A300C206DC /* THBAudioMedium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBAudioMedium.h; sourceTree = "<group>"; };
+		155327D228A659A300C206DC /* THBMedium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBMedium.m; sourceTree = "<group>"; };
+		155327D328A659A300C206DC /* THBAudioMedium.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBAudioMedium.m; sourceTree = "<group>"; };
+		155327D428A659A300C206DC /* THBAudioMixMedium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBAudioMixMedium.h; sourceTree = "<group>"; };
+		155327D528A659A300C206DC /* THBVideoMedium.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBVideoMedium.h; sourceTree = "<group>"; };
+		155327D628A659A300C206DC /* THBBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBBuilder.h; sourceTree = "<group>"; };
+		155327DD28A659E300C206DC /* THBVideoCompositor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBVideoCompositor.m; sourceTree = "<group>"; };
+		155327DE28A659E300C206DC /* THBVideoCompositionInstruction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBVideoCompositionInstruction.m; sourceTree = "<group>"; };
+		155327DF28A659E300C206DC /* THBVideoCompositor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBVideoCompositor.h; sourceTree = "<group>"; };
+		155327E028A659E300C206DC /* THBVideoCompositionInstruction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBVideoCompositionInstruction.h; sourceTree = "<group>"; };
+		155327E128A659E300C206DC /* THBVideoRenderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBVideoRenderProtocol.h; sourceTree = "<group>"; };
+		155327E428A66FA500C206DC /* NSArray+THBExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+THBExtend.m"; sourceTree = "<group>"; };
+		155327E528A66FA500C206DC /* NSArray+THBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+THBExtend.h"; sourceTree = "<group>"; };
+		155327E728A66FE900C206DC /* THBAVFoundationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBAVFoundationUtil.h; sourceTree = "<group>"; };
+		155327E828A66FE900C206DC /* THBAVFoundationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBAVFoundationUtil.m; sourceTree = "<group>"; };
 		15D9C5CE28A4EBB70094642F /* video-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D9C5D128A4EBB70094642F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15D9C5D228A4EBB70094642F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -109,13 +154,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1544568128A673D100585431 /* AVFoundation.framework in Frameworks */,
+				1544568528A6741A00585431 /* Accelerate.framework in Frameworks */,
 				7018DDF93A1FD3A06E8F9B6D /* Pods_video_test.framework in Frameworks */,
+				1544568328A6740200585431 /* VideoToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1544568728A674FD00585431 /* render */ = {
+			isa = PBXGroup;
+			children = (
+				1544569B28A687DD00585431 /* yue_fs.fsh */,
+				1544569A28A687DD00585431 /* yue_vs.fsh */,
+				1544569328A6828100585431 /* EAVYUV2RGBRenderNode.h */,
+				1544569428A6828100585431 /* EAVYUV2RGBRenderNode.m */,
+				1544568828A6750C00585431 /* EAVVideoRenderer.h */,
+				1544568928A6750C00585431 /* EAVVideoRenderer.m */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
 		1553276828A4EDB600C206DC /* video */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +187,14 @@
 			path = video;
 			sourceTree = "<group>";
 		};
-		1553277428A4FC3C00C206DC /* opengl&metal */ = {
+		1553277428A4FC3C00C206DC /* renderlib */ = {
 			isa = PBXGroup;
 			children = (
+				1553279128A4FC4E00C206DC /* texture */,
 				155327B428A4FC5200C206DC /* metallib */,
 				1553277528A4FC4E00C206DC /* opengllib */,
 			);
-			path = "opengl&metal";
+			path = renderlib;
 			sourceTree = "<group>";
 		};
 		1553277528A4FC4E00C206DC /* opengllib */ = {
@@ -140,10 +202,8 @@
 			children = (
 				1553277B28A4FC4E00C206DC /* CXXFillColorRenderNode.h */,
 				1553279A28A4FC4E00C206DC /* CXXFillColorRenderNode.m */,
-				1553277628A4FC4E00C206DC /* category */,
 				1553277C28A4FC4E00C206DC /* Model */,
 				1553279B28A4FC4E00C206DC /* opengl */,
-				1553279128A4FC4E00C206DC /* texture */,
 			);
 			name = opengllib;
 			path = "../../../opengl-test2/opengl-test/opengllib";
@@ -152,10 +212,10 @@
 		1553277628A4FC4E00C206DC /* category */ = {
 			isa = PBXGroup;
 			children = (
-				1553277928A4FC4E00C206DC /* NSArray+MNTExtend.h */,
-				1553277728A4FC4E00C206DC /* NSArray+MNTExtend.m */,
-				1553277A28A4FC4E00C206DC /* UIImage+EAVExtend.h */,
-				1553277828A4FC4E00C206DC /* UIImage+EAVExtend.m */,
+				155327E528A66FA500C206DC /* NSArray+THBExtend.h */,
+				155327E428A66FA500C206DC /* NSArray+THBExtend.m */,
+				1553277A28A4FC4E00C206DC /* UIImage+THBExtend.h */,
+				1553277828A4FC4E00C206DC /* UIImage+THBExtend.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -218,8 +278,8 @@
 		1553279128A4FC4E00C206DC /* texture */ = {
 			isa = PBXGroup;
 			children = (
-				1553279728A4FC4E00C206DC /* THBGLESTexture.h */,
-				1553279228A4FC4E00C206DC /* THBGLESTexture.m */,
+				1553279728A4FC4E00C206DC /* THBTexture.h */,
+				1553279228A4FC4E00C206DC /* THBTexture.m */,
 				1553279428A4FC4E00C206DC /* THBPixelBufferPool.h */,
 				1553279928A4FC4E00C206DC /* THBPixelBufferPool.m */,
 				1553279628A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.h */,
@@ -259,10 +319,60 @@
 		155327B528A4FC5200C206DC /* orientation */ = {
 			isa = PBXGroup;
 			children = (
-				155327B628A4FC5200C206DC /* EAVOrientationRenderNode.m */,
-				155327B728A4FC5200C206DC /* EAVOrientationRenderNode.h */,
+				155327B728A4FC5200C206DC /* THBOrientationRenderNode.h */,
+				155327B628A4FC5200C206DC /* THBOrientationRenderNode.m */,
 			);
 			path = orientation;
+			sourceTree = "<group>";
+		};
+		155327C828A6593400C206DC /* videolib */ = {
+			isa = PBXGroup;
+			children = (
+				1544568C28A67F5300585431 /* video_60.mov */,
+				1544568728A674FD00585431 /* render */,
+				155327E728A66FE900C206DC /* THBAVFoundationUtil.h */,
+				155327E828A66FE900C206DC /* THBAVFoundationUtil.m */,
+				155327DC28A659E300C206DC /* Compositor */,
+				155327CB28A659A300C206DC /* Builder */,
+			);
+			path = videolib;
+			sourceTree = "<group>";
+		};
+		155327CB28A659A300C206DC /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				155327D628A659A300C206DC /* THBBuilder.h */,
+				155327CC28A659A300C206DC /* THBBuilder.m */,
+				155327CD28A659A300C206DC /* Medium */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		155327CD28A659A300C206DC /* Medium */ = {
+			isa = PBXGroup;
+			children = (
+				155327CE28A659A300C206DC /* THBMedium.h */,
+				155327D228A659A300C206DC /* THBMedium.m */,
+				155327D128A659A300C206DC /* THBAudioMedium.h */,
+				155327D328A659A300C206DC /* THBAudioMedium.m */,
+				155327D428A659A300C206DC /* THBAudioMixMedium.h */,
+				155327D028A659A300C206DC /* THBAudioMixMedium.m */,
+				155327D528A659A300C206DC /* THBVideoMedium.h */,
+				155327CF28A659A300C206DC /* THBVideoMedium.m */,
+			);
+			path = Medium;
+			sourceTree = "<group>";
+		};
+		155327DC28A659E300C206DC /* Compositor */ = {
+			isa = PBXGroup;
+			children = (
+				155327E028A659E300C206DC /* THBVideoCompositionInstruction.h */,
+				155327DE28A659E300C206DC /* THBVideoCompositionInstruction.m */,
+				155327DF28A659E300C206DC /* THBVideoCompositor.h */,
+				155327DD28A659E300C206DC /* THBVideoCompositor.m */,
+				155327E128A659E300C206DC /* THBVideoRenderProtocol.h */,
+			);
+			path = Compositor;
 			sourceTree = "<group>";
 		};
 		15D9C5C528A4EBB70094642F = {
@@ -286,7 +396,10 @@
 		15D9C5D028A4EBB70094642F /* video-test */ = {
 			isa = PBXGroup;
 			children = (
-				1553277428A4FC3C00C206DC /* opengl&metal */,
+				1544568E28A67F7800585431 /* fullmoon_01.mp4 */,
+				1553277628A4FC4E00C206DC /* category */,
+				155327C828A6593400C206DC /* videolib */,
+				1553277428A4FC3C00C206DC /* renderlib */,
 				1553276828A4EDB600C206DC /* video */,
 				15D9C5D128A4EBB70094642F /* AppDelegate.h */,
 				15D9C5D228A4EBB70094642F /* AppDelegate.m */,
@@ -315,6 +428,9 @@
 		BE34C4E60906E72729460540 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1544568428A6741A00585431 /* Accelerate.framework */,
+				1544568228A6740200585431 /* VideoToolbox.framework */,
+				1544568028A673D100585431 /* AVFoundation.framework */,
 				2EC335A1037DD5E41516850F /* Pods_video_test.framework */,
 			);
 			name = Frameworks;
@@ -381,8 +497,12 @@
 			files = (
 				15D9C5E128A4EBB80094642F /* LaunchScreen.storyboard in Resources */,
 				1553277228A4EDFF00C206DC /* THBVideoTestVC.xib in Resources */,
+				1544569D28A687DD00585431 /* yue_fs.fsh in Resources */,
+				1544568F28A67F7800585431 /* fullmoon_01.mp4 in Resources */,
 				15D9C5DE28A4EBB80094642F /* Assets.xcassets in Resources */,
+				1544568D28A67F5300585431 /* video_60.mov in Resources */,
 				15D9C5DC28A4EBB70094642F /* Main.storyboard in Resources */,
+				1544569C28A687DD00585431 /* yue_vs.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,30 +555,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155327D828A659A300C206DC /* THBVideoMedium.m in Sources */,
 				155327BF28A4FC5200C206DC /* AAPLShaders.metal in Sources */,
-				155327A228A4FC4E00C206DC /* NSArray+MNTExtend.m in Sources */,
 				155327A728A4FC4E00C206DC /* MNTP3DAssetLoader.mm in Sources */,
-				155327A328A4FC4E00C206DC /* UIImage+EAVExtend.m in Sources */,
-				155327BC28A4FC5200C206DC /* EAVOrientationRenderNode.m in Sources */,
+				155327A328A4FC4E00C206DC /* UIImage+THBExtend.m in Sources */,
+				155327BC28A4FC5200C206DC /* THBOrientationRenderNode.m in Sources */,
 				155327A628A4FC4E00C206DC /* MNTP3DAsset.m in Sources */,
 				155327A528A4FC4E00C206DC /* MNTP3DObjCache.m in Sources */,
-				155327AC28A4FC4E00C206DC /* THBGLESTexture.m in Sources */,
+				155327AC28A4FC4E00C206DC /* THBTexture.m in Sources */,
 				15D9C5D928A4EBB70094642F /* ViewController.m in Sources */,
+				155327E928A66FE900C206DC /* THBAVFoundationUtil.m in Sources */,
 				15D9C5D328A4EBB70094642F /* AppDelegate.m in Sources */,
 				1553277128A4EDFF00C206DC /* THBVideoTestVC.m in Sources */,
 				155327A928A4FC4E00C206DC /* MNTPMathUtils.m in Sources */,
 				155327B128A4FC4E00C206DC /* THBContext.m in Sources */,
 				155327BD28A4FC5200C206DC /* MipmapShaders.metal in Sources */,
+				1544568A28A6750C00585431 /* EAVVideoRenderer.m in Sources */,
 				155327A828A4FC4E00C206DC /* MNTPSubmesh.mm in Sources */,
 				155327AB28A4FC4E00C206DC /* MNTPMaterial.m in Sources */,
 				155327AD28A4FC4E00C206DC /* THBPixelBufferPoolAdaptor.m in Sources */,
+				1544569528A6828100585431 /* EAVYUV2RGBRenderNode.m in Sources */,
+				155327E328A659E300C206DC /* THBVideoCompositionInstruction.m in Sources */,
 				155327BE28A4FC5200C206DC /* MsaaShaders.metal in Sources */,
+				155327E628A66FA500C206DC /* NSArray+THBExtend.m in Sources */,
+				155327D928A659A300C206DC /* THBAudioMixMedium.m in Sources */,
 				155327AF28A4FC4E00C206DC /* THBPixelBufferPool.m in Sources */,
 				155327B028A4FC4E00C206DC /* CXXFillColorRenderNode.m in Sources */,
 				155327B228A4FC4E00C206DC /* GPUImageContext.m in Sources */,
+				155327E228A659E300C206DC /* THBVideoCompositor.m in Sources */,
 				155327AE28A4FC4E00C206DC /* THBPixelBufferUtil.m in Sources */,
+				155327D728A659A300C206DC /* THBBuilder.m in Sources */,
 				155327AA28A4FC4E00C206DC /* AAPLMathUtilities.m in Sources */,
+				155327DB28A659A300C206DC /* THBAudioMedium.m in Sources */,
 				155327B328A4FC4E00C206DC /* GLProgram.m in Sources */,
+				155327DA28A659A300C206DC /* THBMedium.m in Sources */,
 				15D9C5E428A4EBB80094642F /* main.m in Sources */,
 				15D9C5D628A4EBB70094642F /* SceneDelegate.m in Sources */,
 				155327A428A4FC4E00C206DC /* MNTPMesh.mm in Sources */,
@@ -606,6 +736,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D345JDMWWU;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"GLES_SILENCE_DEPRECATION=1",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "video-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -613,7 +748,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,6 +770,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D345JDMWWU;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"GLES_SILENCE_DEPRECATION=1",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "video-test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -642,7 +782,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

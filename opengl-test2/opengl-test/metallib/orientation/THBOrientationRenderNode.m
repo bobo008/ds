@@ -1,6 +1,6 @@
 //  Created on 2022/3/9.
 
-#import "EAVOrientationRenderNode.h"
+#import "THBOrientationRenderNode.h"
 
 
 #import "THBPixelBufferUtil.h"
@@ -12,14 +12,14 @@
 #import <Metal/Metal.h>
 #import <Accelerate/Accelerate.h>
 
-@interface EAVOrientationRenderNode ()
+@interface THBOrientationRenderNode ()
 
 
 
 
 @end
 
-@implementation EAVOrientationRenderNode
+@implementation THBOrientationRenderNode
 
 
 
@@ -173,19 +173,19 @@
 //+ (CVPixelBufferRef)correctUseOpengl:(CVPixelBufferRef)pixel orientation:(UIImageOrientation)orientation {
 //
 //    __block CVPixelBufferRef ret;
-//    [[EAVContext sharedContext] runSyncOnRenderingQueue:^{
+//    [[THBContext sharedContext] runSyncOnRenderingQueue:^{
 //        [GPUImageContext useImageProcessingContext];
 //        GLuint framebufferHandle;
 //        glGenFramebuffers(1, &framebufferHandle);
 //
-//        EAVGLTexture *texture = [[EAVGLTexture alloc] init];
+//        THBGLTexture *texture = [[THBGLTexture alloc] init];
 //        texture.pixelBuffer = pixel;
-//        texture.texture = [EAVPixelBufferUtil textureForPixelBuffer:pixel];
+//        texture.texture = [THBPixelBufferUtil textureForPixelBuffer:pixel];
 //
 //        CGSize size = (orientation == UIImageOrientationRight || orientation == UIImageOrientationLeft) ? CGSizeMake(texture.pixelSize.height, texture.pixelSize.width) : texture.pixelSize;
 //
 //
-//        EAVGLTexture *output = [EAVPixelBufferUtil createTextureWithSize:size];
+//        THBGLTexture *output = [THBPixelBufferUtil createTextureWithSize:size];
 //
 //        MNFOrientationRenderNode *node = [[MNFOrientationRenderNode alloc] init];
 //        node.framebufferHandle = framebufferHandle;

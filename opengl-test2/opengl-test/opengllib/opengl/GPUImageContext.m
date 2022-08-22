@@ -351,7 +351,7 @@ static void *openGLESContextQueueKey;
 
 
 
-GLProgram * CXXLoadGLProgram(NSString *vertexString, NSString *fragmentString, NSArray<NSString *> *attributeNames) {
+GLProgram * GLLoadGLProgram(NSString *vertexString, NSString *fragmentString, NSArray<NSString *> *attributeNames) {
     GLProgram *glProgram = [[GPUImageContext sharedImageProcessingContext] programForVertexShaderString:vertexString
                                                                                    fragmentShaderString:fragmentString];
     if (!glProgram.initialized) {

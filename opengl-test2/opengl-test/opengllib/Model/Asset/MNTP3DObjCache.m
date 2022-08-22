@@ -3,12 +3,12 @@
 #import "MNTP3DObjCache.h"
 #import <UIKit/UIKit.h>
 
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 
 @interface MNTP3DObjCache() <NSCacheDelegate>
 
 @property (nonatomic) NSCache<NSString *, MNTP3DAsset *> *cacher;
-@property (nonatomic) NSCache<NSString *, THBGLESTexture *> *matrialCacher;
+@property (nonatomic) NSCache<NSString *, THBTexture *> *matrialCacher;
 
 @end
 
@@ -43,13 +43,13 @@
     return [cacher.cacher objectForKey:path];
 }
 
-+ (void)cacheTexture:(THBGLESTexture *)texture forMatrialPath:(NSString *)path {
++ (void)cacheTexture:(THBTexture *)texture forMatrialPath:(NSString *)path {
     CGSize size = texture.sizeInPixels;
     NSInteger cost = MAX(1000, size.width * size.height);
     MNTP3DObjCache *cacher = [self instance];
     [cacher.matrialCacher setObject:texture forKey:path cost:cost];
 }
-+ (THBGLESTexture *)getTextureForMatrialPath:(NSString *)path {
++ (THBTexture *)getTextureForMatrialPath:(NSString *)path {
     MNTP3DObjCache *cacher = [self instance];
     return [cacher.matrialCacher objectForKey:path];
 }
@@ -65,8 +65,8 @@
 #pragma mark - NSCacheDelegate
 - (void)cache:(NSCache *)cache willEvictObject:(id)obj {
     if (cache == self.matrialCacher) {
-        THBGLESTexture *texture = (THBGLESTexture *)obj;
-        if ([texture isKindOfClass:THBGLESTexture.class]) {
+        THBTexture *texture = (THBTexture *)obj;
+        if ([texture isKindOfClass:THBTexture.class]) {
             [texture releaseGLESTexture];
         }
     }
@@ -81,7 +81,7 @@
     return _cacher;
 }
 
-- (NSCache<NSString *,THBGLESTexture *> *)matrialCacher {
+- (NSCache<NSString *,THBTexture *> *)matrialCacher {
     if (!_matrialCacher) {
         _matrialCacher = [[NSCache alloc] init];
         _matrialCacher.totalCostLimit = 1080 * 1080 * 20;

@@ -22,7 +22,7 @@ CXXGLESTextureLOD CXXCalcLOD2(float width1, float height1, float maxSize);
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface THBGLESTexture : NSObject {
+@interface THBTexture : NSObject {
     CVPixelBufferRef pixel;
     CVOpenGLESTextureRef texture;
     UIImageOrientation orientation;
@@ -37,7 +37,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)createTextureWithPixel:(CVPixelBufferRef)pixel texture:(CVOpenGLESTextureRef)texture orientation:(UIImageOrientation)orientation;
 + (instancetype)createTextureWithPixel:(CVPixelBufferRef)pixel texture:(CVOpenGLESTextureRef)texture lod:(CXXGLESTextureLOD)lod;
 + (instancetype)createTextureWithPixel:(CVPixelBufferRef)pixel texture:(CVOpenGLESTextureRef)texture orientation:(UIImageOrientation)orientation lod:(CXXGLESTextureLOD)lod;
-- (instancetype)init;
 - (void)retainGLESTexture;
 - (void)releaseGLESTexture;
 
@@ -45,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface THBGLESTexture(Convenience)
+@interface THBTexture(Convenience)
 @property (nonatomic, readonly) size_t costBytes;
 @property (nonatomic, readonly) size_t widthInPixels;
 @property (nonatomic, readonly) size_t heightInPixels;

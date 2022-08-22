@@ -1,5 +1,5 @@
 
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 
 
 CXXGLESTextureLOD CXXCalcLOD(float width1, float height1, float width2, float height2) {
@@ -23,7 +23,7 @@ CXXGLESTextureLOD CXXCalcLOD2(float width1, float height1, float maxSize) {
 }
 
 
-@implementation THBGLESTexture
+@implementation THBTexture
 
 + (instancetype)createTextureWithPixel:(CVPixelBufferRef)pixel texture:(CVOpenGLESTextureRef)texture {
     return [self createTextureWithPixel:pixel texture:texture orientation:UIImageOrientationUp lod:CXXGLESTextureLOD_Original];
@@ -38,13 +38,14 @@ CXXGLESTextureLOD CXXCalcLOD2(float width1, float height1, float maxSize) {
 }
 
 + (instancetype)createTextureWithPixel:(CVPixelBufferRef)pixel texture:(CVOpenGLESTextureRef)texture orientation:(UIImageOrientation)orientation lod:(CXXGLESTextureLOD)lod {
-    THBGLESTexture *ins = [[self alloc] init];
+    THBTexture *ins = [[self alloc] init];
     ins->pixel = pixel;
     ins->texture = texture;
     ins->orientation = orientation;
     ins->lod = lod;
     return ins;
 }
+
 
 - (void)retainGLESTexture {
     CVPixelBufferRetain(pixel);
@@ -86,7 +87,7 @@ CXXGLESTextureLOD CXXCalcLOD2(float width1, float height1, float maxSize) {
 
 
 
-@implementation THBGLESTexture(Convenience)
+@implementation THBTexture(Convenience)
 
 - (size_t)costBytes {
     return CVPixelBufferGetBytesPerRow(pixel) * CVPixelBufferGetHeight(pixel);

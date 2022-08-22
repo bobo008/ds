@@ -2,7 +2,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,9 +40,9 @@ NS_ASSUME_NONNULL_BEGIN
 + (CVOpenGLESTextureRef)textureForPixelBuffer:(CVPixelBufferRef)pixelBuffer glTextureCache:(CVOpenGLESTextureCacheRef)glTextureCache;
 
 
-+ (THBGLESTexture *)createTextureWithSize:(CGSize)size;
++ (THBTexture *)createTextureWithSize:(CGSize)size;
 
-+ (THBGLESTexture *)textureForLocalURL:(NSURL *)localURL;
++ (THBTexture *)textureForLocalURL:(NSURL *)localURL;
 @end
 
 NS_ASSUME_NONNULL_END

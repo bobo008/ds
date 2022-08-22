@@ -6,79 +6,29 @@
 //
 
 #import "THBVideoTestVC.h"
-//
-//precision highp float;
-//
-//#define TRAIL_MAX_COUNT 100
-//#define PARTICLE_MAX_COUNT 100
-//
-//varying vec2 textureCoordinate;
-//
-//uniform float uAspect;
-//
-//uniform int trailCount;
-//uniform vec2 trail[TRAIL_MAX_COUNT];
-//uniform vec3 trailColor;
-//uniform int particleCount;
-//uniform vec3 particles[PARTICLE_MAX_COUNT];
-//uniform vec3 colors[PARTICLE_MAX_COUNT];
-//uniform float trailGlow;
-//uniform float particleGlow;
-//
-//void main() {
-//
-//    vec2 st = textureCoordinate;
-//    st.x *= uAspect;
-//
-//    float r = 0.0;
-//    float g = 0.0;
-//    float b = 0.0;
-//
-//    for (int i = 0; i < trailCount; i++) {
-//        if (i < trailCount) {
-//            vec2 trailPos = trail[i];
-//
-//            float value = float(i) / distance(st, trailPos.xy) * 0.0001 * trailGlow; // Multiplier may need to be adjusted if max trail count is tweaked.
-//
-//            r += trailColor.r * value;
-//            g += trailColor.g * value;
-//            b += trailColor.b * value;
-//        }
-//    }
-//
-//    float mult = 0.00005 * particleGlow;
-//
-//    for (int i = 0; i < particleCount; i++) {
-//
-//        vec3 particle = particles[i];
-//        vec2 pos = particle.xy;
-//        float mass = particle.z;
-//        vec3 color = colors[i];
-//
-//        r += color.r / distance(st, pos) * mult * mass;
-//        g += color.g / distance(st, pos) * mult * mass;
-//        b += color.b / distance(st, pos) * mult * mass;
-//    }
-//
-//    float a = max(r, max(g, b));
-//    gl_FragColor = vec4(r, g , b , a);
-//}
-//
-//
-//attribute vec4 position;
-//attribute vec4 inputTextureCoordinate;
-//
-//varying vec2 textureCoordinate;
-//
-//void main()
-//{
-//    gl_Position = position;
-//    textureCoordinate = inputTextureCoordinate.xy;
-//}
+
+#import "THBAVFoundationUtil.h"
+
+#import "THBBuilder.h"
+#import "THBVideoCompositor.h"
 
 
+#import "EAVVideoRenderer.h"
 
 @interface THBVideoTestVC ()
+
+@property (nonatomic) EAVVideoRenderer *renderer;
+
+@property (nonatomic) THBBuilder *builder;
+@property (nonatomic) NSMutableDictionary<NSString *, id> *composeTrackIdMap;
+
+
+
+
+@property (nonatomic) AVPlayer *player;
+@property (nonatomic) AVPlayerItem *playerItem;
+@property (strong, nonatomic) AVPlayerLayer *playerLayer;
+@property (weak, nonatomic) IBOutlet UIView *showVideoView;
 
 @end
 
@@ -87,14 +37,119 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-
+    [self setup];
 }
 
 
 
+- (void)setup {
+    _builder = [[THBBuilder alloc] init];
+    [_builder install];
+    [_builder updateCustomVideoCompositorClass:THBVideoCompositor.class];
+    
+    _composeTrackIdMap = [NSMutableDictionary dictionary];
+    
+    
+    _renderer = [[EAVVideoRenderer alloc] init];
+    
+    [THBVideoCompositor setVideoRender:_renderer];
+    
+    [self _rebuildComposition];
+    
+    
+    
+    
+
+
+    
+    AVComposition *composition = self.builder.currentComposition;
+    AVVideoComposition *videoComposition = self.builder.currentVideoComposition;
+    AVAudioMix *audioMix = self.builder.currentAudioMix;
+    
+    NSArray<NSString *> *assetKeys = @[@"duration", @"playable"];
+    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:composition automaticallyLoadedAssetKeys:assetKeys];
+    playerItem.videoComposition = videoComposition;
+    playerItem.audioMix = audioMix;
+    
+    playerItem.seekingWaitsForVideoCompositionRendering = YES;
+    
+    
+    self.playerItem = playerItem;
+    
+    
+    self.player = ({
+        AVPlayer *player = [[AVPlayer alloc] initWithPlayerItem:self.playerItem];
+        player.actionAtItemEnd = AVPlayerActionAtItemEndPause;
+        player.automaticallyWaitsToMinimizeStalling = YES;
+        player;
+    });
+    
+    
+    self.playerLayer = [AVPlayerLayer playerLayerWithPlayer:self.player];
+
+    self.playerLayer.frame = CGRectMake(0, 0, 375, 200);
+    [self.showVideoView.layer addSublayer:self.playerLayer];
+    [self.player play];
+    
+}
 
 
 
+- (void)_rebuildComposition {
+    [_composeTrackIdMap removeAllObjects];
+    
+    [self _rebuildCompositionVideo];
+    [self _rebuildCompositionAudio];
+    [self _rebuildAudioMix];
+    
+    NSDictionary<NSString *, id> *composeTrackIdMap = [_composeTrackIdMap copy];
+    self->_renderer.renderComposeTrackIdMap = composeTrackIdMap;
+}
+
+- (void)_rebuildCompositionVideo {
+
+    CMTime duration = CMTimeMake(600, 60);
+    
+    NSMutableArray<THBVideoMedium *> *mediums = [NSMutableArray array];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"fullmoon_01.mp4" ofType:nil];
+    
+    AVAsset *asset = THBReadAssetFromPath(path);
+    AVAssetTrack *videoAssetTrack = [asset tracksWithMediaType:AVMediaTypeVideo].firstObject;
+    
+    
+    THBVideoMedium *medium = [[THBVideoMedium alloc] init];
+    medium.URL = [NSURL fileURLWithPath:path];
+    medium.trackID = videoAssetTrack.trackID;
+    medium.sourceTimeRange = videoAssetTrack.timeRange;
+    medium.activeTimeRange = CMTimeRangeMake(kCMTimeZero, CMTimeMake(600, 60));
+    medium.activeOneLoopDuration = videoAssetTrack.timeRange.duration;
+    medium.context = @"fullmoon_01";
+    medium.composeTrackID = kCMPersistentTrackID_Invalid;
+    [mediums addObject:medium];
+    
+    
+    [_builder rebuildVideoTracks:mediums.copy duration:duration assignBlock:^(THBVideoMedium * _Nonnull medium) {
+        if (medium.context) {
+            [self.composeTrackIdMap setObject:@(medium.composeTrackID) forKey:medium.context];
+        }
+    }];
+}
+
+
+- (void)_rebuildCompositionAudio {
+    CMTime duration = CMTimeMake(600, 60);
+//    NSArray<THBAudioMedium *> *mediums = [T eav_flatten];
+    [_builder rebuildAudioTracks:@[] duration:duration assignBlock:^(THBAudioMedium * _Nonnull medium) {
+        if (medium.context) {
+            [self.composeTrackIdMap setObject:@(medium.composeTrackID) forKey:medium.context];
+        }
+    }];
+}
+
+- (void)_rebuildAudioMix {
+    [_builder rebuildAudioMix:@[]];
+}
 
 
 

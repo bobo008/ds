@@ -3,7 +3,7 @@
 #import <Foundation/Foundation.h>
 
 @class MNTP3DAsset;
-@class THBGLESTexture;
+@class THBTexture;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)cacheAsset:(MNTP3DAsset *)asset withObjPath:(NSString *)path;
 + (nullable MNTP3DAsset *)getAssetForPath:(NSString *)path;
 
-+ (void)cacheTexture:(THBGLESTexture *)texture forMatrialPath:(NSString *)path;
-+ (nullable THBGLESTexture *)getTextureForMatrialPath:(NSString *)path;
++ (void)cacheTexture:(THBTexture *)texture forMatrialPath:(NSString *)path;
++ (nullable THBTexture *)getTextureForMatrialPath:(NSString *)path;
 
 + (void)clearAllCache;
 

@@ -70,7 +70,7 @@ void runAsynchronouslyOnVideoProcessingQueue(void (^block)(void));
 
 
 
-GLProgram * CXXLoadGLProgram(NSString *vertexString, NSString *fragmentString, NSArray<NSString *> *attributeNames);
+GLProgram * GLLoadGLProgram(NSString *vertexString, NSString *fragmentString, NSArray<NSString *> *attributeNames);
 
 @end
 

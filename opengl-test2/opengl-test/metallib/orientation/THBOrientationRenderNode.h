@@ -4,7 +4,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EAVOrientationRenderNode : NSObject
+@interface THBOrientationRenderNode : NSObject
 
 + (CVPixelBufferRef)correct:(CVPixelBufferRef)pixel orientation:(UIImageOrientation)orientation;
 

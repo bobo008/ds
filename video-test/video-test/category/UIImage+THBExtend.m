@@ -1,7 +1,7 @@
 
-#import "UIImage+EAVExtend.h"
+#import "UIImage+THBExtend.h"
 
-@implementation UIImage (EAVExtend)
+@implementation UIImage (THBExtend)
 
 
 - (UIImage *)cxx_flipImage {

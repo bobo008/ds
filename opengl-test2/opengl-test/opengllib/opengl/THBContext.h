@@ -9,7 +9,7 @@
 
 
 #import "THBPixelBufferUtil.h"
-#import "THBGLESTexture.h"
+#import "THBTexture.h"
 #import "THBPixelBufferPoolAdaptor.h"
 
 

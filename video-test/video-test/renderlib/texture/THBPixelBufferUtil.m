@@ -357,25 +357,25 @@ void CGImageToPixelBufferReleaseBytesCallback(void * CV_NULLABLE releaseRefCon, 
     return texture;
 }
 
-+ (THBGLESTexture *)createTextureWithSize:(CGSize)size {
++ (THBTexture *)createTextureWithSize:(CGSize)size {
     return [self createTextureWithSize:size format:kCVPixelFormatType_32BGRA];
 }
 
 
-+ (THBGLESTexture *)createTextureWithSize:(CGSize)size format:(OSType)format {
++ (THBTexture *)createTextureWithSize:(CGSize)size format:(OSType)format {
     CVPixelBufferRef pixels = [self pixelBufferForWidth:size.width height:size.height format:format];
     CVOpenGLESTextureCacheRef glTextureCache = [GPUImageContext sharedImageProcessingContext].coreVideoTextureCache;
     CVOpenGLESTextureRef glTexture = [self textureForPixelBuffer:pixels glTextureCache:glTextureCache];
-    THBGLESTexture *texture = [THBGLESTexture createTextureWithPixel:pixels texture:glTexture];
+    THBTexture *texture = [THBTexture createTextureWithPixel:pixels texture:glTexture];
     return texture;
 }
 
 
-+ (THBGLESTexture *)textureForLocalURL:(NSURL *)localURL {
++ (THBTexture *)textureForLocalURL:(NSURL *)localURL {
     CVPixelBufferRef pixels = [self pixelBufferForLocalURL:localURL];
     CVOpenGLESTextureCacheRef glTextureCache = [GPUImageContext sharedImageProcessingContext].coreVideoTextureCache;
     CVOpenGLESTextureRef glTexture = [self textureForPixelBuffer:pixels glTextureCache:glTextureCache];
-    THBGLESTexture *texture = [THBGLESTexture createTextureWithPixel:pixels texture:glTexture];
+    THBTexture *texture = [THBTexture createTextureWithPixel:pixels texture:glTexture];
     return texture;
 }
 @end

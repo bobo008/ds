@@ -6,7 +6,7 @@
 #import "MNTPSubmesh.h"
 #import "MNTPMaterial.h"
 
-#import "NSArray+MNTExtend.h"
+#import "NSArray+THBExtend.h"
 
 #import <simd/simd.h>
 #import <vector>
@@ -111,7 +111,7 @@ template<> struct std::hash<MNTPVertexData>
     char scannedString[256];
 
     NSArray<NSString *> *array = [line componentsSeparatedByString:@" "];
-    array = [array eav_arrayFilter:^BOOL(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    array = [array THB_arrayFilter:^BOOL(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         return obj.length > 0;
     }];
     NSString *name = array.firstObject;
