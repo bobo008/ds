@@ -4,6 +4,7 @@
 3.opengl 阴影贴图实现阴影
 4.opengl metal mipmap
 5.opengl metal msaa
+6.video edit 底层框架
 
 后续待实现：
 1.延迟光照
