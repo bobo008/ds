@@ -5,34 +5,6 @@
 
 
 
-NSString *const vs2 = SHADER_STRING
-(
- attribute vec4 position;
- attribute vec4 inputTextureCoordinate;
- 
- varying vec2 textureCoordinate;
- 
- void main()
- {
-     gl_Position = position;
-     textureCoordinate = inputTextureCoordinate.xy;
- }
- );
-
-
-NSString *const fs2 = SHADER_STRING
-(
- varying highp vec2 textureCoordinate;
- 
- uniform sampler2D inputImageTexture;
- 
- void main()
- {
-     gl_FragColor = texture2D(inputImageTexture, textureCoordinate);
- }
-);
-
-
 
 @interface THBMutiRenderNode () {
     GLuint _framebuffer;
@@ -55,6 +27,8 @@ NSString *const fs2 = SHADER_STRING
     
     THBTexture *outputTexture = [THBPixelBufferUtil createTextureWithSize:CGSizeMake(1000, 1000)];
     
+    THBTexture *outputTexture2 = [THBPixelBufferUtil createTextureWithSize:CGSizeMake(1000, 1000)];
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"comics_22.png" ofType:nil];
     THBTexture *inputTexture = [THBPixelBufferUtil textureForLocalURL:[NSURL fileURLWithPath:path]];
     
@@ -66,12 +40,20 @@ NSString *const fs2 = SHADER_STRING
                            CVOpenGLESTextureGetTarget(outputTexture.texture),
                            CVOpenGLESTextureGetName(outputTexture.texture),
                            0);
+    
+    
+    glFramebufferTexture2D(GL_FRAMEBUFFER,
+                           GL_COLOR_ATTACHMENT1,
+                           CVOpenGLESTextureGetTarget(outputTexture2.texture),
+                           CVOpenGLESTextureGetName(outputTexture2.texture),
+                           0);
 
 
     glClearColor(0, 0, 0, 0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
-    
+    const GLenum attachments[2] = {GL_COLOR_ATTACHMENT0, GL_COLOR_ATTACHMENT1};
+    glDrawBuffers(2, attachments);
 
     GLProgram *glProgram = [self glProgram];
     [glContext setContextShaderProgram:glProgram];
@@ -100,7 +82,7 @@ NSString *const fs2 = SHADER_STRING
     glActiveTexture(GL_TEXTURE0);
     glUniform1i([glProgram uniformIndex:@"inputImageTexture"], 0);
     
-    float scale = 0.2;
+    float scale = 0.8;
     GLfloat kDefaultAttributePositionData_ [] = {
         -1.0 * scale, -1.0 * scale,
          1.0 * scale, -1.0 * scale,
@@ -130,7 +112,8 @@ NSString *const fs2 = SHADER_STRING
     glDeleteTextures(1, &textureID);
     
     
-    
+    const GLenum attachments1[1] = {GL_COLOR_ATTACHMENT0};
+    glDrawBuffers(1, attachments1);
     
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     glDeleteFramebuffers(1, &_framebuffer);
@@ -154,7 +137,7 @@ NSString *const fs2 = SHADER_STRING
             @"inputTextureCoordinate",
         ];
         
-        glProgram = GLLoadGLProgram(vs2, fs2, attributeNames);
+        glProgram = GLLoadGLProgram([self shaderWithNamed:@"muti_vs.fsh"], [self shaderWithNamed:@"muti_fs.fsh"], attributeNames);
         [glProgramMap setObject:glProgram forKey:key];
     }
     return glProgram;

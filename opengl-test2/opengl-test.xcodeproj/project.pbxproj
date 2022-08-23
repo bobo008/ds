@@ -16,6 +16,8 @@
 		1520912D28B4AC1C00F7E535 /* THBMutiMetalNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1520912A28B4AC1C00F7E535 /* THBMutiMetalNode.m */; };
 		1520912E28B4AC1C00F7E535 /* THBMutiRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1520912C28B4AC1C00F7E535 /* THBMutiRenderNode.m */; };
 		1520913028B4AC8A00F7E535 /* MutiShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1520912F28B4AC8A00F7E535 /* MutiShaders.metal */; };
+		1520913528B4B00800F7E535 /* muti_vs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1520913328B4B00800F7E535 /* muti_vs.fsh */; };
+		1520913628B4B00800F7E535 /* muti_fs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 1520913428B4B00800F7E535 /* muti_fs.fsh */; };
 		15444EE5287EA00600F5E6DC /* light_fs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15444EE3287EA00600F5E6DC /* light_fs.fsh */; };
 		15444EE6287EA00600F5E6DC /* light_vs.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15444EE4287EA00600F5E6DC /* light_vs.fsh */; };
 		15444EF1287EAD5400F5E6DC /* resultImage_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 15444EF0287EAD5400F5E6DC /* resultImage_1.png */; };
@@ -114,6 +116,8 @@
 		1520912B28B4AC1C00F7E535 /* THBMutiRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBMutiRenderNode.h; sourceTree = "<group>"; };
 		1520912C28B4AC1C00F7E535 /* THBMutiRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBMutiRenderNode.m; sourceTree = "<group>"; };
 		1520912F28B4AC8A00F7E535 /* MutiShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MutiShaders.metal; sourceTree = "<group>"; };
+		1520913328B4B00800F7E535 /* muti_vs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = muti_vs.fsh; sourceTree = "<group>"; };
+		1520913428B4B00800F7E535 /* muti_fs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = muti_fs.fsh; sourceTree = "<group>"; };
 		15444EE3287EA00600F5E6DC /* light_fs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_fs.fsh; sourceTree = "<group>"; };
 		15444EE4287EA00600F5E6DC /* light_vs.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = light_vs.fsh; sourceTree = "<group>"; };
 		15444EF0287EAD5400F5E6DC /* resultImage_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resultImage_1.png; sourceTree = "<group>"; };
@@ -278,9 +282,8 @@
 		1520912728B4AC1C00F7E535 /* mutiRender */ = {
 			isa = PBXGroup;
 			children = (
+				1520913128B4AFE400F7E535 /* opengl */,
 				1520912828B4AC1C00F7E535 /* metal */,
-				1520912B28B4AC1C00F7E535 /* THBMutiRenderNode.h */,
-				1520912C28B4AC1C00F7E535 /* THBMutiRenderNode.m */,
 			);
 			path = mutiRender;
 			sourceTree = "<group>";
@@ -292,6 +295,25 @@
 				1520912A28B4AC1C00F7E535 /* THBMutiMetalNode.m */,
 			);
 			path = metal;
+			sourceTree = "<group>";
+		};
+		1520913128B4AFE400F7E535 /* opengl */ = {
+			isa = PBXGroup;
+			children = (
+				1520913228B4B00800F7E535 /* glsl */,
+				1520912B28B4AC1C00F7E535 /* THBMutiRenderNode.h */,
+				1520912C28B4AC1C00F7E535 /* THBMutiRenderNode.m */,
+			);
+			path = opengl;
+			sourceTree = "<group>";
+		};
+		1520913228B4B00800F7E535 /* glsl */ = {
+			isa = PBXGroup;
+			children = (
+				1520913328B4B00800F7E535 /* muti_vs.fsh */,
+				1520913428B4B00800F7E535 /* muti_fs.fsh */,
+			);
+			path = glsl;
 			sourceTree = "<group>";
 		};
 		15444EE2287E9F7E00F5E6DC /* image */ = {
@@ -734,6 +756,8 @@
 			files = (
 				1561F2E128751BF300CEBCE6 /* THBGestTestVC.xib in Resources */,
 				15444EE6287EA00600F5E6DC /* light_vs.fsh in Resources */,
+				1520913528B4B00800F7E535 /* muti_vs.fsh in Resources */,
+				1520913628B4B00800F7E535 /* muti_fs.fsh in Resources */,
 				156BAF39287FAFB500672D06 /* resultImage_2.png in Resources */,
 				15444EF1287EAD5400F5E6DC /* resultImage_1.png in Resources */,
 				1517AE00287D78C500CF0087 /* Cutout_002.jpg in Resources */,
