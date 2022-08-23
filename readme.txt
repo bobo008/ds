@@ -5,6 +5,7 @@
 4.opengl metal mipmap
 5.opengl metal msaa
 6.video edit 底层框架
+7.多输出渲染（为延迟光照准备，延迟光照需要渲染四个gbuffer，同时渲染比渲染四次快很多）
 
 后续待实现：
 1.延迟光照

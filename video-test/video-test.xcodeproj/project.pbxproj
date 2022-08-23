@@ -342,12 +342,12 @@
 		158EECEA28B3AFF300F04514 /* opengl */ = {
 			isa = PBXGroup;
 			children = (
-				158EECEB28B3AFF300F04514 /* THBContext.m */,
-				158EECEC28B3AFF300F04514 /* GPUImageContext.m */,
-				158EECED28B3AFF300F04514 /* GLProgram.m */,
-				158EECEE28B3AFF300F04514 /* THBContext.h */,
-				158EECEF28B3AFF300F04514 /* GPUImageContext.h */,
 				158EECF028B3AFF300F04514 /* GLProgram.h */,
+				158EECED28B3AFF300F04514 /* GLProgram.m */,
+				158EECEF28B3AFF300F04514 /* GPUImageContext.h */,
+				158EECEC28B3AFF300F04514 /* GPUImageContext.m */,
+				158EECEE28B3AFF300F04514 /* THBContext.h */,
+				158EECEB28B3AFF300F04514 /* THBContext.m */,
 			);
 			path = opengl;
 			sourceTree = "<group>";

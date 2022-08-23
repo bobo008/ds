@@ -23,6 +23,8 @@
 
 #import "THBMipmapMetalNode.h"
 
+#import "THBMutiMetalNode.h"
+
 @interface ViewController ()
 
 @end
@@ -50,7 +52,7 @@
 
 
 - (void)test {
-    THBMipmapRenderNode *renderNode = [[THBMipmapRenderNode alloc] init];
+    THBMutiMetalNode *renderNode = [[THBMutiMetalNode alloc] init];
     [renderNode render];
 }
 @end
