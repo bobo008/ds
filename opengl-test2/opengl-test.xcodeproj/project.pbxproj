@@ -316,6 +316,13 @@
 			path = glsl;
 			sourceTree = "<group>";
 		};
+		1520913728B4D3D500F7E535 /* rasterization */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = rasterization;
+			sourceTree = "<group>";
+		};
 		15444EE2287E9F7E00F5E6DC /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +456,7 @@
 		1561F2A028751B6400CEBCE6 /* opengl-test */ = {
 			isa = PBXGroup;
 			children = (
+				1520913728B4D3D500F7E535 /* rasterization */,
 				1520912728B4AC1C00F7E535 /* mutiRender */,
 				155E2E7E28992849004D979C /* mipmap */,
 				155E2E7328990A8D004D979C /* MSAA */,

@@ -55,6 +55,8 @@ void main()
     lightPos_tbn = inverseTBN * lightPos;
     viewPos_tbn = inverseTBN * viewPos;
     
+    /// TBN * FragPos_tbn = FragPos TBN mat 乘 切线空间下的向量，等于世界空间下的向量（这里的TBN本身乘了Model矩阵，就是model矩阵下的切线空间转换成了世界空间下）
+    
     
 }
 

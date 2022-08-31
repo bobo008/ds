@@ -33,5 +33,8 @@
     NSLog(@"test - a touch cancel2");
 }
 
-
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    BOOL ret = [super gestureRecognizerShouldBegin:gestureRecognizer];
+    return ret;
+}
 @end

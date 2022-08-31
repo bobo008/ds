@@ -43,11 +43,11 @@
 
 - (IBAction)onBtn:(id)sender {
     
-//    TTTEffectCreatorTestVC *vc = [[TTTEffectCreatorTestVC alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
+    THBGestTestVC *vc = [[THBGestTestVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
     
     
-    [self test];
+//    [self test];
 }
 
 

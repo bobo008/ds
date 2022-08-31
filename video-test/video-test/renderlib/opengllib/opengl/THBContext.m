@@ -40,6 +40,7 @@ static void * kCXXContextMainQueueKey = "kCXXContextMainQueueKey";
 
 #pragma mark -
 - (dispatch_queue_t)renderingQueue {
+
     return [GPUImageContext sharedContextQueue];
 }
 

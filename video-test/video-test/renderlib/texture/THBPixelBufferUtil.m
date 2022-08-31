@@ -2,9 +2,13 @@
 
 #import "THBPixelBufferUtil.h"
 #import "GPUImageContext.h"
+
+#import "GPUImageContext.h"
 #import <VideoToolbox/VideoToolbox.h>
 #import <OpenGLES/ES3/gl.h>
 #import <OpenGLES/ES3/glext.h>
+
+#import <OpenGLES/EAGLIOSurface.h>
 #import <Accelerate/Accelerate.h>
 
 void CGImageToPixelBufferReleaseBytesCallback(void * CV_NULLABLE releaseRefCon, const void * CV_NULLABLE baseAddress) {
@@ -319,8 +323,23 @@ void CGImageToPixelBufferReleaseBytesCallback(void * CV_NULLABLE releaseRefCon, 
 @end
 
 @implementation THBPixelBufferUtil (GLTexture)
+
++ (GLuint)textureForPixelBuffer:(CVPixelBufferRef)pixelBuffer {
+    [GPUImageContext useImageProcessingContext];
+    
+    GLuint textureID = 0;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    BOOL success = [[GPUImageContext sharedImageProcessingContext].context texImageIOSurface:CVPixelBufferGetIOSurface(pixelBuffer) target:GL_TEXTURE_2D internalFormat:GL_RGBA width:(GLsizei)CVPixelBufferGetWidth(pixelBuffer) height: (GLsizei)CVPixelBufferGetHeight(pixelBuffer) format:GL_BGRA  type:GL_UNSIGNED_BYTE plane:0];
+    glBindTexture(GL_TEXTURE_2D, 0);
+    return textureID;
+}
+
 + (CVOpenGLESTextureRef)textureForPixelBuffer:(CVPixelBufferRef)pixelBuffer glTextureCache:(CVOpenGLESTextureCacheRef)glTextureCache {
     CVOpenGLESTextureRef texture = NULL;
+    
+    
+    
     if (CVPixelBufferGetPixelFormatType(pixelBuffer) == kCVPixelFormatType_32BGRA) {
         CVReturn err = CVOpenGLESTextureCacheCreateTextureFromImage(kCFAllocatorDefault,
                                                                     glTextureCache,
@@ -378,4 +397,35 @@ void CGImageToPixelBufferReleaseBytesCallback(void * CV_NULLABLE releaseRefCon, 
     THBTexture *texture = [THBTexture createTextureWithPixel:pixels texture:glTexture];
     return texture;
 }
+
+
+- (GLuint)createTextureNameByPixelBuffer2:(CVPixelBufferRef)pixelBuffer {
+    if (!pixelBuffer) return 0;
+    
+    OSType formatType = CVPixelBufferGetPixelFormatType(pixelBuffer);
+    uint32_t width = (uint32_t)CVPixelBufferGetWidth(pixelBuffer);
+    uint32_t height = (uint32_t)CVPixelBufferGetHeight(pixelBuffer);
+
+    [GPUImageContext useImageProcessingContext];
+    
+    GLuint textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_2D, textureID);
+    
+    EAGLContext *ctx = GPUImageContext.sharedImageProcessingContext.context;
+    
+    BOOL suc = NO;
+    if (formatType == kCVPixelFormatType_32BGRA) {
+        suc = [ctx texImageIOSurface:CVPixelBufferGetIOSurface(pixelBuffer) target:GL_TEXTURE_2D internalFormat:GL_RGBA width:width height:height format:GL_BGRA type:GL_UNSIGNED_BYTE plane:0];
+    }
+    else if (formatType == kCVPixelFormatType_OneComponent8) {
+        suc = [ctx texImageIOSurface:CVPixelBufferGetIOSurface(pixelBuffer) target:GL_TEXTURE_2D internalFormat:GL_R8 width:width height:height format:GL_RED type:GL_UNSIGNED_BYTE plane:0];
+    }
+    else if (formatType == kCVPixelFormatType_64RGBAHalf) {
+        suc = [ctx texImageIOSurface:CVPixelBufferGetIOSurface(pixelBuffer) target:GL_TEXTURE_2D internalFormat:GL_RGBA16F width:width height:height format:GL_RGBA type:GL_HALF_FLOAT plane:0];
+    }
+    NSCAssert(suc, @"无法创建GLESTexture2D");
+    return suc ? textureID : 0;
+}
+
 @end
