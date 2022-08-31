@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface THBPixelBufferUtil (GLTexture)
+
++ (GLuint)textureForPixelBuffer:(CVPixelBufferRef)pixelBuffer;
 + (CVOpenGLESTextureRef)textureForPixelBuffer:(CVPixelBufferRef)pixelBuffer glTextureCache:(CVOpenGLESTextureCacheRef)glTextureCache;
 
 
