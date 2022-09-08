@@ -62,7 +62,8 @@ vec4 getSpecula(vec4 objectColor, vec3 normal) {
 
 
 void main() {
-    vec4 objColor = texture2D(inputImageTexture, textureCoordinate);
+    vec2 uv = vec2(textureCoordinate.x, 1. - textureCoordinate.y);
+    vec4 objColor = texture2D(inputImageTexture, uv);
     vec4 normal = texture2D(inputImageTexture2, textureCoordinate);
     vec3 normal2 = vec3(mMatrix * vec4(normal.rgb, 0.)); /// 当在世界空间做光照的时候，会遇到用了法线贴图的发现计算要放到片段着色器中，对性能是有影响的
     

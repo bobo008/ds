@@ -1,6 +1,9 @@
 
 #import "THBTestRenderer.h"
 
+#import "MNTP3DAsset.h"
+#import "MNTPMesh.h"
+#import "MNTPSubmesh.h"
 
 #import "THBTestRenderNode.h"
 
@@ -43,6 +46,11 @@ typedef struct THBVertexData {
     THBTexture *_imageTexture;
     
     THBTexture *_normalTexture;
+    
+    
+    THBTexture *_materialTexture;
+    
+    MNTP3DAsset *_asset;
 }
 
 
@@ -66,6 +74,13 @@ typedef struct THBVertexData {
     _normalTexture = [self textureForMatrialPath:path2];
 
     _scale = 1;
+    
+    NSURL *url = [NSBundle.mainBundle URLForResource:@"patrick.obj" withExtension:nil];
+    _asset = [[MNTP3DAsset alloc] initWithURL:url error:nil];
+    
+    
+    NSString *path3 = [NSBundle.mainBundle pathForResource:@"Char_Patrick.png" ofType:nil];
+    _materialTexture = [self textureForMatrialPath:path3];
 
 }
 
@@ -131,32 +146,43 @@ typedef struct THBVertexData {
     }
     if (!canvasGlesTexture) return nil;
     
-    
-
-
-    [self aaa];
-
-    
     THBTestRenderNode *renderNode = [[THBTestRenderNode alloc] init];
     renderNode.outputTexture = canvasGlesTexture;
     [renderNode prepareRender];
 
-    renderNode.inputTexture = _imageTexture;
-    renderNode.inputTexture2 = _normalTexture;
+
+    [_asset loadBufferForGL];
     
-    renderNode.vertexArrayBuffer = _vao;
-    renderNode.indexElementBuffer = _ebo;
-    renderNode.indexElementCount = 6;
+    MNTPMesh *mesh = _asset.mesh;
+    [mesh.submeshes enumerateObjectsUsingBlock:^(MNTPSubmesh * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+
+
+        renderNode.inputTexture = _materialTexture;
+        renderNode.inputTexture2 = _normalTexture;
+        
+//        renderNode.vertexArrayBuffer = _vao;
+//        renderNode.indexElementBuffer = _ebo;
+//        renderNode.indexElementCount = 6;
+        
+        renderNode.vertexArrayBuffer = _asset.vertexGLBuffer;
+        renderNode.indexElementBuffer = [_asset indexGLBufferAtIndex:idx];
+        renderNode.indexElementCount = [_asset indexGLBufferCountAtIndex:idx];
+        
+        
+        renderNode.pMatrix = [self obtainP];
+        renderNode.vMatrix = [self obtainV];
+        renderNode.mMatrix = [self obtainM];
+        
+        simd_float3 cameraPos = simd_make_float3(0, 0, 1.0 / tan(FOV));
+        renderNode.cameraPos = cameraPos;
+        
+        [renderNode render];
+    }];
     
-    renderNode.pMatrix = [self obtainP];
-    renderNode.vMatrix = [self obtainV];
-    renderNode.mMatrix = [self obtainM];
     
-    simd_float3 cameraPos = simd_make_float3(0, 0, 1.0 / tan(FOV));
-    renderNode.cameraPos = cameraPos;
+
     
-    
-    [renderNode render];
+
 
 
     [renderNode destroyRender];

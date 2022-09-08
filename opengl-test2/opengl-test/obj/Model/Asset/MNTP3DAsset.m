@@ -7,7 +7,7 @@
 
 #import "GPUImageContext.h"
 
-#import "MNTP3DObjCache.h"
+//#import "MNTP3DObjCache.h"
 
 #define BUFFER_OFFSET(i) ((char *)NULL + (i))
 
@@ -21,15 +21,9 @@
 }
 
 - (instancetype)initWithURL:(NSURL *)url error:(NSError * _Nullable * _Nullable)error {
-    MNTP3DAsset *asset = [MNTP3DObjCache getAssetForPath:url.path];
-    if (asset) {
-        return asset;
-    }
     MNTP3DAssetLoader *loader = [[MNTP3DAssetLoader alloc] init];
-    asset = [loader loadAssetAtURL:url error:error];
-    if (asset) {
-        [MNTP3DObjCache cacheAsset:asset withObjPath:url.path];
-    }
+    MNTP3DAsset *asset = [loader loadAssetAtURL:url error:error];
+
     return asset;
 }
 

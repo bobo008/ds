@@ -67,7 +67,6 @@
 		1561F3302875C06300CEBCE6 /* GLProgram.m in Sources */ = {isa = PBXBuildFile; fileRef = 1561F32F2875C06300CEBCE6 /* GLProgram.m */; };
 		156BAF39287FAFB500672D06 /* resultImage_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 156BAF38287FAFB500672D06 /* resultImage_2.png */; };
 		158A740C2878229E0038F666 /* MNTPMesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158A73F82878229E0038F666 /* MNTPMesh.mm */; };
-		158A740D2878229E0038F666 /* MNTP3DObjCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FA2878229E0038F666 /* MNTP3DObjCache.m */; };
 		158A740E2878229E0038F666 /* MNTP3DAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FB2878229E0038F666 /* MNTP3DAsset.m */; };
 		158A740F2878229E0038F666 /* MNTP3DAssetLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158A73FE2878229E0038F666 /* MNTP3DAssetLoader.mm */; };
 		158A74122878229E0038F666 /* MNTPSubmesh.mm in Sources */ = {isa = PBXBuildFile; fileRef = 158A74062878229E0038F666 /* MNTPSubmesh.mm */; };
@@ -75,6 +74,9 @@
 		158A741F287836260038F666 /* MNTPMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A741D287836260038F666 /* MNTPMathUtils.m */; };
 		158A7422287836310038F666 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A7421287836310038F666 /* AAPLMathUtilities.m */; };
 		158EECC428B3AF9700F04514 /* NSArray+THBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECC228B3AF9700F04514 /* NSArray+THBExtend.m */; };
+		15B4A7D528C9CAFD0085C62C /* patrick.obj in Resources */ = {isa = PBXBuildFile; fileRef = 15B4A7D228C9CAFD0085C62C /* patrick.obj */; };
+		15B4A7D628C9CAFD0085C62C /* Char_Patrick.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B4A7D328C9CAFD0085C62C /* Char_Patrick.png */; };
+		15B4A7D728C9CAFD0085C62C /* patrick.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 15B4A7D428C9CAFD0085C62C /* patrick.mtl */; };
 		15B9B6272889371800EBA315 /* THBShadowMapRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */; };
 		15DF389E2880423D00D041D7 /* THBLightShadowTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */; };
 		15DF389F2880423D00D041D7 /* THBLightShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DF38952880423D00D041D7 /* THBLightShadowTestVC.m */; };
@@ -201,10 +203,8 @@
 		156BAF38287FAFB500672D06 /* resultImage_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resultImage_2.png; sourceTree = "<group>"; };
 		158A73F72878229E0038F666 /* MNTPMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTPMesh.h; sourceTree = "<group>"; };
 		158A73F82878229E0038F666 /* MNTPMesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPMesh.mm; sourceTree = "<group>"; };
-		158A73FA2878229E0038F666 /* MNTP3DObjCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DObjCache.m; sourceTree = "<group>"; };
 		158A73FB2878229E0038F666 /* MNTP3DAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MNTP3DAsset.m; sourceTree = "<group>"; };
 		158A73FC2878229E0038F666 /* MNTP3DAssetLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DAssetLoader.h; sourceTree = "<group>"; };
-		158A73FD2878229E0038F666 /* MNTP3DObjCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DObjCache.h; sourceTree = "<group>"; };
 		158A73FE2878229E0038F666 /* MNTP3DAssetLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTP3DAssetLoader.mm; sourceTree = "<group>"; };
 		158A73FF2878229E0038F666 /* MNTP3DAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MNTP3DAsset.h; sourceTree = "<group>"; };
 		158A74062878229E0038F666 /* MNTPSubmesh.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MNTPSubmesh.mm; sourceTree = "<group>"; };
@@ -217,6 +217,9 @@
 		158A7421287836310038F666 /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
 		158EECC228B3AF9700F04514 /* NSArray+THBExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+THBExtend.m"; sourceTree = "<group>"; };
 		158EECC328B3AF9700F04514 /* NSArray+THBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+THBExtend.h"; sourceTree = "<group>"; };
+		15B4A7D228C9CAFD0085C62C /* patrick.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = patrick.obj; path = ../../../../MotionNinja/MotionNinja/Editor/Src/CameraTracking/engine/render/plane/patrick.obj; sourceTree = "<group>"; };
+		15B4A7D328C9CAFD0085C62C /* Char_Patrick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Char_Patrick.png; path = ../../../../MotionNinja/MotionNinja/Editor/Src/CameraTracking/engine/render/plane/Char_Patrick.png; sourceTree = "<group>"; };
+		15B4A7D428C9CAFD0085C62C /* patrick.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = patrick.mtl; path = ../../../../MotionNinja/MotionNinja/Editor/Src/CameraTracking/engine/render/plane/patrick.mtl; sourceTree = "<group>"; };
 		15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBShadowMapRenderNode.m; sourceTree = "<group>"; };
 		15B9B6262889371800EBA315 /* THBShadowMapRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBShadowMapRenderNode.h; sourceTree = "<group>"; };
 		15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBLightShadowTestVC.xib; sourceTree = "<group>"; };
@@ -456,6 +459,7 @@
 		1561F2A028751B6400CEBCE6 /* opengl-test */ = {
 			isa = PBXGroup;
 			children = (
+				15B4A7D128C9C8FE0085C62C /* obj */,
 				1520913728B4D3D500F7E535 /* rasterization */,
 				1520912728B4AC1C00F7E535 /* mutiRender */,
 				155E2E7E28992849004D979C /* mipmap */,
@@ -557,7 +561,6 @@
 				1546152528B3995400E68CF1 /* UIImage+THBExtend.h */,
 				1546152628B3995400E68CF1 /* UIImage+THBExtend.m */,
 				1546151828B3993B00E68CF1 /* texture */,
-				158A73F32878229E0038F666 /* Model */,
 				159FFE652876D9B3000D9E36 /* opengl */,
 				1561F3282875C00600CEBCE6 /* CXXFillColorRenderNode.h */,
 				1561F3292875C00600CEBCE6 /* CXXFillColorRenderNode.m */,
@@ -596,8 +599,6 @@
 				158A73FB2878229E0038F666 /* MNTP3DAsset.m */,
 				158A73FC2878229E0038F666 /* MNTP3DAssetLoader.h */,
 				158A73FE2878229E0038F666 /* MNTP3DAssetLoader.mm */,
-				158A73FD2878229E0038F666 /* MNTP3DObjCache.h */,
-				158A73FA2878229E0038F666 /* MNTP3DObjCache.m */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -631,6 +632,17 @@
 				1561F32F2875C06300CEBCE6 /* GLProgram.m */,
 			);
 			path = opengl;
+			sourceTree = "<group>";
+		};
+		15B4A7D128C9C8FE0085C62C /* obj */ = {
+			isa = PBXGroup;
+			children = (
+				15B4A7D328C9CAFD0085C62C /* Char_Patrick.png */,
+				15B4A7D428C9CAFD0085C62C /* patrick.mtl */,
+				15B4A7D228C9CAFD0085C62C /* patrick.obj */,
+				158A73F32878229E0038F666 /* Model */,
+			);
+			path = obj;
 			sourceTree = "<group>";
 		};
 		15DF38932880423D00D041D7 /* lightShadow */ = {
@@ -776,12 +788,15 @@
 				1517ADE0287D561E00CF0087 /* THBLightTestVC.xib in Resources */,
 				15444F20287EE83700F5E6DC /* light_tbn_fs.fsh in Resources */,
 				1561F2AC28751B6400CEBCE6 /* Main.storyboard in Resources */,
+				15B4A7D528C9CAFD0085C62C /* patrick.obj in Resources */,
 				15DF38A02880423D00D041D7 /* light_shadow_vs.fsh in Resources */,
 				15DF389E2880423D00D041D7 /* THBLightShadowTestVC.xib in Resources */,
 				15DF38A22880423D00D041D7 /* light_shadow_fs.fsh in Resources */,
 				1561F3132875BF5400CEBCE6 /* ipad_1.png in Resources */,
 				15444EE5287EA00600F5E6DC /* light_fs.fsh in Resources */,
+				15B4A7D728C9CAFD0085C62C /* patrick.mtl in Resources */,
 				15444F24287EE83700F5E6DC /* THBTBNLightTestVC.xib in Resources */,
+				15B4A7D628C9CAFD0085C62C /* Char_Patrick.png in Resources */,
 				15444F21287EE83700F5E6DC /* light_tbn_vs.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -828,7 +843,6 @@
 				1546152428B3993B00E68CF1 /* THBPixelBufferPool.m in Sources */,
 				1561F3302875C06300CEBCE6 /* GLProgram.m in Sources */,
 				15DF38A12880423D00D041D7 /* THBShadowTestRenderNode.m in Sources */,
-				158A740D2878229E0038F666 /* MNTP3DObjCache.m in Sources */,
 				1546152728B3995400E68CF1 /* UIImage+THBExtend.m in Sources */,
 				158A740E2878229E0038F666 /* MNTP3DAsset.m in Sources */,
 				1561F2FE2875AC7C00CEBCE6 /* THBTestBView..m in Sources */,

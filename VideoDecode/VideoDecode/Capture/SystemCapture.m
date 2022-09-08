@@ -272,6 +272,7 @@
 // 设置分辨率
 - (void)setVideoPreset
 {
+    
     if ([self.captureSession canSetSessionPreset:AVCaptureSessionPreset1920x1080])
     {
         self.captureSession.sessionPreset = AVCaptureSessionPreset1920x1080;

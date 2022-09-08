@@ -48,8 +48,6 @@ void main()
     vec3 B = cross(T, N);
     mat3 TBN = mat3(T, B, N);
     mat3 inverseTBN = transpose(TBN);
-    
-    
 
     FragPos_tbn = inverseTBN * FragPos;
     lightPos_tbn = inverseTBN * lightPos;

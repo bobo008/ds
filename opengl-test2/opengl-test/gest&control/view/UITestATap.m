@@ -8,6 +8,10 @@
 #import "UITestATap.h"
 
 @implementation UITestATap
+//
+//+(void)load {
+//    NSLog(@"aaaaa  load");
+//}
 
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

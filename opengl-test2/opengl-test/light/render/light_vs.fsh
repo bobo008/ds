@@ -10,7 +10,7 @@ varying vec3 FragPos;
 
 uniform highp mat4 pMatrix;
 uniform highp mat4 vMatrix;
-uniform highp mat4 mMatrix;
+uniform highp mat4 mMatrix; // 世界矩阵，将位置转换到世界矩阵中
 uniform vec3 lightPos;
 uniform vec3 viewPos;
 

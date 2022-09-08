@@ -25,6 +25,8 @@
 
 #import "THBMutiRenderNode.h"
 
+#import "UITestTap.h"
+
 @interface ViewController ()
 
 @end
@@ -43,16 +45,18 @@
 
 - (IBAction)onBtn:(id)sender {
     
-    THBGestTestVC *vc = [[THBGestTestVC alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+    [UITestTap load];
+    
+//    THBGestTestVC *vc = [[THBGestTestVC alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
     
-//    [self test];
+    [self test];
 }
 
 
 - (void)test {
-    THBMutiRenderNode *renderNode = [[THBMutiRenderNode alloc] init];
-    [renderNode render];
+    THBTBNLightTestVC *vc = [[THBTBNLightTestVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

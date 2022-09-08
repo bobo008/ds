@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UITestATap.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITestTap : UITapGestureRecognizer
+@interface UITestTap : UITestATap
 
 @end
 

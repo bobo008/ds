@@ -10,7 +10,9 @@
 @implementation UITestTap
 
 
-
+//+(void)load {
+//    NSLog(@"bbbbb  load");
+//}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"test - tap b touch begin");

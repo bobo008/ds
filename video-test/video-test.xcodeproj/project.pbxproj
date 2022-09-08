@@ -48,6 +48,13 @@
 		158EED0C28B3AFF300F04514 /* MipmapShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 158EECF628B3AFF300F04514 /* MipmapShaders.metal */; };
 		158EED0D28B3AFF300F04514 /* MsaaShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 158EECF728B3AFF300F04514 /* MsaaShaders.metal */; };
 		158EED0E28B3AFF300F04514 /* AAPLShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 158EECF828B3AFF300F04514 /* AAPLShaders.metal */; };
+		15AECEAB28C2001300F4BA9D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 15AECEA728C2001300F4BA9D /* README.md */; };
+		15AECEAC28C2001300F4BA9D /* SEPYUV2RGBFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AECEA828C2001300F4BA9D /* SEPYUV2RGBFilter.m */; };
+		15AECEAD28C2001300F4BA9D /* SEPYpCbCr2RGBUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 15AECEA928C2001300F4BA9D /* SEPYpCbCr2RGBUtil.m */; };
+		15AECEB228C2001A00F4BA9D /* YUV2RGB_16U.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 15AECEB028C2001A00F4BA9D /* YUV2RGB_16U.vsh */; };
+		15AECEB328C2001A00F4BA9D /* YUV2RGB_16U.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15AECEB128C2001A00F4BA9D /* YUV2RGB_16U.fsh */; };
+		15AECEB428C2001A00F4BA9D /* YUV2RGB.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 15AECEAF28C2001A00F4BA9D /* YUV2RGB.vsh */; };
+		15AECEB528C2001A00F4BA9D /* YUV2RGB.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 15AECEAE28C2001A00F4BA9D /* YUV2RGB.fsh */; };
 		15D9C5D328A4EBB70094642F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D228A4EBB70094642F /* AppDelegate.m */; };
 		15D9C5D628A4EBB70094642F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D528A4EBB70094642F /* SceneDelegate.m */; };
 		15D9C5D928A4EBB70094642F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D9C5D828A4EBB70094642F /* ViewController.m */; };
@@ -132,6 +139,15 @@
 		158EECF628B3AFF300F04514 /* MipmapShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MipmapShaders.metal; sourceTree = "<group>"; };
 		158EECF728B3AFF300F04514 /* MsaaShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MsaaShaders.metal; sourceTree = "<group>"; };
 		158EECF828B3AFF300F04514 /* AAPLShaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = AAPLShaders.metal; sourceTree = "<group>"; };
+		15AECEA428C2001300F4BA9D /* SEPYpCbCr2RGBUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEPYpCbCr2RGBUtil.h; sourceTree = "<group>"; };
+		15AECEA528C2001300F4BA9D /* SEPYUV2RGBFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEPYUV2RGBFilter.h; sourceTree = "<group>"; };
+		15AECEA728C2001300F4BA9D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		15AECEA828C2001300F4BA9D /* SEPYUV2RGBFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEPYUV2RGBFilter.m; sourceTree = "<group>"; };
+		15AECEA928C2001300F4BA9D /* SEPYpCbCr2RGBUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEPYpCbCr2RGBUtil.m; sourceTree = "<group>"; };
+		15AECEAE28C2001A00F4BA9D /* YUV2RGB.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = YUV2RGB.fsh; sourceTree = "<group>"; };
+		15AECEAF28C2001A00F4BA9D /* YUV2RGB.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = YUV2RGB.vsh; sourceTree = "<group>"; };
+		15AECEB028C2001A00F4BA9D /* YUV2RGB_16U.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = YUV2RGB_16U.vsh; sourceTree = "<group>"; };
+		15AECEB128C2001A00F4BA9D /* YUV2RGB_16U.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = YUV2RGB_16U.fsh; sourceTree = "<group>"; };
 		15D9C5CE28A4EBB70094642F /* video-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "video-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D9C5D128A4EBB70094642F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15D9C5D228A4EBB70094642F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -226,6 +242,7 @@
 		155327C828A6593400C206DC /* videolib */ = {
 			isa = PBXGroup;
 			children = (
+				15AECEA328C2001300F4BA9D /* Conversion */,
 				1544568C28A67F5300585431 /* video_60.mov */,
 				1544568728A674FD00585431 /* render */,
 				155327E728A66FE900C206DC /* THBAVFoundationUtil.h */,
@@ -373,6 +390,22 @@
 			path = orientation;
 			sourceTree = "<group>";
 		};
+		15AECEA328C2001300F4BA9D /* Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				15AECEB128C2001A00F4BA9D /* YUV2RGB_16U.fsh */,
+				15AECEB028C2001A00F4BA9D /* YUV2RGB_16U.vsh */,
+				15AECEAE28C2001A00F4BA9D /* YUV2RGB.fsh */,
+				15AECEAF28C2001A00F4BA9D /* YUV2RGB.vsh */,
+				15AECEA728C2001300F4BA9D /* README.md */,
+				15AECEA428C2001300F4BA9D /* SEPYpCbCr2RGBUtil.h */,
+				15AECEA928C2001300F4BA9D /* SEPYpCbCr2RGBUtil.m */,
+				15AECEA528C2001300F4BA9D /* SEPYUV2RGBFilter.h */,
+				15AECEA828C2001300F4BA9D /* SEPYUV2RGBFilter.m */,
+			);
+			path = Conversion;
+			sourceTree = "<group>";
+		};
 		15D9C5C528A4EBB70094642F = {
 			isa = PBXGroup;
 			children = (
@@ -494,8 +527,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				15D9C5E128A4EBB80094642F /* LaunchScreen.storyboard in Resources */,
+				15AECEB428C2001A00F4BA9D /* YUV2RGB.vsh in Resources */,
 				1553277228A4EDFF00C206DC /* THBVideoTestVC.xib in Resources */,
+				15AECEB328C2001A00F4BA9D /* YUV2RGB_16U.fsh in Resources */,
+				15AECEAB28C2001300F4BA9D /* README.md in Resources */,
 				1544569D28A687DD00585431 /* yue_fs.fsh in Resources */,
+				15AECEB228C2001A00F4BA9D /* YUV2RGB_16U.vsh in Resources */,
+				15AECEB528C2001A00F4BA9D /* YUV2RGB.fsh in Resources */,
 				1544568F28A67F7800585431 /* fullmoon_01.mp4 in Resources */,
 				15D9C5DE28A4EBB80094642F /* Assets.xcassets in Resources */,
 				1544568D28A67F5300585431 /* video_60.mov in Resources */,
@@ -560,7 +598,9 @@
 				155327AC28A4FC4E00C206DC /* THBTexture.m in Sources */,
 				15D9C5D928A4EBB70094642F /* ViewController.m in Sources */,
 				158EED0B28B3AFF300F04514 /* THBOrientationRenderNode.m in Sources */,
+				15AECEAD28C2001300F4BA9D /* SEPYpCbCr2RGBUtil.m in Sources */,
 				155327E928A66FE900C206DC /* THBAVFoundationUtil.m in Sources */,
+				15AECEAC28C2001300F4BA9D /* SEPYUV2RGBFilter.m in Sources */,
 				15D9C5D328A4EBB70094642F /* AppDelegate.m in Sources */,
 				1553277128A4EDFF00C206DC /* THBVideoTestVC.m in Sources */,
 				1544568A28A6750C00585431 /* EAVVideoRenderer.m in Sources */,
