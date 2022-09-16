@@ -267,7 +267,7 @@ template<> struct std::hash<MNTPVertexData>
             subMesh.baseColorMapURL = URL;
         }
     } else {
-        NSAssert(NO, @"模型数据错误");
+//        NSAssert(NO, @"模型数据错误");
         subMesh.material = [[MNTPMaterial alloc] init];
     }
     [_submeshes addObject:subMesh];

@@ -73,7 +73,7 @@ typedef struct THBVertexData {
     NSString *path2 = [[NSBundle mainBundle] pathForResource:@"resultImage_1.png" ofType:nil];
     _normalTexture = [self textureForMatrialPath:path2];
 
-    _scale = 1;
+    _scale = 0.8;
     
     NSURL *url = [NSBundle.mainBundle URLForResource:@"patrick.obj" withExtension:nil];
     _asset = [[MNTP3DAsset alloc] initWithURL:url error:nil];

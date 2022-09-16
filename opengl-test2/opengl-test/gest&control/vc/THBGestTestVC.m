@@ -15,7 +15,7 @@
 #import "THBTestBtn.h"
 
 
-@interface THBGestTestVC ()
+@interface THBGestTestVC ()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) CALayer *colorLayer;
 @end
 
@@ -25,6 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //create a red layer
+    [self setup];
+    
+ 
+}
+
+
+- (void)setup2 {
     self.colorLayer = [CALayer layer];
     self.colorLayer.frame = CGRectMake(0, 0, 100, 100);
     self.colorLayer.backgroundColor = [UIColor redColor].CGColor;
@@ -64,11 +71,17 @@
     [aView addSubview:bView];
     
     
-//    UITestATap *tap = [[UITestATap alloc] initWithTarget:self action:@selector(onTap)];
-//    [aView addGestureRecognizer:tap];
-//    
-//    UITestTap *tap2 = [[UITestTap alloc] initWithTarget:self action:@selector(onTap2)];
-//    [bView addGestureRecognizer:tap2];
+    UITestATap *tap = [[UITestATap alloc] initWithTarget:self action:@selector(onTap)];
+    [aView addGestureRecognizer:tap];
+    
+    UITestTap *tap2 = [[UITestTap alloc] initWithTarget:self action:@selector(onTap2)];
+    tap2.edges = UIRectEdgeLeft;
+//    tap2.delegate = self;
+    [bView addGestureRecognizer:tap2];
+
+    
+
+    
     
 //    UICollectionViewLayout *layout = [[UICollectionViewLayout alloc] init];
 //    UICollectionView *scrollView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 200, 200) collectionViewLayout:layout];
@@ -76,10 +89,10 @@
 //    [bView addSubview:scrollView];
     
 
-    THBTestBtn *btn = [[THBTestBtn alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    [bView addSubview:btn];
-    [btn addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
-
+//    THBTestBtn *btn = [[THBTestBtn alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+//    [bView addSubview:btn];
+//    [btn addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+//
 
 //    THBTestCView *cView = [[THBTestCView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
 //    cView.backgroundColor = UIColor.blueColor;
@@ -96,10 +109,28 @@
 }
 
 
+- (void)onTap4 {
+    NSLog(@"tap4");
+}
+
+- (void)onTap5 {
+    NSLog(@"tap5");
+}
 
 - (void)onTap {
     NSLog(@"tap");
 }
+
+
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    if ([gestureRecognizer isKindOfClass:UITestTap.class] && [otherGestureRecognizer isKindOfClass:UITestATap.class]) {
+        return YES;
+    }
+    return NO;
+}
+
 
 
 

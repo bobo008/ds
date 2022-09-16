@@ -74,9 +74,9 @@
 		158A741F287836260038F666 /* MNTPMathUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A741D287836260038F666 /* MNTPMathUtils.m */; };
 		158A7422287836310038F666 /* AAPLMathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 158A7421287836310038F666 /* AAPLMathUtilities.m */; };
 		158EECC428B3AF9700F04514 /* NSArray+THBExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 158EECC228B3AF9700F04514 /* NSArray+THBExtend.m */; };
-		15B4A7D528C9CAFD0085C62C /* patrick.obj in Resources */ = {isa = PBXBuildFile; fileRef = 15B4A7D228C9CAFD0085C62C /* patrick.obj */; };
-		15B4A7D628C9CAFD0085C62C /* Char_Patrick.png in Resources */ = {isa = PBXBuildFile; fileRef = 15B4A7D328C9CAFD0085C62C /* Char_Patrick.png */; };
-		15B4A7D728C9CAFD0085C62C /* patrick.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 15B4A7D428C9CAFD0085C62C /* patrick.mtl */; };
+		15A85CE428C9E9AA0081D7E3 /* patrick.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 15A85CE128C9E9AA0081D7E3 /* patrick.mtl */; };
+		15A85CE528C9E9AA0081D7E3 /* Char_Patrick.png in Resources */ = {isa = PBXBuildFile; fileRef = 15A85CE228C9E9AA0081D7E3 /* Char_Patrick.png */; };
+		15A85CE628C9E9AA0081D7E3 /* patrick.obj in Resources */ = {isa = PBXBuildFile; fileRef = 15A85CE328C9E9AA0081D7E3 /* patrick.obj */; };
 		15B9B6272889371800EBA315 /* THBShadowMapRenderNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */; };
 		15DF389E2880423D00D041D7 /* THBLightShadowTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */; };
 		15DF389F2880423D00D041D7 /* THBLightShadowTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15DF38952880423D00D041D7 /* THBLightShadowTestVC.m */; };
@@ -217,9 +217,9 @@
 		158A7421287836310038F666 /* AAPLMathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLMathUtilities.m; sourceTree = "<group>"; };
 		158EECC228B3AF9700F04514 /* NSArray+THBExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+THBExtend.m"; sourceTree = "<group>"; };
 		158EECC328B3AF9700F04514 /* NSArray+THBExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+THBExtend.h"; sourceTree = "<group>"; };
-		15B4A7D228C9CAFD0085C62C /* patrick.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = patrick.obj; path = ../../../../MotionNinja/MotionNinja/Editor/Src/CameraTracking/engine/render/plane/patrick.obj; sourceTree = "<group>"; };
-		15B4A7D328C9CAFD0085C62C /* Char_Patrick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Char_Patrick.png; path = ../../../../MotionNinja/MotionNinja/Editor/Src/CameraTracking/engine/render/plane/Char_Patrick.png; sourceTree = "<group>"; };
-		15B4A7D428C9CAFD0085C62C /* patrick.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = patrick.mtl; path = ../../../../MotionNinja/MotionNinja/Editor/Src/CameraTracking/engine/render/plane/patrick.mtl; sourceTree = "<group>"; };
+		15A85CE128C9E9AA0081D7E3 /* patrick.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patrick.mtl; sourceTree = "<group>"; };
+		15A85CE228C9E9AA0081D7E3 /* Char_Patrick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Char_Patrick.png; sourceTree = "<group>"; };
+		15A85CE328C9E9AA0081D7E3 /* patrick.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patrick.obj; sourceTree = "<group>"; };
 		15B9B6252889371800EBA315 /* THBShadowMapRenderNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBShadowMapRenderNode.m; sourceTree = "<group>"; };
 		15B9B6262889371800EBA315 /* THBShadowMapRenderNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBShadowMapRenderNode.h; sourceTree = "<group>"; };
 		15DF38942880423D00D041D7 /* THBLightShadowTestVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = THBLightShadowTestVC.xib; sourceTree = "<group>"; };
@@ -637,9 +637,9 @@
 		15B4A7D128C9C8FE0085C62C /* obj */ = {
 			isa = PBXGroup;
 			children = (
-				15B4A7D328C9CAFD0085C62C /* Char_Patrick.png */,
-				15B4A7D428C9CAFD0085C62C /* patrick.mtl */,
-				15B4A7D228C9CAFD0085C62C /* patrick.obj */,
+				15A85CE228C9E9AA0081D7E3 /* Char_Patrick.png */,
+				15A85CE128C9E9AA0081D7E3 /* patrick.mtl */,
+				15A85CE328C9E9AA0081D7E3 /* patrick.obj */,
 				158A73F32878229E0038F666 /* Model */,
 			);
 			path = obj;
@@ -776,27 +776,27 @@
 			files = (
 				1561F2E128751BF300CEBCE6 /* THBGestTestVC.xib in Resources */,
 				15444EE6287EA00600F5E6DC /* light_vs.fsh in Resources */,
+				15A85CE628C9E9AA0081D7E3 /* patrick.obj in Resources */,
 				1520913528B4B00800F7E535 /* muti_vs.fsh in Resources */,
 				1520913628B4B00800F7E535 /* muti_fs.fsh in Resources */,
 				156BAF39287FAFB500672D06 /* resultImage_2.png in Resources */,
 				15444EF1287EAD5400F5E6DC /* resultImage_1.png in Resources */,
 				1517AE00287D78C500CF0087 /* Cutout_002.jpg in Resources */,
 				1517ADFE287D788700CF0087 /* comics_22.png in Resources */,
+				15A85CE428C9E9AA0081D7E3 /* patrick.mtl in Resources */,
 				1561F2B128751B6500CEBCE6 /* LaunchScreen.storyboard in Resources */,
 				1561F2AE28751B6500CEBCE6 /* Assets.xcassets in Resources */,
 				1561F3142875BF5400CEBCE6 /* PXCShadowTestVC.xib in Resources */,
 				1517ADE0287D561E00CF0087 /* THBLightTestVC.xib in Resources */,
 				15444F20287EE83700F5E6DC /* light_tbn_fs.fsh in Resources */,
 				1561F2AC28751B6400CEBCE6 /* Main.storyboard in Resources */,
-				15B4A7D528C9CAFD0085C62C /* patrick.obj in Resources */,
 				15DF38A02880423D00D041D7 /* light_shadow_vs.fsh in Resources */,
 				15DF389E2880423D00D041D7 /* THBLightShadowTestVC.xib in Resources */,
 				15DF38A22880423D00D041D7 /* light_shadow_fs.fsh in Resources */,
 				1561F3132875BF5400CEBCE6 /* ipad_1.png in Resources */,
 				15444EE5287EA00600F5E6DC /* light_fs.fsh in Resources */,
-				15B4A7D728C9CAFD0085C62C /* patrick.mtl in Resources */,
 				15444F24287EE83700F5E6DC /* THBTBNLightTestVC.xib in Resources */,
-				15B4A7D628C9CAFD0085C62C /* Char_Patrick.png in Resources */,
+				15A85CE528C9E9AA0081D7E3 /* Char_Patrick.png in Resources */,
 				15444F21287EE83700F5E6DC /* light_tbn_vs.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

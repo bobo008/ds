@@ -1,0 +1,6 @@
+# Material file for patrick.obj
+
+newmtl pat
+	map_Kd Char_Patrick.png
+
+

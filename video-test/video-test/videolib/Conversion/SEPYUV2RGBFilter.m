@@ -18,12 +18,36 @@
 
 #define BUNDLE_NAME @"ColorConversion.bundle"
 
+
+static NSString * shaderWithNamed(NSString *fileName) {
+    NSString *file = [[NSBundle mainBundle] pathForResource:fileName ofType:nil];
+    
+    BOOL isDirectory;
+    BOOL isFileExists = [[NSFileManager defaultManager] fileExistsAtPath:file isDirectory:&isDirectory];
+    if (!isFileExists || isDirectory) {
+        NSLog(@"Shader source not exists");
+        return nil;
+    }
+    
+    NSError *readShaderSourceError;
+    NSString *shaderSource = [NSString stringWithContentsOfFile:file encoding:NSUTF8StringEncoding error:&readShaderSourceError];
+    if (!shaderSource || readShaderSourceError) {
+        NSLog(@"Read shader source failed: %@", readShaderSourceError);
+        return nil;
+    }
+    
+    return shaderSource;
+}
+
+
+
 static GLProgram * sharedConversionProgram(void) {
     static GLProgram *program = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *vertString = [[SEPShaderCache sharedInstance] shaderWithNamed:@"YUV2RGB.vsh" andBundleName:BUNDLE_NAME];
-        NSString *fragString = [[SEPShaderCache sharedInstance] shaderWithNamed:@"YUV2RGB.fsh" andBundleName:BUNDLE_NAME];
+        
+        NSString *vertString = shaderWithNamed(@"YUV2RGB.vsh");
+        NSString *fragString = shaderWithNamed(@"YUV2RGB.fsh");
         NSArray<NSString *> *attributeNames = @[
             @"position",
             @"inputTextureCoordinate",
@@ -37,8 +61,8 @@ static GLProgram * sharedConversionProgram16U(void) {
     static GLProgram *program = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString *vertString = [[SEPShaderCache sharedInstance] shaderWithNamed:@"YUV2RGB_16U.vsh" andBundleName:BUNDLE_NAME];
-        NSString *fragString = [[SEPShaderCache sharedInstance] shaderWithNamed:@"YUV2RGB_16U.fsh" andBundleName:BUNDLE_NAME];
+        NSString *vertString = shaderWithNamed(@"YUV2RGB_16U.vsh");
+        NSString *fragString = shaderWithNamed(@"YUV2RGB_16U.fsh");
         NSArray<NSString *> *attributeNames = @[
             @"position",
             @"inputTextureCoordinate",
@@ -75,9 +99,9 @@ static GLProgram * sharedConversionProgram16U(void) {
     const GLfloat *colorConversionBias;
     SEPAutoSelectConversion(YUVPixel, &colorConversionMatrix, &colorConversionBias);
     
-    SEPContext *context = [SEPContext sharedInstance];
-    [context useAsCurrentContext];
-    CVOpenGLESTextureCacheRef glTextureCache = context.coreVideoTextureCache;
+    THBContext *context = [THBContext sharedInstance];
+    [GPUImageContext.sharedImageProcessingContext useAsCurrentContext];
+    CVOpenGLESTextureCacheRef glTextureCache = GPUImageContext.sharedImageProcessingContext.coreVideoTextureCache;
     
     CVReturn err;
     
@@ -166,7 +190,7 @@ static GLProgram * sharedConversionProgram16U(void) {
     } else {
         program = sharedConversionProgram();
     }
-    [context setCurrentShaderProgram:program];
+    [GPUImageContext.sharedImageProcessingContext setCurrentShaderProgram:program];
     
     static const GLfloat squareVertices[] = {
         -1.0f, -1.0f,

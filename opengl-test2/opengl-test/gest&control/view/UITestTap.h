@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UITestTap : UITestATap
+@interface UITestTap : UIScreenEdgePanGestureRecognizer
 
 @end
 

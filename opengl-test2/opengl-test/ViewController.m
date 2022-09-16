@@ -56,7 +56,7 @@
 
 
 - (void)test {
-    THBTBNLightTestVC *vc = [[THBTBNLightTestVC alloc] init];
+    THBGestTestVC *vc = [[THBGestTestVC alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 @end

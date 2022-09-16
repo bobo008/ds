@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface THBTestBView : UIView
+@interface THBTestBView : UIView<UIGestureRecognizerDelegate>
 
 @end
 

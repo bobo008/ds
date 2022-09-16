@@ -39,16 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "77A67251-B697-497C-A925-B6DF7FCF4A62"
+            uuid = "939A1066-37BF-4575-92E6-B94EAB391AAE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "opengl-test/gest&amp;control/view/THBTestAView.m"
+            filePath = "opengl-test/gest&amp;control/view/THBTestBView..m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "-touchesBegan:withEvent:"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

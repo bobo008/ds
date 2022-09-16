@@ -49,7 +49,19 @@ vec4 getSpecula(vec4 objectColor, vec3 normal) {
     
     vec3 reflectDir = reflect(-lightDir, norm);
     
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.);/// 光泽越高，反射区域越小，光泽越低 反射区域越大，对于低光泽，一般用半角渲染
+    
+//    {
+//        vec3 refl = reflect(-lightDir, norm);
+//        float specAmt = max(dot(viewDir, reflectDir), 0.0);
+//        float spec = pow(specAmt, 16.);
+//
+//    半角的模型下 光泽度要乘 2 ~ 4
+//
+//        vec3 halfVec = normalize(viewDir + lightDir);
+//        float specAmt = max(dot(halfVec, norm), 0.0);
+//        float spec = pow(specAmt, 64.);
+//    }
     
     vec4 specular = specularStrength * spec * vec4(1.0);
     
