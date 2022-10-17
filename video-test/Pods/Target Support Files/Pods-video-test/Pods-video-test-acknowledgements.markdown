@@ -1,6 +1,11 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## CTMediator
+
+MIT
+
+
 ## ReactiveObjC
 
 **Copyright (c) 2012 - 2016, GitHub, Inc.**

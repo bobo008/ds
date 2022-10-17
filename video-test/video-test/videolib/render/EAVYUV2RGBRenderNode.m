@@ -2,7 +2,7 @@
 
 #import "EAVYUV2RGBRenderNode.h"
 
-
+#import <OpenGLES/EAGLIOSurface.h>
 
 
 GLfloat kColorConversion601Default[] = {
@@ -40,7 +40,7 @@ GLfloat *kColorConversion709 = kColorConversion709Default;
         NSLog(@"movieFrame is Nil");
         return;
     }
-    
+    EAGLContext *ctx = [[GPUImageContext sharedImageProcessingContext] context];
     const GPUImageContext *glContext = [GPUImageContext sharedImageProcessingContext];
     [glContext useAsCurrentContext];
     
@@ -69,34 +69,76 @@ GLfloat *kColorConversion709 = kColorConversion709Default;
         return;
     }
     
-    CVOpenGLESTextureRef luminanceTextureRef = NULL;
-    CVOpenGLESTextureRef chrominanceTextureRef = NULL;
-    
+
+
+    CVReturn err;
     CVPixelBufferLockBaseAddress(movieFrame, 0);
     
-    CVReturn err;
     
-    err = CVOpenGLESTextureCacheCreateTextureFromImage(kCFAllocatorDefault, glTextureCache, movieFrame, NULL, GL_TEXTURE_2D, GL_R8, movieWidth, movieHeight, GL_RED, GL_UNSIGNED_BYTE, 0, &luminanceTextureRef);
-    if (err) {
-        CVPixelBufferUnlockBaseAddress(movieFrame, 0);
-        return;
-    }
-    GLuint luminanceTexture = CVOpenGLESTextureGetName(luminanceTextureRef);
+//    CVOpenGLESTextureRef luminanceTextureRef = NULL;
+//    err = CVOpenGLESTextureCacheCreateTextureFromImage(kCFAllocatorDefault, glTextureCache, movieFrame, NULL, GL_TEXTURE_2D, GL_R8, movieWidth, movieHeight, GL_RED, GL_UNSIGNED_BYTE, 0, &luminanceTextureRef);
+//    if (err) {
+//        CVPixelBufferUnlockBaseAddress(movieFrame, 0);
+//        return;
+//    }
+//    GLuint luminanceTexture = CVOpenGLESTextureGetName(luminanceTextureRef);
+//    glActiveTexture(GL_TEXTURE4);
+//    glBindTexture(GL_TEXTURE_2D, luminanceTexture);
+//    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+//    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+//
+
+    GLuint luminanceTexture;
+    glGenTextures(1, &luminanceTexture);
+
+    glBindTexture(GL_TEXTURE_2D, luminanceTexture);
+    int planeW = (int)CVPixelBufferGetWidthOfPlane(movieFrame, 0);
+    int planeH = (int)CVPixelBufferGetHeightOfPlane(movieFrame, 0);
+
+    IOSurfaceRef iosurface = CVPixelBufferGetIOSurface(movieFrame);
+    BOOL suc = [ctx texImageIOSurface:iosurface target:GL_TEXTURE_2D internalFormat:GL_R8 width:planeW height:planeH format:GL_RED type:GL_UNSIGNED_BYTE plane:0];
+
+
     glActiveTexture(GL_TEXTURE4);
     glBindTexture(GL_TEXTURE_2D, luminanceTexture);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
     
-    err = CVOpenGLESTextureCacheCreateTextureFromImage(kCFAllocatorDefault, glTextureCache, movieFrame, NULL, GL_TEXTURE_2D, GL_RG8, movieWidth/2, movieHeight/2, GL_RG, GL_UNSIGNED_BYTE, 1, &chrominanceTextureRef);
-    if (err) {
-        CVPixelBufferUnlockBaseAddress(movieFrame, 0);
-        return;
-    }
+//    CVOpenGLESTextureRef chrominanceTextureRef = NULL;
+//    err = CVOpenGLESTextureCacheCreateTextureFromImage(kCFAllocatorDefault, glTextureCache, movieFrame, NULL, GL_TEXTURE_2D, GL_RG8, movieWidth/2, movieHeight/2, GL_RG, GL_UNSIGNED_BYTE, 1, &chrominanceTextureRef);
+//    if (err) {
+//        CVPixelBufferUnlockBaseAddress(movieFrame, 0);
+//        return;
+//    }
+//    glActiveTexture(GL_TEXTURE5);
+//    GLuint chrominanceTexture = CVOpenGLESTextureGetName(chrominanceTextureRef);
+//    glBindTexture(GL_TEXTURE_2D, chrominanceTexture);
+//    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+//    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    
+    
+    
+    GLuint chrominanceTexture;
+    glGenTextures(1, &chrominanceTexture);
+
+    glBindTexture(GL_TEXTURE_2D, chrominanceTexture);
+    int planeW2 = (int)CVPixelBufferGetWidthOfPlane(movieFrame, 1);
+    int planeH2 = (int)CVPixelBufferGetHeightOfPlane(movieFrame, 1);
+
+
+    BOOL suc2 = [ctx texImageIOSurface:iosurface target:GL_TEXTURE_2D internalFormat:GL_RG8 width:planeW2 height:planeH2 format:GL_RG type:GL_UNSIGNED_BYTE plane:1];
+
+
     glActiveTexture(GL_TEXTURE5);
-    GLuint chrominanceTexture = CVOpenGLESTextureGetName(chrominanceTextureRef);
     glBindTexture(GL_TEXTURE_2D, chrominanceTexture);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    
     
     glBindFramebuffer(GL_FRAMEBUFFER, self.framebufferHandle);
     glViewport(0,
@@ -153,8 +195,8 @@ GLfloat *kColorConversion709 = kColorConversion709Default;
 //    glFlush();
     
     CVPixelBufferUnlockBaseAddress(movieFrame, 0);
-    CFRelease(luminanceTextureRef);
-    CFRelease(chrominanceTextureRef);
+//    CFRelease(luminanceTextureRef);
+//    CFRelease(chrominanceTextureRef);
 }
 
 - (GLProgram *)glProgram {

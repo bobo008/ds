@@ -28,9 +28,9 @@
 
 
 - (IBAction)onBtn:(id)sender {
-//    THBVideoTestVC *vc = [[THBVideoTestVC alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
-    
+    THBVideoTestVC *vc = [[THBVideoTestVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    return;
     
     
 

@@ -23,8 +23,6 @@
 @property (nonatomic) NSMutableDictionary<NSString *, id> *composeTrackIdMap;
 
 
-
-
 @property (nonatomic) AVPlayer *player;
 @property (nonatomic) AVPlayerItem *playerItem;
 @property (strong, nonatomic) AVPlayerLayer *playerLayer;

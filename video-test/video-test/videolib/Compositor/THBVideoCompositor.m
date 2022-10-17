@@ -113,7 +113,7 @@ static NSMutableDictionary<NSString *, id<THBVideoRenderProtocol>> *renderDicIns
     return @{
         (__bridge NSString *)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange),
         (__bridge NSString *)kCVPixelBufferOpenGLESCompatibilityKey: @(YES),
-        (__bridge NSString *)kCVPixelBufferOpenGLESTextureCacheCompatibilityKey: @(YES),
+//        (__bridge NSString *)kCVPixelBufferOpenGLESTextureCacheCompatibilityKey: @(YES),
     };
 }
 
